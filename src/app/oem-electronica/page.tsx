@@ -6,7 +6,7 @@ import { Icon } from "@/components/icons/icon";
 
 import { OemHero } from "@/components/oem/oem-hero";
 import { SideProgressNav } from "@/components/oem/side-progress-nav";
-import { MobileIndex } from "@/components/oem/mobile-index";
+import { SolutionGrid } from "@/components/oem/solution-grid";
 import { SectionZone } from "@/components/oem/section-zone";
 import { SolutionIntro } from "@/components/oem/solution-intro";
 import { SectionHeader } from "@/components/oem/section-header";
@@ -14,6 +14,9 @@ import { ProductCards } from "@/components/oem/product-cards";
 import { FeatureGrid } from "@/components/oem/feature-grid";
 import { ImageFeatureSplit } from "@/components/oem/image-feature-split";
 import { NumberedList } from "@/components/oem/numbered-list";
+import { SectionNextLink } from "@/components/oem/section-next-link";
+import { ComparisonSplit } from "@/components/oem/comparison-split";
+import { ProcessSteps } from "@/components/oem/process-steps";
 import { OemClosing } from "@/components/oem/closing";
 
 import {
@@ -26,6 +29,8 @@ import {
   OEM_CERRADURAS,
   OEM_ESL,
   OEM_EAS,
+  OEM_COMPARISON,
+  OEM_PROCESS,
 } from "@/lib/oem-content";
 
 export const metadata: Metadata = {
@@ -40,7 +45,7 @@ export default function OemElectronicaPage() {
       <OemHero />
       <SideProgressNav />
 
-      <Section className="py-16 sm:py-20">
+      <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
         <Reveal className="max-w-2xl">
           <p className="eyebrow text-verde-acento">{OEM_ENTORNO_INTRO.eyebrow}</p>
           <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
@@ -49,10 +54,14 @@ export default function OemElectronicaPage() {
           <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
             {OEM_ENTORNO_INTRO.body}
           </p>
+          <p className="mt-5 max-w-xl text-sm text-ink-faint">
+            Todas operan sobre la misma infraestructura y el mismo contrato. Da clic en una
+            solución para ver su ficha completa.
+          </p>
         </Reveal>
 
         <div className="mt-10">
-          <MobileIndex />
+          <SolutionGrid />
         </div>
       </Section>
 
@@ -130,6 +139,7 @@ export default function OemElectronicaPage() {
           />
           <NumberedList items={OEM_SEGURIDAD.implementa.items} />
         </Section>
+        <SectionNextLink afterSlug="seguridad" />
       </SectionZone>
 
       {/* 02 — Digital Signage */}
@@ -176,6 +186,7 @@ export default function OemElectronicaPage() {
           />
           <FeatureGrid features={OEM_SIGNAGE.vivitag.features} columns={4} />
         </Section>
+        <SectionNextLink afterSlug="signage" />
       </SectionZone>
 
       {/* 03 — Interacción en el punto de venta */}
@@ -207,6 +218,7 @@ export default function OemElectronicaPage() {
             </p>
           </Reveal>
         </Section>
+        <SectionNextLink afterSlug="interaccion" />
       </SectionZone>
 
       {/* 04 — Inteligencia artificial */}
@@ -307,6 +319,7 @@ export default function OemElectronicaPage() {
           />
           <FeatureGrid features={OEM_IA.aplicaciones.features} columns={4} />
         </Section>
+        <SectionNextLink afterSlug="ia" />
       </SectionZone>
 
       {/* 05 — Cerraduras electrónicas */}
@@ -321,6 +334,7 @@ export default function OemElectronicaPage() {
           />
           <FeatureGrid features={OEM_CERRADURAS.control.features} columns={3} />
         </Section>
+        <SectionNextLink afterSlug="cerraduras" />
       </SectionZone>
 
       {/* 06 — Etiquetas ESL */}
@@ -353,6 +367,7 @@ export default function OemElectronicaPage() {
             ))}
           </Reveal>
         </Section>
+        <SectionNextLink afterSlug="esl" />
       </SectionZone>
 
       {/* 07 — Antenas EAS */}
@@ -380,7 +395,21 @@ export default function OemElectronicaPage() {
           />
           <ProductCards products={OEM_EAS.consumibles.products} />
         </Section>
+        <SectionNextLink afterSlug="eas" />
       </SectionZone>
+
+      <Section className="py-16 sm:py-20">
+        <SectionHeader
+          eyebrow={OEM_COMPARISON.eyebrow}
+          title={OEM_COMPARISON.title}
+        />
+        <ComparisonSplit />
+      </Section>
+
+      <Section className="py-16 sm:py-20">
+        <SectionHeader eyebrow={OEM_PROCESS.eyebrow} title={OEM_PROCESS.title} />
+        <ProcessSteps />
+      </Section>
 
       <OemClosing />
       <CtaBanner

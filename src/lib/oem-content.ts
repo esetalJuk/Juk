@@ -502,6 +502,56 @@ export const OEM_EAS = {
   },
 };
 
+export const OEM_COMPARISON = {
+  eyebrow: "POR QUÉ OPERAR INTEGRADO",
+  title: "Un entorno integrado, no cinco contratos por separado",
+  fragmented: {
+    label: "Operación fragmentada",
+    items: [
+      "Un contrato distinto por línea: seguridad, pantallas, etiquetas, cerraduras, datos.",
+      "Facturas y tiempos de respuesta distintos en cada frente.",
+      "Cada exhibición se ejecuta con un criterio distinto.",
+      "Datos aislados por sistema: nada comparable entre sí.",
+    ],
+  },
+  integrated: {
+    label: "Dások All Solutions",
+    items: [
+      "Seguridad, exhibición, comunicación, precio y datos operan bajo el mismo estándar.",
+      "Un contrato, una factura y un equipo de soporte con call center dedicado.",
+      "Un estándar de exhibición replicable en toda tu red.",
+      "Métricas comparables de toda tu red en una sola vista.",
+    ],
+  },
+};
+
+export const OEM_PROCESS = {
+  eyebrow: "CÓMO ENTRA EN OPERACIÓN",
+  title: "De un piloto medible a toda tu red",
+  steps: [
+    {
+      number: "01",
+      title: "Diagnóstico en piso",
+      body: "Levantamiento de mobiliario, accesos y categorías de tu exhibición actual.",
+    },
+    {
+      number: "02",
+      title: "Piloto medible",
+      body: "Un grupo controlado con métricas de partida para comparar el antes y el después.",
+    },
+    {
+      number: "03",
+      title: "Despliegue en red",
+      body: "Instalación replicable en minutos, sin obra ni herramientas. Cobertura a nivel nacional: el despliegue avanza al mismo ritmo en cualquier plaza de la República.",
+    },
+    {
+      number: "04",
+      title: "Soporte y datos",
+      body: "Monitoreo remoto, atención técnica vía call center y tableros consolidados de toda tu red.",
+    },
+  ],
+};
+
 export const OEM_CLOSING = {
   eyebrow: "CIERRE",
   title: "Una exhibición que vende, protege y decide con datos",

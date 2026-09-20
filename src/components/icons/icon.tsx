@@ -21,6 +21,8 @@ const PATHS: Record<string, string> = {
   camera: "M4 8h3l2-2h6l2 2h3v11H4V8Zm8 3a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z",
   cloud: "M7 18a4.5 4.5 0 0 1-1-8.9 5.5 5.5 0 0 1 10.8-1.6A4 4 0 0 1 17 18H7Z",
   arrowRight: "M5 12h14M13 6l6 6-6 6",
+  check: "M5 13l4 4L19 7",
+  close: "M6 6l12 12M18 6 6 18",
 };
 
 export function Icon({
