@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useSectionAccent } from "@/components/oem/section-accent-context";
+import { ACCENT_BAR_CLASS, ACCENT_TEXT_CLASS } from "@/components/oem/section-zone";
 
 export function SolutionIntro({
+  number,
   eyebrow,
   title,
   tags,
@@ -12,6 +15,7 @@ export function SolutionIntro({
   imageCredit,
   fit = "cover",
 }: {
+  number?: string;
   eyebrow: string;
   title: string;
   tags?: string[];
@@ -21,16 +25,26 @@ export function SolutionIntro({
   fit?: "cover" | "contain";
 }) {
   const ref = useScrollReveal<HTMLDivElement>({ y: 24, once: true });
+  const accent = useSectionAccent();
 
   return (
     <div ref={ref} className="grid border-b border-line/60 lg:grid-cols-2">
-      <div className="flex flex-col justify-center px-6 py-16 sm:px-10 lg:py-24">
-        <p className="eyebrow text-verde-acento">{eyebrow}</p>
-        <h2 className="font-display text-balance mt-5 text-4xl sm:text-5xl">
+      <div className="relative flex flex-col justify-center overflow-hidden px-6 py-16 sm:px-10 lg:py-24">
+        {number && (
+          <span
+            aria-hidden="true"
+            className={`font-display pointer-events-none absolute -left-2 -top-6 select-none text-[9rem] leading-none opacity-[0.07] sm:-top-10 sm:text-[13rem] ${ACCENT_TEXT_CLASS[accent]}`}
+          >
+            {number}
+          </span>
+        )}
+        <span className={`relative block h-[3px] w-12 ${ACCENT_BAR_CLASS[accent]}`} />
+        <p className="eyebrow relative mt-5 text-white">{eyebrow}</p>
+        <h2 className="font-display text-balance relative mt-5 text-4xl sm:text-5xl">
           {title}
         </h2>
         {tags && (
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="relative mt-5 flex flex-wrap gap-2">
             {tags.map((tag) => (
               <span
                 key={tag}
@@ -41,7 +55,7 @@ export function SolutionIntro({
             ))}
           </div>
         )}
-        <p className="mt-6 max-w-md font-body text-base normal-case tracking-normal text-ink-muted">
+        <p className="relative mt-6 max-w-md font-body text-base normal-case tracking-normal text-ink-muted">
           {body}
         </p>
       </div>

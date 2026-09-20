@@ -70,7 +70,7 @@ export default function OemElectronicaPage() {
 
         {/* 01 — Seguridad para display */}
         <SectionZone id="seguridad" accent="azul-primario">
-          <SolutionIntro {...OEM_SEGURIDAD.intro} />
+          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -153,7 +153,7 @@ export default function OemElectronicaPage() {
 
         {/* 02 — Digital Signage */}
         <SectionZone id="signage" accent="verde-acento">
-          <SolutionIntro {...OEM_SIGNAGE.intro} />
+          <SolutionIntro {...OEM_SIGNAGE.intro} number="02" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -216,7 +216,7 @@ export default function OemElectronicaPage() {
             </Reveal>
           </Section>
 
-          <SolutionIntro {...OEM_INTERACCION.productoResponde} />
+          <SolutionIntro {...OEM_INTERACCION.productoResponde} number="03" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -235,7 +235,7 @@ export default function OemElectronicaPage() {
 
         {/* 04 — Inteligencia artificial */}
         <SectionZone id="ia" accent="verde-acento">
-          <SolutionIntro {...OEM_IA.intro} fit="contain" />
+          <SolutionIntro {...OEM_IA.intro} number="04" fit="contain" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -344,7 +344,7 @@ export default function OemElectronicaPage() {
 
         {/* 05 — Cerraduras electrónicas */}
         <SectionZone id="cerraduras" accent="azul-primario">
-          <SolutionIntro {...OEM_CERRADURAS.intro} fit="contain" />
+          <SolutionIntro {...OEM_CERRADURAS.intro} number="05" fit="contain" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -362,7 +362,7 @@ export default function OemElectronicaPage() {
 
         {/* 06 — Etiquetas ESL */}
         <SectionZone id="esl" accent="azul-corporativo">
-          <SolutionIntro {...OEM_ESL.intro} />
+          <SolutionIntro {...OEM_ESL.intro} number="06" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -395,7 +395,7 @@ export default function OemElectronicaPage() {
 
         {/* 07 — Antenas EAS */}
         <SectionZone id="eas" accent="verde-acento">
-          <SolutionIntro {...OEM_EAS.intro} />
+          <SolutionIntro {...OEM_EAS.intro} number="07" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader

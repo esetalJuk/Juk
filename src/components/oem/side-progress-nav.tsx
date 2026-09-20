@@ -2,15 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { OEM_SOLUTION_LINES } from "@/lib/oem-content";
-import { ACCENT_TEXT_CLASS } from "@/components/oem/section-zone";
 
-const BORDER_ACTIVE_CLASS: Record<string, string> = {
-  "azul-primario": "border-azul-primario",
-  "verde-acento": "border-verde-acento",
-  "azul-corporativo": "border-azul-primario",
-};
-
-/** Persistent left sidebar with every section always visible — no hover required. */
+/**
+ * Persistent left sidebar with every section always visible — no hover required.
+ * Green is reserved for this "you are here" indicator only; it never appears as
+ * decorative text elsewhere on the page.
+ */
 export function SideProgressNav() {
   const [active, setActive] = useState<string>(OEM_SOLUTION_LINES[0].slug);
 
@@ -54,7 +51,7 @@ export function SideProgressNav() {
               aria-current={isActive ? "true" : undefined}
               className={`flex items-start gap-2.5 border-l-2 py-1.5 pl-[13px] pr-2 transition-colors duration-300 ${
                 isActive
-                  ? `${BORDER_ACTIVE_CLASS[line.accent]} ${ACCENT_TEXT_CLASS[line.accent]}`
+                  ? "border-verde-acento text-verde-acento"
                   : "border-white/10 text-ink-muted hover:border-white/30 hover:text-white"
               }`}
             >

@@ -17,6 +17,12 @@ export function SolutionGrid() {
         <a
           key={line.slug}
           href={`#${line.slug}`}
+          onClick={(event) => {
+            event.preventDefault();
+            document
+              .getElementById(line.slug)
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
           data-reveal-item
           className="group relative flex flex-col justify-between gap-8 bg-tinta-raised p-7 transition-colors duration-300 hover:bg-tinta-card sm:p-8"
         >
