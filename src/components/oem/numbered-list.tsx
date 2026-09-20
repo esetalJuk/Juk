@@ -21,7 +21,7 @@ export function NumberedList({ items }: { items: Item[] }) {
             {item.icon && (
               <Icon
                 name={item.icon}
-                className="h-4 w-4 text-verde-acento opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="h-4 w-4 text-azul-primario opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               />
             )}
           </span>

@@ -70,7 +70,7 @@ export function SolutionIntro({
           sizes="(min-width: 1024px) 38vw, 100vw"
         />
         {imageCredit && (
-          <span className="absolute bottom-3 right-3 rounded bg-black/50 px-2 py-1 text-[10px] text-white/70">
+          <span className="absolute bottom-3 right-3 rounded bg-black/50 px-2 py-1 text-[10px] text-[#fff]/70">
             {imageCredit}
           </span>
         )}

@@ -48,7 +48,7 @@ export default function OemElectronicaPage() {
 
         <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-verde-acento">
+            <p className="eyebrow text-white">
               {OEM_ENTORNO_INTRO.eyebrow}
             </p>
             <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
@@ -135,7 +135,7 @@ export default function OemElectronicaPage() {
             />
             <ProductCards products={OEM_SEGURIDAD.mecanicas.products} />
             <Reveal className="mt-6">
-              <p className="font-display text-xl text-verde-acento sm:text-2xl">
+              <p className="font-display text-xl text-azul-primario sm:text-2xl">
                 {OEM_SEGURIDAD.mecanicas.closing}
               </p>
             </Reveal>
@@ -210,7 +210,7 @@ export default function OemElectronicaPage() {
               columns={2}
             />
             <Reveal className="mt-6">
-              <p className="font-display text-xl text-verde-acento sm:text-2xl">
+              <p className="font-display text-xl text-azul-primario sm:text-2xl">
                 {OEM_INTERACCION.intro.closing}
               </p>
             </Reveal>
@@ -257,7 +257,7 @@ export default function OemElectronicaPage() {
                       >
                         <Icon
                           name={item.icon}
-                          className="mt-1 h-5 w-5 shrink-0 text-verde-acento transition-transform duration-300 group-hover:scale-110"
+                          className="mt-1 h-5 w-5 shrink-0 text-azul-primario transition-transform duration-300 group-hover:scale-110"
                         />
                         <div>
                           <h3 className="font-display text-base">
@@ -298,13 +298,15 @@ export default function OemElectronicaPage() {
                 >
                   <Icon
                     name={feature.icon}
-                    className={`h-6 w-6 transition-transform duration-300 group-hover:scale-110 ${feature.highlight ? "text-white" : "text-verde-acento"}`}
+                    className={`h-6 w-6 transition-transform duration-300 group-hover:scale-110 ${feature.highlight ? "text-[#fff]" : "text-azul-primario"}`}
                   />
-                  <h3 className="font-display mt-4 text-lg leading-tight">
+                  <h3
+                    className={`font-display mt-4 text-lg leading-tight ${feature.highlight ? "text-[#fff]" : ""}`}
+                  >
                     {feature.title}
                   </h3>
                   <p
-                    className={`mt-2 text-sm ${feature.highlight ? "text-white/85" : "text-ink-muted"}`}
+                    className={`mt-2 text-sm ${feature.highlight ? "text-[#fff]/85" : "text-ink-muted"}`}
                   >
                     {feature.body}
                   </p>
@@ -382,7 +384,7 @@ export default function OemElectronicaPage() {
                   data-reveal-item
                   className="bg-tinta-card px-6 py-5 text-center"
                 >
-                  <p className="font-display text-2xl text-verde-acento">
+                  <p className="font-display text-2xl text-azul-primario">
                     {spec.value}
                   </p>
                   <p className="text-xs text-ink-muted">{spec.note}</p>

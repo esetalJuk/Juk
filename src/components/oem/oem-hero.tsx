@@ -53,7 +53,7 @@ export function OemHero() {
         }}
       />
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8">
-        <p data-hero-item className="eyebrow text-verde-acento">
+        <p data-hero-item className="eyebrow text-white">
           {OEM_HERO.eyebrow}
         </p>
         <h1
@@ -64,7 +64,7 @@ export function OemHero() {
         </h1>
         <p
           data-hero-item
-          className="font-display mt-6 max-w-xl text-xl normal-case tracking-normal text-verde-acento sm:text-2xl"
+          className="font-display mt-6 max-w-xl text-xl normal-case tracking-normal text-azul-primario sm:text-2xl"
         >
           {OEM_HERO.hook}
         </p>

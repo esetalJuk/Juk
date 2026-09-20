@@ -140,6 +140,25 @@ li {
   text-wrap: balance;
 }
 
+/* Light section variant (OEM page): flips the dark-theme tokens that every
+   shared card/feature component reads, so a section can go full white
+   without touching each component that renders inside it. */
+.zone-light {
+  --color-white: #0a1420;
+  --color-tinta: #ffffff;
+  --color-tinta-raised: #eef1f5;
+  --color-tinta-card: #e3e8ee;
+  --color-line: rgba(10, 20, 32, 0.12);
+  --color-line-strong: rgba(10, 20, 32, 0.22);
+  --color-ink-muted: rgba(10, 20, 32, 0.68);
+  --color-ink-faint: rgba(10, 20, 32, 0.48);
+  /* Re-anchors inherited text color at this scope: elements with no
+     explicit text-* class (most headings) otherwise keep inheriting
+     the dark-theme white resolved higher up the tree. */
+  color: var(--color-white);
+  color-scheme: light;
+}
+
 @keyframes modal-in {
   from {
     opacity: 0;

@@ -7,7 +7,7 @@ export function OemClosing() {
   return (
     <Section className="py-16 sm:py-20">
       <Reveal className="max-w-2xl">
-        <p className="eyebrow text-verde-acento">{OEM_CLOSING.eyebrow}</p>
+        <p className="eyebrow text-white">{OEM_CLOSING.eyebrow}</p>
         <h2 className="font-display mt-4 text-3xl sm:text-4xl">
           {OEM_CLOSING.title}
         </h2>
@@ -18,7 +18,7 @@ export function OemClosing() {
       </div>
 
       <Reveal className="mt-8">
-        <p className="font-display text-2xl text-verde-acento sm:text-3xl">
+        <p className="font-display text-2xl text-azul-primario sm:text-3xl">
           {OEM_CLOSING.closing}
         </p>
       </Reveal>
