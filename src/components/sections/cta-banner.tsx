@@ -30,8 +30,7 @@ export function CtaBanner({
           className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-azul-primario/20 blur-3xl"
         />
         <div className="relative max-w-2xl">
-          <p className="eyebrow text-verde-acento">Siguiente paso</p>
-          <h2 className="font-display text-balance mt-4 text-4xl sm:text-5xl">
+          <h2 className="font-display text-balance text-4xl sm:text-5xl">
             {title}
           </h2>
           <p className="mt-5 font-body text-base normal-case tracking-normal text-ink-muted">

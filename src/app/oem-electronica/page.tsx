@@ -14,7 +14,6 @@ import { ProductCards } from "@/components/oem/product-cards";
 import { FeatureGrid } from "@/components/oem/feature-grid";
 import { ImageFeatureSplit } from "@/components/oem/image-feature-split";
 import { NumberedList } from "@/components/oem/numbered-list";
-import { SectionNextLink } from "@/components/oem/section-next-link";
 import { ComparisonSplit } from "@/components/oem/comparison-split";
 import { ProcessSteps } from "@/components/oem/process-steps";
 import { OemClosing } from "@/components/oem/closing";
@@ -148,7 +147,6 @@ export default function OemElectronicaPage() {
             />
             <NumberedList items={OEM_SEGURIDAD.implementa.items} />
           </Section>
-          <SectionNextLink afterSlug="seguridad" />
         </SectionZone>
 
         {/* 02 — Digital Signage */}
@@ -195,7 +193,6 @@ export default function OemElectronicaPage() {
             />
             <FeatureGrid features={OEM_SIGNAGE.vivitag.features} columns={4} />
           </Section>
-          <SectionNextLink afterSlug="signage" />
         </SectionZone>
 
         {/* 03 — Interacción en el punto de venta */}
@@ -230,7 +227,6 @@ export default function OemElectronicaPage() {
               </p>
             </Reveal>
           </Section>
-          <SectionNextLink afterSlug="interaccion" />
         </SectionZone>
 
         {/* 04 — Inteligencia artificial */}
@@ -341,7 +337,6 @@ export default function OemElectronicaPage() {
             />
             <FeatureGrid features={OEM_IA.aplicaciones.features} columns={4} />
           </Section>
-          <SectionNextLink afterSlug="ia" />
         </SectionZone>
 
         {/* 05 — Cerraduras electrónicas */}
@@ -359,7 +354,6 @@ export default function OemElectronicaPage() {
               columns={3}
             />
           </Section>
-          <SectionNextLink afterSlug="cerraduras" />
         </SectionZone>
 
         {/* 06 — Etiquetas ESL */}
@@ -392,7 +386,6 @@ export default function OemElectronicaPage() {
               ))}
             </Reveal>
           </Section>
-          <SectionNextLink afterSlug="esl" />
         </SectionZone>
 
         {/* 07 — Antenas EAS */}
@@ -420,7 +413,6 @@ export default function OemElectronicaPage() {
             />
             <ProductCards products={OEM_EAS.consumibles.products} />
           </Section>
-          <SectionNextLink afterSlug="eas" />
         </SectionZone>
 
         <Section className="py-16 sm:py-20">
