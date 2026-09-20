@@ -2,7 +2,6 @@
 
 import Link, { type LinkProps } from "next/link";
 import { type ComponentPropsWithoutRef } from "react";
-import { useMagnetic } from "@/hooks/use-magnetic";
 
 type Variant = "primary" | "secondary" | "ghost";
 
@@ -24,10 +23,8 @@ export function CtaLink({
   children,
   ...rest
 }: CtaLinkProps) {
-  const ref = useMagnetic<HTMLAnchorElement>(0.25);
   return (
     <Link
-      ref={ref}
       className={`eyebrow inline-flex items-center justify-center gap-2 px-7 py-4 transition-colors ${VARIANT_CLASS[variant]} ${className ?? ""}`}
       {...rest}
     >

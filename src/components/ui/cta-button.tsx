@@ -1,7 +1,6 @@
 "use client";
 
 import { type ButtonHTMLAttributes } from "react";
-import { useMagnetic } from "@/hooks/use-magnetic";
 
 type Variant = "primary" | "secondary" | "ghost";
 
@@ -22,10 +21,8 @@ export function CtaButton({
   children,
   ...rest
 }: CtaButtonProps) {
-  const ref = useMagnetic<HTMLButtonElement>(0.25);
   return (
     <button
-      ref={ref}
       type="button"
       className={`eyebrow inline-flex items-center justify-center gap-2 px-7 py-4 transition-colors ${VARIANT_CLASS[variant]} ${className ?? ""}`}
       {...rest}

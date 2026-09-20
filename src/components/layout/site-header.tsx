@@ -6,7 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PRIMARY_CTA_LABEL, getRetailFormats } from "@/lib/content";
 import { useContactModal } from "@/components/layout/contact-modal";
-import { useMagnetic } from "@/hooks/use-magnetic";
 
 const NAV_LINKS = [
   { href: "/retail", label: "Retail", withFormats: true },
@@ -31,7 +30,6 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const { openModal } = useContactModal();
-  const ctaRef = useMagnetic<HTMLButtonElement>(0.2);
   const retailFormats = getRetailFormats();
 
   useEffect(() => {
@@ -75,7 +73,6 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <button
-            ref={ctaRef}
             type="button"
             onClick={() => openModal("showroom")}
             className="eyebrow border border-azul-primario bg-azul-primario/10 px-5 py-3 text-white transition-colors hover:bg-azul-primario"

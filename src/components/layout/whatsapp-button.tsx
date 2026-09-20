@@ -1,17 +1,14 @@
 "use client";
 
 import { CONTACT_INFO } from "@/lib/content";
-import { useMagnetic } from "@/hooks/use-magnetic";
 
 export function WhatsAppButton() {
-  const ref = useMagnetic<HTMLAnchorElement>(0.25);
   const href = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(
     CONTACT_INFO.whatsappMessage,
   )}`;
 
   return (
     <a
-      ref={ref}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
