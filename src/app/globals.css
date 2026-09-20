@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+:root {
+  --color-tinta: #070d14;
+  --color-tinta-raised: #0d1622;
+  --color-tinta-card: #101b29;
+  --color-azul-corporativo: #004b8e;
+  --color-azul-primario: #0080df;
+  --color-verde-acento: #27d38c;
+  --color-white: #ffffff;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-strong: rgba(255, 255, 255, 0.18);
+  --color-ink-muted: rgba(255, 255, 255, 0.64);
+  --color-ink-faint: rgba(255, 255, 255, 0.42);
+}
+
+@theme inline {
+  --color-tinta: var(--color-tinta);
+  --color-tinta-raised: var(--color-tinta-raised);
+  --color-tinta-card: var(--color-tinta-card);
+  --color-azul-corporativo: var(--color-azul-corporativo);
+  --color-azul-primario: var(--color-azul-primario);
+  --color-verde-acento: var(--color-verde-acento);
+  --color-line: var(--color-line);
+  --color-line-strong: var(--color-line-strong);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-ink-faint: var(--color-ink-faint);
+
+  --font-display: var(--font-barlow-condensed);
+  --font-body: var(--font-barlow);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(39, 211, 140, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(39, 211, 140, 0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-tinta);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-tinta);
+  color: var(--color-white);
+  font-family: var(--font-body), "Barlow", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-azul-primario);
+  color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display), "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+}
+
+p,
+li {
+  line-height: 1.75;
+}
+
+/* La pleca: degradado de Tinta a Azul primario con línea de escaneo cada 8px,
+   siempre en el borde izquierdo de cada pieza (guía de marca, 01). */
+.pleca {
+  position: relative;
+}
+
+.pleca::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-tinta) 0%,
+    var(--color-azul-primario) 100%
+  );
+}
+
+.pleca::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0px,
+    rgba(255, 255, 255, 0.55) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+  mix-blend-mode: overlay;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-panel {
+  animation: modal-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-overlay {
+  animation: overlay-in 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
