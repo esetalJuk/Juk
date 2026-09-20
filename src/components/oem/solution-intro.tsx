@@ -39,7 +39,7 @@ export function SolutionIntro({
           </span>
         )}
         <span className={`relative block h-[3px] w-12 ${ACCENT_BAR_CLASS[accent]}`} />
-        <p className="eyebrow relative mt-5 text-white">{eyebrow}</p>
+        <p className="eyebrow relative mt-5 text-verde-acento">{eyebrow}</p>
         <h2 className="font-display text-balance relative mt-5 text-4xl sm:text-5xl">
           {title}
         </h2>
