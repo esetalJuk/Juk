@@ -12,94 +12,63 @@ export const OEM_HERO = {
 };
 
 export const OEM_SOLUTION_LINES = [
-  { number: "01", slug: "seguridad", label: "Seguridad para display", kicker: "Electrónicas · Mecánicas" },
-  { number: "02", slug: "signage", label: "Digital Signage", kicker: "Producto · Anaquel · Precio · Experiencias" },
-  { number: "03", slug: "interaccion", label: "Interacción en el punto de venta", kicker: "Táctil · Lift & Learn · Audio" },
-  { number: "04", slug: "ia", label: "Inteligencia artificial", kicker: "Tráfico · Comportamiento · Operación" },
-  { number: "05", slug: "cerraduras", label: "Cerraduras electrónicas", kicker: "RFID · Bluetooth · Trazabilidad" },
-  { number: "06", slug: "esl", label: "Etiquetas ESL", kicker: "Precio digital en anaquel" },
-  { number: "07", slug: "eas", label: "Antenas EAS", kicker: "Antenas · Consumibles" },
-];
-
-export const OEM_QUIENES_SOMOS = {
-  eyebrow: "01 / QUIÉNES SOMOS",
-  title: "El socio estratégico de tu exhibición inteligente",
-  body: "Convertimos espacios comerciales en entornos inteligentes, con datos para la toma de decisiones. Nuestras soluciones permiten que el cliente interactúe libremente con el dispositivo, manteniendo los más altos índices de seguridad.",
-  cards: [
-    {
-      icon: "user",
-      title: "Socio comercial estratégico",
-      body: "Acompañamos la estrategia de exhibición de principio a fin, como extensión del equipo de marca o retail.",
-    },
-    {
-      icon: "chart",
-      title: "Inteligencia de punto de venta",
-      body: "Cada exhibidor se convierte en fuente de información: tráfico, interacción y comportamiento del shopper.",
-    },
-    {
-      icon: "pin",
-      title: "Cobertura nacional",
-      body: "Instalación y soporte en todo México, con el mismo estándar de exhibición en cada punto de venta.",
-    },
-    {
-      icon: "headset",
-      title: "Contact center dedicado",
-      body: "Un equipo de atención exclusivo que resuelve diagnóstico, instalación y soporte sin fricción.",
-    },
-  ],
-  showrooms: "Showroom CDMX y Culiacán",
-  closing: "Un entorno integrado. Un socio que te acompaña en cada etapa.",
-};
-
-export const OEM_DATA_VALOR = {
-  eyebrow: "02 / DATA DE VALOR",
-  title: "La posibilidad de mercado en cada categoría",
-  intro:
-    "Cuánto se vende, a qué precio y en qué canal — cifras del mercado mexicano. Cuatro categorías que se exhiben, se prueban y se deciden frente al mostrador.",
-  headline: {
-    label: "Buen Fin 2025",
-    stat: "68%",
-    statBody: "de las compras del Buen Fin fueron presenciales",
-    note: "La temporada de mayor consumo de electrónicos en México se decide, sobre todo, en el piso de venta físico — justo donde vive la exhibición.",
-    facts: [
-      { label: "El Buen Fin", meta: "13–16 nov 2026", value: "$219,200M", valueNote: "en ventas, 2025" },
-      { label: "Hot Sale", meta: "25 may – 2 jun 2026", value: "$42,725M", valueNote: "100% en línea" },
-      { label: "Regreso a clases", meta: "Jul – Sep 2026", value: "Pico", valueNote: "en laptops, tablets y accesorios" },
-    ],
-    footnote: "El Buen Fin es el evento comercial más grande de México. Navidad y Black Friday cierran el año con telefonía premium y electrónicos.",
+  {
+    number: "01",
+    slug: "seguridad",
+    label: "Seguridad para display",
+    kicker: "Electrónicas · Mecánicas",
+    description: "Protege celulares, laptops y audio en exhibición sin bloquear la prueba del producto.",
+    accent: "azul-primario",
   },
-  categories: [
-    {
-      label: "Celulares",
-      stat1: "35M",
-      stat1Note: "Smartphones vendidos en México en 2025 (+7% anual).",
-      stat2: "64%",
-      stat2Note: "De las ventas en México es segmento de entrada — el producto más manipulado en piso.",
-    },
-    {
-      label: "Tabletas",
-      stat1: "60.3%",
-      stat1Note: "Del volumen de tabletas en México se vende en tienda física, no en línea.",
-      stat2: "Alta",
-      stat2Note: "Concentración de venta de laptops en regreso a clases y Buen Fin.",
-    },
-    {
-      label: "Smartwatch",
-      stat1: "$798M",
-      stat1Note: "USD, mercado mexicano de smartwatch en 2024.",
-      stat2: "17.07%",
-      stat2Note: "Crecimiento anual compuesto proyectado del mercado mexicano.",
-    },
-    {
-      label: "Audio",
-      stat1: "Alta",
-      stat1Note: "Rotación: el accesorio de mayor reposición en telefonía en México.",
-      stat2: "Por validar",
-      stat2Note: "Cifra de mercado mexicano de audio inalámbrico pendiente de fuente interna.",
-    },
-  ],
-  sources: "Fuentes: The CIU · IDC · Statista — mercado México",
-};
+  {
+    number: "02",
+    slug: "signage",
+    label: "Digital Signage",
+    kicker: "Producto · Anaquel · Precio · Experiencias",
+    description: "Convierte cada pantalla del punto de venta en un canal de marca controlado.",
+    accent: "verde-acento",
+  },
+  {
+    number: "03",
+    slug: "interaccion",
+    label: "Interacción en el punto de venta",
+    kicker: "Táctil · Lift & Learn · Audio",
+    description: "El producto se demuestra solo cuando el cliente lo toca, lo levanta o lo escucha.",
+    accent: "azul-corporativo",
+  },
+  {
+    number: "04",
+    slug: "ia",
+    label: "Inteligencia artificial",
+    kicker: "Tráfico · Comportamiento · Operación",
+    description: "Las cámaras que ya operan en tienda, convertidas en datos accionables de piso de venta.",
+    accent: "verde-acento",
+  },
+  {
+    number: "05",
+    slug: "cerraduras",
+    label: "Cerraduras electrónicas",
+    kicker: "RFID · Bluetooth · Trazabilidad",
+    description: "De llave física a acceso autorizado, con historial de uso en vitrinas y cajones.",
+    accent: "azul-primario",
+  },
+  {
+    number: "06",
+    slug: "esl",
+    label: "Etiquetas ESL",
+    kicker: "Precio digital en anaquel",
+    description: "El precio en exhibición coincide siempre con el de caja, en toda la red a la vez.",
+    accent: "azul-corporativo",
+  },
+  {
+    number: "07",
+    slug: "eas",
+    label: "Antenas EAS",
+    kicker: "Antenas · Consumibles",
+    description: "Detección en el acceso y monitoreo remoto de toda la red de tiendas.",
+    accent: "verde-acento",
+  },
+] as const;
 
 export const OEM_SEGURIDAD = {
   intro: {

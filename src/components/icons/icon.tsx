@@ -20,6 +20,7 @@ const PATHS: Record<string, string> = {
   key: "M15 7a4 4 0 1 0-4 4h.5L15 8.5V11h2.5V8.5H20V6h-2.6A4 4 0 0 0 15 7ZM7 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm4-4-6 6",
   camera: "M4 8h3l2-2h6l2 2h3v11H4V8Zm8 3a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z",
   cloud: "M7 18a4.5 4.5 0 0 1-1-8.9 5.5 5.5 0 0 1 10.8-1.6A4 4 0 0 1 17 18H7Z",
+  arrowRight: "M5 12h14M13 6l6 6-6 6",
 };
 
 export function Icon({
