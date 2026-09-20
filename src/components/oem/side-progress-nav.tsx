@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import { OEM_SOLUTION_LINES } from "@/lib/oem-content";
 import { ACCENT_TEXT_CLASS } from "@/components/oem/section-zone";
 
-const DOT_COLOR_CLASS: Record<string, string> = {
-  "azul-primario": "bg-azul-primario",
-  "verde-acento": "bg-verde-acento",
-  "azul-corporativo": "bg-azul-primario",
+const BORDER_ACTIVE_CLASS: Record<string, string> = {
+  "azul-primario": "border-azul-primario",
+  "verde-acento": "border-verde-acento",
+  "azul-corporativo": "border-azul-primario",
 };
 
+/** Persistent left sidebar with every section always visible — no hover required. */
 export function SideProgressNav() {
   const [active, setActive] = useState<string>(OEM_SOLUTION_LINES[0].slug);
 
@@ -34,41 +35,39 @@ export function SideProgressNav() {
   return (
     <nav
       aria-label="Navegación de secciones"
-      className="fixed left-6 top-1/2 z-30 hidden -translate-y-1/2 xl:flex xl:flex-col xl:gap-5"
+      className="fixed left-6 top-1/2 z-30 hidden w-52 -translate-y-1/2 xl:block"
     >
-      <div className="absolute left-[3px] top-1 bottom-1 w-px bg-white/10" aria-hidden="true" />
-      {OEM_SOLUTION_LINES.map((line) => {
-        const isActive = active === line.slug;
-        return (
-          <button
-            key={line.slug}
-            type="button"
-            onClick={() =>
-              document
-                .getElementById(line.slug)
-                ?.scrollIntoView({ behavior: "smooth", block: "start" })
-            }
-            aria-current={isActive ? "true" : undefined}
-            aria-label={line.label}
-            className="group relative flex items-center gap-3 py-0.5"
-          >
-            <span
-              className={`relative z-10 block h-[7px] w-[7px] rounded-full transition-all duration-300 ${
+      <p className="eyebrow mb-3 pl-4 text-ink-faint">Secciones</p>
+      <div className="flex flex-col gap-0.5">
+        {OEM_SOLUTION_LINES.map((line) => {
+          const isActive = active === line.slug;
+          return (
+            <a
+              key={line.slug}
+              href={`#${line.slug}`}
+              onClick={(event) => {
+                event.preventDefault();
+                document
+                  .getElementById(line.slug)
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              aria-current={isActive ? "true" : undefined}
+              className={`flex items-start gap-2.5 border-l-2 py-1.5 pl-[13px] pr-2 transition-colors duration-300 ${
                 isActive
-                  ? `scale-[1.7] ${DOT_COLOR_CLASS[line.accent]}`
-                  : "bg-white/25 group-hover:bg-white/60"
-              }`}
-            />
-            <span
-              className={`eyebrow whitespace-nowrap rounded-sm bg-tinta/90 px-2 py-1 normal-case tracking-normal opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 ${
-                isActive ? ACCENT_TEXT_CLASS[line.accent] : "-translate-x-1 text-ink-muted"
+                  ? `${BORDER_ACTIVE_CLASS[line.accent]} ${ACCENT_TEXT_CLASS[line.accent]}`
+                  : "border-white/10 text-ink-muted hover:border-white/30 hover:text-white"
               }`}
             >
-              {line.number} · {line.label}
-            </span>
-          </button>
-        );
-      })}
+              <span className="font-mono text-[10px] leading-[1.4] opacity-70">
+                {line.number}
+              </span>
+              <span className="eyebrow text-[11px] normal-case leading-[1.4] tracking-normal">
+                {line.label}
+              </span>
+            </a>
+          );
+        })}
+      </div>
     </nav>
   );
 }
