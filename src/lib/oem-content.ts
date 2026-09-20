@@ -11,11 +11,18 @@ export const OEM_HERO = {
     "Acompañamos tu operación de principio a fin: mejor experiencia de compra, menor pérdida y datos reales para decidir con confianza.",
 };
 
+export const OEM_ENTORNO_INTRO = {
+  eyebrow: "QUÉ COMPONE EL ENTORNO",
+  title: "Cada solución resuelve una dolencia del piso de venta",
+  body: "Dások cierra esa brecha: protege tu producto exhibido sin interferir con la experiencia del cliente, controla el mensaje que lo acompaña, mantiene el precio consistente en toda tu red y convierte cada exhibición en datos que comparas y accionas en tiempo real. Eso es un entorno inteligente.",
+};
+
 export const OEM_SOLUTION_LINES = [
   {
     number: "01",
     slug: "seguridad",
     label: "Seguridad para display",
+    icon: "shield",
     kicker: "Electrónicas · Mecánicas",
     description: "Protege celulares, laptops y audio en exhibición sin bloquear la prueba del producto.",
     accent: "azul-primario",
@@ -24,6 +31,7 @@ export const OEM_SOLUTION_LINES = [
     number: "02",
     slug: "signage",
     label: "Digital Signage",
+    icon: "device",
     kicker: "Producto · Anaquel · Precio · Experiencias",
     description: "Convierte cada pantalla del punto de venta en un canal de marca controlado.",
     accent: "verde-acento",
@@ -32,6 +40,7 @@ export const OEM_SOLUTION_LINES = [
     number: "03",
     slug: "interaccion",
     label: "Interacción en el punto de venta",
+    icon: "tap",
     kicker: "Táctil · Lift & Learn · Audio",
     description: "El producto se demuestra solo cuando el cliente lo toca, lo levanta o lo escucha.",
     accent: "azul-corporativo",
@@ -40,6 +49,7 @@ export const OEM_SOLUTION_LINES = [
     number: "04",
     slug: "ia",
     label: "Inteligencia artificial",
+    icon: "camera",
     kicker: "Tráfico · Comportamiento · Operación",
     description: "Las cámaras que ya operan en tienda, convertidas en datos accionables de piso de venta.",
     accent: "verde-acento",
@@ -48,6 +58,7 @@ export const OEM_SOLUTION_LINES = [
     number: "05",
     slug: "cerraduras",
     label: "Cerraduras electrónicas",
+    icon: "lock",
     kicker: "RFID · Bluetooth · Trazabilidad",
     description: "De llave física a acceso autorizado, con historial de uso en vitrinas y cajones.",
     accent: "azul-primario",
@@ -56,6 +67,7 @@ export const OEM_SOLUTION_LINES = [
     number: "06",
     slug: "esl",
     label: "Etiquetas ESL",
+    icon: "tag",
     kicker: "Precio digital en anaquel",
     description: "El precio en exhibición coincide siempre con el de caja, en toda la red a la vez.",
     accent: "azul-corporativo",
@@ -63,6 +75,7 @@ export const OEM_SOLUTION_LINES = [
   {
     number: "07",
     slug: "eas",
+    icon: "wifi",
     label: "Antenas EAS",
     kicker: "Antenas · Consumibles",
     description: "Detección en el acceso y monitoreo remoto de toda la red de tiendas.",
@@ -80,7 +93,7 @@ export const OEM_SEGURIDAD = {
     imageCredit: "Getty Images / SimpleImages",
   },
   celulares: {
-    eyebrow: "03 / ELECTRÓNICAS",
+    eyebrow: "ELECTRÓNICAS",
     title: "Celulares y tabletas",
     intro: "Nuestros sistemas para celulares son igualmente compatibles con tabletas: solo cambia la dimensión de los brackets, no la lógica de protección.",
     products: [
@@ -105,7 +118,7 @@ export const OEM_SEGURIDAD = {
     ],
   },
   autonomia: {
-    eyebrow: "03 / ELECTRÓNICAS",
+    eyebrow: "ELECTRÓNICAS",
     title: "Autonomía y exhibición sin cables",
     intro: "Cuando la exhibición opera sin corriente constante, o cuando no debe verse un solo cable sobre la mesa, cambia la unidad de energía, no el sistema.",
     products: [
@@ -124,7 +137,7 @@ export const OEM_SEGURIDAD = {
     ],
   },
   laptops: {
-    eyebrow: "03 / ELECTRÓNICAS",
+    eyebrow: "ELECTRÓNICAS",
     title: "Laptops",
     intro: "Una sola plataforma de protección para todo el portafolio de equipos de cómputo en exhibición, sin una solución distinta para cada modelo.",
     image: "/oem/laptops.jpg",
@@ -136,7 +149,7 @@ export const OEM_SEGURIDAD = {
     ],
   },
   audio: {
-    eyebrow: "03 / ELECTRÓNICAS",
+    eyebrow: "ELECTRÓNICAS",
     title: "Audio y producto pequeño",
     intro: "Producto de alto valor y alta manipulación: cada formato exige un tipo de protección distinto, sin bloquear la prueba del producto.",
     products: [
@@ -161,7 +174,7 @@ export const OEM_SEGURIDAD = {
     ],
   },
   wearables: {
-    eyebrow: "03 / ELECTRÓNICAS",
+    eyebrow: "ELECTRÓNICAS",
     title: "Wearables y exhibición multi-dispositivo",
     intro: "Del reloj individual a la mesa de uso mixto, con sensores y membranas específicos para cada formato.",
     products: [
@@ -180,7 +193,7 @@ export const OEM_SEGURIDAD = {
     ],
   },
   mecanicas: {
-    eyebrow: "03 / MECÁNICAS",
+    eyebrow: "MECÁNICAS",
     title: "Robusta, adaptable y libre de mantenimiento",
     intro: "Protección de alta seguridad para celulares, tabletas y laptops. Se ancla a la mesa o se fija con adhesivo de máxima seguridad, y no requiere consumibles ni mantenimiento.",
     products: [
@@ -206,7 +219,7 @@ export const OEM_SEGURIDAD = {
     closing: "Todos los modelos son universales: cualquier celular, tableta, smartwatch o laptop, sin importar marca ni tamaño.",
   },
   implementa: {
-    eyebrow: "03 / SEGURIDAD PARA DISPLAY",
+    eyebrow: "SEGURIDAD PARA DISPLAY",
     title: "Lo que deja implementar esta solución",
     items: [
       { number: "01", title: "Un estándar consistente", body: "El mismo nivel de protección y experiencia en cada tienda, sin importar quién la opere ni qué mueble use." },
@@ -228,7 +241,7 @@ export const OEM_SIGNAGE = {
     imageCredit: "Getty Images / Vladimir Fedorov",
   },
   donde: {
-    eyebrow: "04 / DIGITAL SIGNAGE",
+    eyebrow: "DIGITAL SIGNAGE",
     title: "Dónde vive el contenido",
     intro: "Tres superficies distintas, un mismo sistema de contenido y control.",
     products: [
@@ -250,7 +263,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   control: {
-    eyebrow: "04 / DIGITAL SIGNAGE",
+    eyebrow: "DIGITAL SIGNAGE",
     title: "Cómo se controla",
     intro: "Una sola plataforma decide qué aparece en cada pantalla de la red, sin intervención manual en cada tienda.",
     features: [
@@ -261,7 +274,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   pricingApp: {
-    eyebrow: "04 / DIGITAL SIGNAGE",
+    eyebrow: "DIGITAL SIGNAGE",
     title: "Digital Pricing App: el precio, siempre correcto",
     intro: "Convierte el mismo celular o tableta en exhibición en una etiqueta de precio digital interactiva, eliminando por completo la tarjeta de precio impresa.",
     image: "/oem/pricing-app.jpg",
@@ -274,7 +287,7 @@ export const OEM_SIGNAGE = {
     footnote: "Acceso inmediato a la información del equipo y del plan, para resolver dudas sin tiempos de espera.",
   },
   vivitag: {
-    eyebrow: "04 / DIGITAL SIGNAGE",
+    eyebrow: "DIGITAL SIGNAGE",
     title: "Pantalla Vivitag",
     intro: "Mini pantallas táctiles instaladas directamente en el anaquel, junto al producto — más allá del precio, un espacio de marca propio.",
     features: [
@@ -306,7 +319,7 @@ export const OEM_INTERACCION = {
     image: "/oem/interaccion-hero.jpg",
   },
   formas: {
-    eyebrow: "05 / INTERACCIÓN",
+    eyebrow: "INTERACCIÓN",
     title: "Tres formas de que el producto se demuestre solo",
     products: [
       {
@@ -342,7 +355,7 @@ export const OEM_IA = {
     darkIllustration: true,
   },
   implementa: {
-    eyebrow: "06 / INTELIGENCIA ARTIFICIAL",
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
     title: "Cómo se implementa y cómo escala",
     intro: "Sin cámaras nuevas, sin infraestructura local y sin inversión extra en hardware.",
     columns: [
@@ -365,7 +378,7 @@ export const OEM_IA = {
     ],
   },
   funciones: {
-    eyebrow: "06 / INTELIGENCIA ARTIFICIAL",
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
     title: "Funciones principales",
     intro: "Lo que la plataforma observa y reporta del piso de venta, con el detalle necesario para decidir con evidencia.",
     features: [
@@ -382,7 +395,7 @@ export const OEM_IA = {
     ]},
   },
   aplicaciones: {
-    eyebrow: "06 / INTELIGENCIA ARTIFICIAL",
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
     title: "Aplicaciones para el negocio",
     intro: "Cuatro decisiones que dejan de tomarse por intuición cuando el dato del piso de venta está disponible.",
     features: [
@@ -404,7 +417,7 @@ export const OEM_CERRADURAS = {
     darkIllustration: true,
   },
   control: {
-    eyebrow: "07 / CERRADURAS ELECTRÓNICAS",
+    eyebrow: "CERRADURAS ELECTRÓNICAS",
     title: "El control de acceso, con trazabilidad",
     intro: "De un esquema manual y poco auditable a un modelo con usuarios autorizados, historial y menor exposición a merma — sin modificar el mueble existente.",
     features: [
@@ -426,7 +439,7 @@ export const OEM_ESL = {
     image: "/oem/esl-hero.jpg",
   },
   detalle: {
-    eyebrow: "08 / ETIQUETAS ESL",
+    eyebrow: "ETIQUETAS ESL",
     title: "Precio correcto en cada anaquel",
     intro: "Un mismo cambio de precio se ejecuta en toda la red, sin recorrer mueble por mueble.",
     features: [
@@ -454,7 +467,7 @@ export const OEM_EAS = {
     image: "/oem/eas-hero.jpg",
   },
   resuelve: {
-    eyebrow: "09 / ANTENAS EAS",
+    eyebrow: "ANTENAS EAS",
     title: "Lo que resuelve el sistema en la salida",
     intro: "Detección en el acceso, reconocimiento de reincidentes y monitoreo remoto de toda la red.",
     image: "/oem/eas-resuelve.jpg",
@@ -466,7 +479,7 @@ export const OEM_EAS = {
     ],
   },
   consumibles: {
-    eyebrow: "08 / CONSUMIBLES EAS",
+    eyebrow: "CONSUMIBLES EAS",
     title: "El accesorio también es objetivo de robo",
     intro: "Etiquetas duras reutilizables (más de 40 formatos), etiquetas suaves adhesivas de un solo uso y sistemas de cable y spider wrap para empaques irregulares o de mayor tamaño.",
     products: [
