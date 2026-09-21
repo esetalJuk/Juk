@@ -10,6 +10,7 @@ import { OEM_SOLUTION_LINES } from "@/lib/oem-content";
  */
 export function SideProgressNav() {
   const [active, setActive] = useState<string>(OEM_SOLUTION_LINES[0].slug);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const elements = OEM_SOLUTION_LINES.map((line) =>
@@ -29,10 +30,45 @@ export function SideProgressNav() {
     return () => observer.disconnect();
   }, []);
 
+  // Stays hidden through the hero; only appears once scroll has carried the
+  // "Qué compone el entorno" section up near the header (and hides again
+  // above that point). Tracked on scroll rather than IntersectionObserver
+  // since we need the exact pixel position, not just a visibility ratio.
+  useEffect(() => {
+    const entorno = document.getElementById("entorno");
+    if (!entorno) return;
+
+    const HEADER_OFFSET = 80;
+    let ticking = false;
+
+    const check = () => {
+      setVisible(entorno.getBoundingClientRect().top <= HEADER_OFFSET);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(check);
+    };
+
+    check();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
   return (
     <nav
       aria-label="Navegación de secciones"
-      className="fixed left-6 top-1/2 z-30 hidden w-52 -translate-y-1/2 xl:block"
+      className={`fixed left-6 top-1/2 z-30 hidden w-52 -translate-y-1/2 transition-all duration-500 xl:block ${
+        visible
+          ? "opacity-100"
+          : "pointer-events-none -translate-x-4 opacity-0"
+      }`}
     >
       <p className="eyebrow mb-3 pl-4 text-ink-faint">Secciones</p>
       <div className="flex flex-col gap-0.5">

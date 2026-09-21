@@ -41,10 +41,9 @@ export const metadata: Metadata = {
 export default function OemElectronicaPage() {
   return (
     <>
+      <OemHero />
       <SideProgressNav />
       <div className="xl:pl-72">
-        <OemHero />
-
         <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-white">{OEM_ENTORNO_INTRO.eyebrow}</p>
