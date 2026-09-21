@@ -502,29 +502,6 @@ export const OEM_EAS = {
   },
 };
 
-export const OEM_COMPARISON = {
-  eyebrow: "POR QUÉ OPERAR INTEGRADO",
-  title: "Un entorno integrado, no cinco contratos por separado",
-  fragmented: {
-    label: "Operación fragmentada",
-    items: [
-      "Un contrato distinto por línea: seguridad, pantallas, etiquetas, cerraduras, datos.",
-      "Facturas y tiempos de respuesta distintos en cada frente.",
-      "Cada exhibición se ejecuta con un criterio distinto.",
-      "Datos aislados por sistema: nada comparable entre sí.",
-    ],
-  },
-  integrated: {
-    label: "Dások All Solutions",
-    items: [
-      "Seguridad, exhibición, comunicación, precio y datos operan bajo el mismo estándar.",
-      "Un contrato, una factura y un equipo de soporte con call center dedicado.",
-      "Un estándar de exhibición replicable en toda tu red.",
-      "Métricas comparables de toda tu red en una sola vista.",
-    ],
-  },
-};
-
 export const OEM_PROCESS = {
   eyebrow: "CÓMO ENTRA EN OPERACIÓN",
   title: "De un piloto medible a toda tu red",

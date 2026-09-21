@@ -14,7 +14,6 @@ import { ProductCards } from "@/components/oem/product-cards";
 import { FeatureGrid } from "@/components/oem/feature-grid";
 import { ImageFeatureSplit } from "@/components/oem/image-feature-split";
 import { NumberedList } from "@/components/oem/numbered-list";
-import { ComparisonSplit } from "@/components/oem/comparison-split";
 import { ProcessSteps } from "@/components/oem/process-steps";
 import { OemClosing } from "@/components/oem/closing";
 
@@ -28,7 +27,6 @@ import {
   OEM_CERRADURAS,
   OEM_ESL,
   OEM_EAS,
-  OEM_COMPARISON,
   OEM_PROCESS,
 } from "@/lib/oem-content";
 
@@ -414,14 +412,6 @@ export default function OemElectronicaPage() {
 
         <Section className="py-16 sm:py-20">
           <SectionHeader
-            eyebrow={OEM_COMPARISON.eyebrow}
-            title={OEM_COMPARISON.title}
-          />
-          <ComparisonSplit />
-        </Section>
-
-        <Section className="py-16 sm:py-20">
-          <SectionHeader
             eyebrow={OEM_PROCESS.eyebrow}
             title={OEM_PROCESS.title}
           />
@@ -429,6 +419,8 @@ export default function OemElectronicaPage() {
         </Section>
 
         <OemClosing />
+      </div>
+      <div id="ver-para-decidir">
         <CtaBanner
           title="Ver para decidir, antes de comprometer presupuesto"
           body="Prueba la exhibición segura, el Digital Signage y las etiquetas ESL en un entorno real. Agenda tu visita al showroom CDMX o Culiacán."

@@ -30,19 +30,23 @@ export function SideProgressNav() {
     return () => observer.disconnect();
   }, []);
 
-  // Stays hidden through the hero; only appears once scroll has carried the
-  // "Qué compone el entorno" section up near the header (and hides again
-  // above that point). Tracked on scroll rather than IntersectionObserver
-  // since we need the exact pixel position, not just a visibility ratio.
+  // Stays hidden through the hero; appears once scroll has carried "Qué
+  // compone el entorno" up near the header, and hides again once "Ver para
+  // decidir" reaches that same point (or if scrolled back above entorno).
+  // Tracked on scroll rather than IntersectionObserver since we need the
+  // exact pixel position, not just a visibility ratio.
   useEffect(() => {
     const entorno = document.getElementById("entorno");
-    if (!entorno) return;
+    const outro = document.getElementById("ver-para-decidir");
+    if (!entorno || !outro) return;
 
     const HEADER_OFFSET = 80;
     let ticking = false;
 
     const check = () => {
-      setVisible(entorno.getBoundingClientRect().top <= HEADER_OFFSET);
+      const pastEntorno = entorno.getBoundingClientRect().top <= HEADER_OFFSET;
+      const pastOutro = outro.getBoundingClientRect().top <= HEADER_OFFSET;
+      setVisible(pastEntorno && !pastOutro);
       ticking = false;
     };
 
@@ -70,8 +74,8 @@ export function SideProgressNav() {
           : "pointer-events-none -translate-x-4 opacity-0"
       }`}
     >
-      <p className="eyebrow mb-3 pl-4 text-ink-faint">Secciones</p>
-      <div className="flex flex-col gap-0.5">
+      <p className="eyebrow mb-4 pl-4 text-ink-faint">Secciones</p>
+      <div className="flex flex-col gap-3">
         {OEM_SOLUTION_LINES.map((line) => {
           const isActive = active === line.slug;
           return (
@@ -85,7 +89,7 @@ export function SideProgressNav() {
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
               aria-current={isActive ? "true" : undefined}
-              className={`flex items-start gap-2.5 border-l-2 py-1.5 pl-[13px] pr-2 transition-colors duration-300 ${
+              className={`flex items-start gap-2.5 border-l-2 py-2 pl-[13px] pr-2 transition-colors duration-300 ${
                 isActive
                   ? "border-verde-acento text-verde-acento"
                   : "border-white/10 text-ink-muted hover:border-white/30 hover:text-white"
