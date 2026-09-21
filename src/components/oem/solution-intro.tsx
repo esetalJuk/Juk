@@ -4,11 +4,9 @@ import Image from "next/image";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useSectionAccent } from "@/components/oem/section-accent-context";
 import { ACCENT_BAR_CLASS, ACCENT_TEXT_CLASS } from "@/components/oem/section-zone";
-import { SectionScene, type SceneVariant } from "@/components/oem/section-scene";
 
 export function SolutionIntro({
   number,
-  scene,
   eyebrow,
   title,
   tags,
@@ -18,7 +16,6 @@ export function SolutionIntro({
   fit = "cover",
 }: {
   number?: string;
-  scene?: SceneVariant;
   eyebrow: string;
   title: string;
   tags?: string[];
@@ -33,7 +30,6 @@ export function SolutionIntro({
   return (
     <div ref={ref} className="grid border-b border-line/60 lg:grid-cols-2">
       <div className="relative flex flex-col justify-center overflow-hidden px-6 py-16 sm:px-10 lg:py-24">
-        {scene && <SectionScene variant={scene} />}
         {number && (
           <span
             aria-hidden="true"

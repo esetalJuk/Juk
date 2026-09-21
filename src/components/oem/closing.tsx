@@ -18,7 +18,7 @@ export function OemClosing() {
       </div>
 
       <Reveal className="mt-8">
-        <p className="font-display text-2xl text-azul-primario sm:text-3xl">
+        <p className="font-display text-2xl text-verde-acento sm:text-3xl">
           {OEM_CLOSING.closing}
         </p>
       </Reveal>

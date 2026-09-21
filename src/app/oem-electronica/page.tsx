@@ -47,9 +47,7 @@ export default function OemElectronicaPage() {
 
         <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-white">
-              {OEM_ENTORNO_INTRO.eyebrow}
-            </p>
+            <p className="eyebrow text-white">{OEM_ENTORNO_INTRO.eyebrow}</p>
             <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
               {OEM_ENTORNO_INTRO.title}
             </h2>
@@ -69,7 +67,7 @@ export default function OemElectronicaPage() {
 
         {/* 01 — Seguridad para display */}
         <SectionZone id="seguridad" accent="azul-primario">
-          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" scene="radar" />
+          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -134,7 +132,7 @@ export default function OemElectronicaPage() {
             />
             <ProductCards products={OEM_SEGURIDAD.mecanicas.products} />
             <Reveal className="mt-6">
-              <p className="font-display text-xl text-azul-primario sm:text-2xl">
+              <p className="font-display text-xl text-verde-acento sm:text-2xl">
                 {OEM_SEGURIDAD.mecanicas.closing}
               </p>
             </Reveal>
@@ -151,7 +149,7 @@ export default function OemElectronicaPage() {
 
         {/* 02 — Digital Signage */}
         <SectionZone id="signage" accent="verde-acento">
-          <SolutionIntro {...OEM_SIGNAGE.intro} number="02" scene="signage" />
+          <SolutionIntro {...OEM_SIGNAGE.intro} number="02" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -207,17 +205,13 @@ export default function OemElectronicaPage() {
               columns={2}
             />
             <Reveal className="mt-6">
-              <p className="font-display text-xl text-azul-primario sm:text-2xl">
+              <p className="font-display text-xl text-verde-acento sm:text-2xl">
                 {OEM_INTERACCION.intro.closing}
               </p>
             </Reveal>
           </Section>
 
-          <SolutionIntro
-            {...OEM_INTERACCION.productoResponde}
-            number="03"
-            scene="ripple"
-          />
+          <SolutionIntro {...OEM_INTERACCION.productoResponde} number="03" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -226,7 +220,7 @@ export default function OemElectronicaPage() {
             />
             <ProductCards products={OEM_INTERACCION.formas.products} />
             <Reveal className="mt-6">
-              <p className="max-w-2xl font-display text-xl leading-snug sm:text-2xl">
+              <p className="max-w-2xl font-display text-xl leading-snug text-verde-acento sm:text-2xl">
                 {OEM_INTERACCION.formas.closing}
               </p>
             </Reveal>
@@ -235,12 +229,7 @@ export default function OemElectronicaPage() {
 
         {/* 04 — Inteligencia artificial */}
         <SectionZone id="ia" accent="verde-acento">
-          <SolutionIntro
-            {...OEM_IA.intro}
-            number="04"
-            scene="scan"
-            fit="contain"
-          />
+          <SolutionIntro {...OEM_IA.intro} number="04" fit="contain" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -327,7 +316,7 @@ export default function OemElectronicaPage() {
                 <div className="mt-4 flex gap-6">
                   {OEM_IA.funciones.stat.items.map((item) => (
                     <div key={item.note}>
-                      <p className="font-display text-2xl text-azul-primario">
+                      <p className="font-display text-2xl text-verde-acento">
                         {item.value}
                       </p>
                       <p className="text-xs text-ink-muted">{item.note}</p>
@@ -350,12 +339,7 @@ export default function OemElectronicaPage() {
 
         {/* 05 — Cerraduras electrónicas */}
         <SectionZone id="cerraduras" accent="azul-primario">
-          <SolutionIntro
-            {...OEM_CERRADURAS.intro}
-            number="05"
-            scene="orbit"
-            fit="contain"
-          />
+          <SolutionIntro {...OEM_CERRADURAS.intro} number="05" fit="contain" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -372,7 +356,7 @@ export default function OemElectronicaPage() {
 
         {/* 06 — Etiquetas ESL */}
         <SectionZone id="esl" accent="azul-corporativo">
-          <SolutionIntro {...OEM_ESL.intro} number="06" scene="matrix" />
+          <SolutionIntro {...OEM_ESL.intro} number="06" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
@@ -392,7 +376,7 @@ export default function OemElectronicaPage() {
                   data-reveal-item
                   className="bg-tinta-card px-6 py-5 text-center"
                 >
-                  <p className="font-display text-2xl text-azul-primario">
+                  <p className="font-display text-2xl text-verde-acento">
                     {spec.value}
                   </p>
                   <p className="text-xs text-ink-muted">{spec.note}</p>
@@ -404,7 +388,7 @@ export default function OemElectronicaPage() {
 
         {/* 07 — Antenas EAS */}
         <SectionZone id="eas" accent="verde-acento">
-          <SolutionIntro {...OEM_EAS.intro} number="07" scene="wave" />
+          <SolutionIntro {...OEM_EAS.intro} number="07" />
 
           <Section className="py-16 sm:py-20">
             <SectionHeader
