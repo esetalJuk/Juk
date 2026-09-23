@@ -31,12 +31,11 @@ export function SideProgressNav() {
   }, []);
 
   // Stays hidden through the hero; appears once scroll has carried "Qué
-  // compone el entorno" up near the header, and hides again once the
-  // "Cierre" section's own bottom edge has scrolled past the nav's
-  // vertical center — before "Ver para decidir" reaches that height —
-  // so the two never overlap. Tracked on scroll rather than
-  // IntersectionObserver since we need the exact pixel position, not
-  // just a visibility ratio.
+  // compone el entorno" up near the header, and hides again as soon as
+  // the "Cierre" section itself is reached (its own top crossing that
+  // same header line) — the nav is gone before "Ver para decidir" ever
+  // comes into view. Tracked on scroll rather than IntersectionObserver
+  // since we need the exact pixel position, not just a visibility ratio.
   useEffect(() => {
     const entorno = document.getElementById("entorno");
     const cierre = document.getElementById("cierre");
@@ -47,9 +46,8 @@ export function SideProgressNav() {
 
     const check = () => {
       const pastEntorno = entorno.getBoundingClientRect().top <= HEADER_OFFSET;
-      const pastCierre =
-        cierre.getBoundingClientRect().bottom <= window.innerHeight / 2;
-      setVisible(pastEntorno && !pastCierre);
+      const pastCierreStart = cierre.getBoundingClientRect().top <= HEADER_OFFSET;
+      setVisible(pastEntorno && !pastCierreStart);
       ticking = false;
     };
 
