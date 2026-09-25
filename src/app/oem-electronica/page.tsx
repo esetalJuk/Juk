@@ -15,7 +15,6 @@ import { ProductCards } from "@/components/oem/product-cards";
 import { FeatureGrid } from "@/components/oem/feature-grid";
 import { ProductTable } from "@/components/oem/product-table";
 import { ProcessSteps } from "@/components/oem/process-steps";
-import { ResourceGrid } from "@/components/oem/resource-grid";
 import { Faq } from "@/components/oem/faq";
 
 import {
@@ -31,7 +30,6 @@ import {
   OEM_ESL,
   OEM_EAS,
   OEM_PROCESS,
-  OEM_RECURSOS,
   OEM_FAQ,
   OEM_CIERRE,
 } from "@/lib/oem-content";
@@ -295,15 +293,6 @@ export default function OemElectronicaPage() {
           />
           <ProcessSteps />
           <p className="mt-8 text-sm text-ink-faint">{OEM_PROCESS.note}</p>
-        </Section>
-
-        <Section className="py-12 sm:py-16">
-          <SectionHeader
-            eyebrow={OEM_RECURSOS.eyebrow}
-            title={OEM_RECURSOS.title}
-            intro={OEM_RECURSOS.body}
-          />
-          <ResourceGrid />
         </Section>
 
         <Section className="py-12 sm:py-16">

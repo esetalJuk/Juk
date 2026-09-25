@@ -457,19 +457,6 @@ export const OEM_PROCESS = {
   note: "Más de 25 años acompañando al retail físico en México.",
 };
 
-export const OEM_RECURSOS = {
-  eyebrow: "RECURSOS PARA TU OPERACIÓN",
-  title: "Recursos para tu operación",
-  body: "Guías prácticas para tomar mejores decisiones sobre tu exhibición. Solicítalas sin costo.",
-  items: [
-    { title: "Autodiagnóstico: ¿tu exhibición vende o solo se ve?" },
-    { title: "Guía: cómo exhibir tecnología sin perder inventario" },
-    { title: "Guía de decisión: del precio impreso al precio digital" },
-    { title: "Guía: qué te pueden decir tus cámaras sobre tu comprador" },
-    { title: "Guía para marcas: tu producto, igual en cada punto de venta" },
-  ],
-};
-
 export const OEM_FAQ = {
   eyebrow: "PREGUNTAS FRECUENTES",
   title: "Preguntas frecuentes",
