@@ -32,22 +32,29 @@ export function SideProgressNav() {
 
   // Stays hidden through the hero; appears once scroll has carried "El
   // reto" up near the header — the first section that shares the
-  // content column with this nav — and hides again as soon as the
-  // "Cierre" section itself is reached (its own top crossing that
-  // same header line) — the nav is gone before "Ver para decidir" ever
-  // comes into view. Tracked on scroll rather than IntersectionObserver
-  // since we need the exact pixel position, not just a visibility ratio.
+  // content column with this nav. Hides again once the FAQ section has
+  // ended: the CTA banner right after it (#cierre) has generous padding
+  // of its own before its heading, so waiting for #cierre's top to
+  // reach the header line would leave the nav on screen well after the
+  // CTA text is already visible and readable. Instead the hide trigger
+  // fires while #cierre's top is still in the lower half of the
+  // viewport — i.e. as soon as FAQ is done and the CTA is only just
+  // starting to scroll in — so there's no overlap between the two.
+  // Tracked on scroll rather than IntersectionObserver since we need
+  // the exact pixel position, not just a visibility ratio.
   useEffect(() => {
     const reto = document.getElementById("reto");
     const cierre = document.getElementById("cierre");
     if (!reto || !cierre) return;
 
     const HEADER_OFFSET = 80;
+    const CIERRE_HIDE_RATIO = 0.55;
     let ticking = false;
 
     const check = () => {
       const pastReto = reto.getBoundingClientRect().top <= HEADER_OFFSET;
-      const pastCierreStart = cierre.getBoundingClientRect().top <= HEADER_OFFSET;
+      const pastCierreStart =
+        cierre.getBoundingClientRect().top <= window.innerHeight * CIERRE_HIDE_RATIO;
       setVisible(pastReto && !pastCierreStart);
       ticking = false;
     };
