@@ -46,13 +46,13 @@ export default function OemElectronicaPage() {
     <>
       <OemHero />
 
-      <Section className="py-16 sm:py-20">
-        <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
-        <FeatureGrid features={OEM_RETO.features} columns={3} />
-      </Section>
-
       <SideProgressNav />
       <div className="xl:pl-72">
+        <Section id="reto" className="scroll-mt-20 py-16 sm:py-20">
+          <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
+          <FeatureGrid features={OEM_RETO.features} columns={3} />
+        </Section>
+
         <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-white">{OEM_ENTORNO_INTRO.eyebrow}</p>

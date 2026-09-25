@@ -30,24 +30,25 @@ export function SideProgressNav() {
     return () => observer.disconnect();
   }, []);
 
-  // Stays hidden through the hero; appears once scroll has carried "Qué
-  // compone el entorno" up near the header, and hides again as soon as
-  // the "Cierre" section itself is reached (its own top crossing that
+  // Stays hidden through the hero; appears once scroll has carried "El
+  // reto" up near the header — the first section that shares the
+  // content column with this nav — and hides again as soon as the
+  // "Cierre" section itself is reached (its own top crossing that
   // same header line) — the nav is gone before "Ver para decidir" ever
   // comes into view. Tracked on scroll rather than IntersectionObserver
   // since we need the exact pixel position, not just a visibility ratio.
   useEffect(() => {
-    const entorno = document.getElementById("entorno");
+    const reto = document.getElementById("reto");
     const cierre = document.getElementById("cierre");
-    if (!entorno || !cierre) return;
+    if (!reto || !cierre) return;
 
     const HEADER_OFFSET = 80;
     let ticking = false;
 
     const check = () => {
-      const pastEntorno = entorno.getBoundingClientRect().top <= HEADER_OFFSET;
+      const pastReto = reto.getBoundingClientRect().top <= HEADER_OFFSET;
       const pastCierreStart = cierre.getBoundingClientRect().top <= HEADER_OFFSET;
-      setVisible(pastEntorno && !pastCierreStart);
+      setVisible(pastReto && !pastCierreStart);
       ticking = false;
     };
 
