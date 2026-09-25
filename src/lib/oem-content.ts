@@ -176,13 +176,13 @@ export const OEM_SEGURIDAD = {
     title: "Soluciones para exhibición",
     tagline: "Tocar, probar, decidir",
     body: "Tu cliente quiere tocar, probar y comparar antes de comprar. Con nuestras bases de seguridad puede hacerlo con total libertad, mientras tu inventario permanece protegido. El resultado: más producto abierto a prueba, menos pérdidas y una exhibición que siempre luce bien. Experiencia y seguridad, sin tener que elegir.",
-    image: "/oem/seguridad-hero.jpg",
-    imageCredit: "Getty Images / SimpleImages",
   },
   categorias: {
     eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Dos formas de proteger tu exhibición",
     body: "Electrónica, con alerta inmediata, y mecánica, con sujeción física: la opción más robusta, libre de consumibles y mantenimiento. Son escalables —el nivel de protección crece con el riesgo de cada tienda o categoría, sin cambiar de sistema— y universales: funcionan con cualquier marca y tamaño de equipo.",
+    image: "/oem/seguridad-hero.jpg",
+    imageCredit: "Getty Images / SimpleImages",
   },
   electronicas: {
     icon: "bell",

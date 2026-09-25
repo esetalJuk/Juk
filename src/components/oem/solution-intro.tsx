@@ -22,7 +22,7 @@ export function SolutionIntro({
   tagline?: string;
   tags?: string[];
   body: string;
-  image: string;
+  image?: string;
   imageCredit?: string;
   fit?: "cover" | "contain";
 }) {
@@ -30,7 +30,7 @@ export function SolutionIntro({
   const accent = useSectionAccent();
 
   return (
-    <div ref={ref} className="grid border-b border-line/60 lg:grid-cols-2">
+    <div ref={ref} className={`grid border-b border-line/60 ${image ? "lg:grid-cols-2" : ""}`}>
       <div className="relative flex flex-col justify-center overflow-hidden px-6 py-16 sm:px-10 lg:py-24">
         {number && (
           <span
@@ -68,26 +68,30 @@ export function SolutionIntro({
             ))}
           </div>
         )}
-        <p className="relative mt-6 max-w-md font-body text-base normal-case tracking-normal text-ink-muted">
+        <p
+          className={`relative mt-6 font-body text-base normal-case tracking-normal text-ink-muted ${image ? "max-w-md" : "max-w-xl"}`}
+        >
           {body}
         </p>
       </div>
-      <div
-        className={`relative min-h-[280px] lg:min-h-0 ${fit === "contain" ? "bg-tinta-raised" : ""}`}
-      >
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className={fit === "contain" ? "object-contain p-8" : "object-cover"}
-          sizes="(min-width: 1024px) 38vw, 100vw"
-        />
-        {imageCredit && (
-          <span className="absolute bottom-3 right-3 rounded bg-black/50 px-2 py-1 text-[10px] text-[#fff]/70">
-            {imageCredit}
-          </span>
-        )}
-      </div>
+      {image && (
+        <div
+          className={`relative min-h-[280px] lg:min-h-0 ${fit === "contain" ? "bg-tinta-raised" : ""}`}
+        >
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className={fit === "contain" ? "object-contain p-8" : "object-cover"}
+            sizes="(min-width: 1024px) 38vw, 100vw"
+          />
+          {imageCredit && (
+            <span className="absolute bottom-3 right-3 rounded bg-black/50 px-2 py-1 text-[10px] text-[#fff]/70">
+              {imageCredit}
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }

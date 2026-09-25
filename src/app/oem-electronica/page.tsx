@@ -82,19 +82,35 @@ export default function OemElectronicaPage() {
         <SectionZone id="seguridad" accent="azul-primario">
           <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" />
 
-          <Section className="py-16 sm:py-24">
-            <Reveal className="text-center">
-              <span className="mx-auto block h-[3px] w-12 bg-azul-primario" />
-              <p className="eyebrow mt-5 text-white">
-                {OEM_SEGURIDAD.categorias.eyebrow}
-              </p>
-              <h2 className="font-display text-balance mt-4 text-4xl sm:text-5xl md:text-6xl">
-                {OEM_SEGURIDAD.categorias.title}
-              </h2>
-              <p className="mx-auto mt-6 max-w-2xl font-body text-base normal-case tracking-normal text-ink-muted sm:text-lg">
-                {OEM_SEGURIDAD.categorias.body}
-              </p>
-            </Reveal>
+          <Section className="py-12 sm:py-16">
+            <div className="grid overflow-hidden border border-line bg-line gap-px lg:grid-cols-2">
+              <Reveal className="relative min-h-[280px] bg-tinta-raised">
+                <Image
+                  src={OEM_SEGURIDAD.categorias.image}
+                  alt={OEM_SEGURIDAD.categorias.title}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+                {OEM_SEGURIDAD.categorias.imageCredit && (
+                  <span className="absolute bottom-3 right-3 rounded bg-black/50 px-2 py-1 text-[10px] text-[#fff]/70">
+                    {OEM_SEGURIDAD.categorias.imageCredit}
+                  </span>
+                )}
+              </Reveal>
+              <Reveal className="flex flex-col justify-center bg-tinta-raised p-8 sm:p-10">
+                <span className="block h-[3px] w-9 bg-azul-primario" />
+                <p className="eyebrow mt-4 text-white">
+                  {OEM_SEGURIDAD.categorias.eyebrow}
+                </p>
+                <h2 className="font-display mt-3 text-3xl sm:text-4xl">
+                  {OEM_SEGURIDAD.categorias.title}
+                </h2>
+                <p className="mt-4 max-w-xl font-body text-sm normal-case tracking-normal text-ink-muted">
+                  {OEM_SEGURIDAD.categorias.body}
+                </p>
+              </Reveal>
+            </div>
           </Section>
 
           <Section className="py-12 sm:py-16">
