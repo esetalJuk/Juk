@@ -1,29 +1,117 @@
 // Contenido de la página OEM / Electrónica de consumo.
-// Fuente: "Presentación OEMs" (material comercial Dások). Redactado siguiendo
-// la Guía de Tono y Voz 2026: sin "ecosistema" / "un solo proveedor", vocabulario
-// reemplazado por "entorno" / "socio estratégico" con acción concreta.
+// Fuente: propuesta de contenido "nuevo_sitio.docx" (Dások All Solutions).
+// Redactado siguiendo la Guía de Tono y Voz 2026: sin "ecosistema" / "un solo
+// proveedor", vocabulario reemplazado por "entorno" / "socio estratégico" con
+// acción concreta.
 
 export const OEM_HERO = {
   eyebrow: "PILAR · OEM Y ELECTRÓNICA DE CONSUMO",
   h1: "Convertimos la exhibición en tu mejor vendedor",
   hook: "El dispositivo que no se puede tocar, no se vende. El que se puede robar, tampoco.",
   intro:
-    "Acompañamos tu operación de principio a fin: mejor experiencia de compra, menor pérdida y datos reales para decidir con confianza.",
+    "Te ayudamos a exhibir tecnología para que tus clientes la prueben con libertad, sin arriesgar tu inventario.",
+};
+
+export const OEM_RETO = {
+  eyebrow: "EL RETO",
+  title: "El reto de exhibir tecnología",
+  features: [
+    {
+      icon: "shield",
+      title: "Tu producto necesita tocarse, pero es el más robado",
+      body: "Si lo proteges de más, nadie lo prueba. Si lo dejas libre, se pierde.",
+    },
+    {
+      icon: "tag",
+      title: "Precios y promociones cambian cada semana",
+      body: "Cada cambio es trabajo manual, y un error frente a caja cuesta ventas y confianza.",
+    },
+    {
+      icon: "chart",
+      title: "Decides tu exhibición sin saber qué pasa frente a ella",
+      body: "Cuánta gente se detiene y qué producto toca hoy se resuelve por intuición.",
+    },
+  ],
 };
 
 export const OEM_ENTORNO_INTRO = {
-  eyebrow: "QUÉ COMPONE EL ENTORNO",
-  title: "Cada solución resuelve una dolencia del piso de venta",
-  body: "Dások cierra esa brecha: protege tu producto exhibido sin interferir con la experiencia del cliente, controla el mensaje que lo acompaña, mantiene el precio consistente en toda tu red y convierte cada exhibición en datos que comparas y accionas en tiempo real. Eso es un entorno inteligente.",
+  eyebrow: "LO QUE HACEMOS",
+  title: "Cada categoría resuelve una dolencia del piso de venta",
+  body: "Cuatro frentes de trabajo, sobre la misma infraestructura y el mismo contrato. Da clic en una categoría para ver sus soluciones.",
+};
+
+export const OEM_LO_QUE_HACEMOS = [
+  {
+    key: "proteger",
+    icon: "shield",
+    label: "PROTEGER",
+    title: "Que lo prueben todo, que nada salga sin pagar",
+    body: "Tus equipos quedan protegidos en la mesa y en la salida, sin frenar la prueba del producto.",
+    linkLabel: "Seguridad para exhibición · Antenas EAS y consumibles",
+    targetSlug: "seguridad",
+    accent: "azul-primario",
+  },
+  {
+    key: "vender",
+    icon: "device",
+    label: "VENDER",
+    title: "El producto se explica solo",
+    body: "Precio, características y promociones aparecen en el momento en que el cliente toca, levanta o escucha el producto.",
+    linkLabel: "Digital Signage · Interacción en punto de venta",
+    targetSlug: "signage",
+    accent: "verde-acento",
+  },
+  {
+    key: "operar",
+    icon: "key",
+    label: "OPERAR",
+    title: "Menos tareas manuales, más tiempo para atender",
+    body: "Precios que se actualizan en toda tu red a la vez y vitrinas que se abren sin llaves, con registro de cada apertura.",
+    linkLabel: "Etiquetas ESL · Cerraduras electrónicas",
+    targetSlug: "esl",
+    accent: "azul-corporativo",
+  },
+  {
+    key: "conocer",
+    icon: "camera",
+    label: "CONOCER",
+    title: "Data en tiempo real de tu comprador",
+    body: "Las cámaras que ya tienes te dicen quién te visita, cómo recorre tu tienda y qué necesita atención inmediata.",
+    linkLabel: "Inteligencia artificial",
+    targetSlug: "ia",
+    accent: "verde-acento",
+  },
+] as const;
+
+export const OEM_PARA_QUIEN = {
+  eyebrow: "PARA QUIÉN ES",
+  title: "Para quién es",
+  features: [
+    {
+      icon: "store",
+      title: "Si tienes una tienda",
+      body: "Protege tus equipos de mayor valor, deja que tus clientes los prueben y reduce pérdidas desde el primer día.",
+    },
+    {
+      icon: "grid",
+      title: "Si operas una cadena",
+      body: "El mismo estándar de exhibición, precio y seguridad en cada sucursal, con supervisión remota de toda la red.",
+    },
+    {
+      icon: "eye",
+      title: "Si eres una marca",
+      body: "Tu producto se exhibe y se comunica como lo diseñaste, en cualquier punto de venta, y sabes cómo responde el comprador frente a él.",
+    },
+  ],
 };
 
 export const OEM_SOLUTION_LINES = [
   {
     number: "01",
     slug: "seguridad",
-    label: "Seguridad para display",
+    label: "Seguridad para exhibición",
     icon: "shield",
-    kicker: "Electrónicas · Mecánicas",
+    kicker: "Electrónica · Mecánica",
     description: "Protege celulares, laptops y audio en exhibición sin bloquear la prueba del producto.",
     accent: "azul-primario",
   },
@@ -32,14 +120,14 @@ export const OEM_SOLUTION_LINES = [
     slug: "signage",
     label: "Digital Signage",
     icon: "device",
-    kicker: "Producto · Anaquel · Precio · Experiencias",
-    description: "Convierte cada pantalla del punto de venta en un canal de marca controlado.",
+    kicker: "Producto · Anaquel · Precio digital",
+    description: "Convierte cada pantalla del punto de venta en un canal de venta controlado.",
     accent: "verde-acento",
   },
   {
     number: "03",
     slug: "interaccion",
-    label: "Interacción en el punto de venta",
+    label: "Interacción en punto de venta",
     icon: "tap",
     kicker: "Táctil · Lift & Learn · Audio",
     description: "El producto se demuestra solo cuando el cliente lo toca, lo levanta o lo escucha.",
@@ -51,7 +139,7 @@ export const OEM_SOLUTION_LINES = [
     label: "Inteligencia artificial",
     icon: "camera",
     kicker: "Tráfico · Comportamiento · Operación",
-    description: "Las cámaras que ya operan en tienda, convertidas en datos accionables de piso de venta.",
+    description: "Las cámaras que ya tienes, convertidas en datos en tiempo real de tu comprador.",
     accent: "verde-acento",
   },
   {
@@ -76,7 +164,7 @@ export const OEM_SOLUTION_LINES = [
     number: "07",
     slug: "eas",
     icon: "wifi",
-    label: "Antenas EAS",
+    label: "Antenas EAS y consumibles",
     kicker: "Antenas · Consumibles",
     description: "Detección en el acceso y monitoreo remoto de toda la red de tiendas.",
     accent: "verde-acento",
@@ -85,237 +173,118 @@ export const OEM_SOLUTION_LINES = [
 
 export const OEM_SEGURIDAD = {
   intro: {
-    eyebrow: "SEGURIDAD PARA DISPLAY",
+    eyebrow: "SEGURIDAD PARA EXHIBICIÓN",
     title: "Tocar, probar, decidir",
-    tags: ["Electrónicas", "Mecánicas"],
-    body: "Durante años, exhibir un dispositivo de alto valor implicó elegir entre dejarlo libre para que el cliente lo pruebe o asegurarlo tanto que nadie pudiera interactuar con él. La exhibición correcta resuelve esa tensión: el cliente toma el producto, lo prueba y explora todas sus funciones con total libertad — protegido en la exhibición, sin que se note.",
+    body: "El cliente toma el equipo y explora todas sus funciones. Si alguien intenta llevárselo, se activa una alarma inmediata.",
     image: "/oem/seguridad-hero.jpg",
     imageCredit: "Getty Images / SimpleImages",
   },
-  celulares: {
-    eyebrow: "ELECTRÓNICAS",
-    title: "Celulares y tabletas",
-    intro: "Nuestros sistemas para celulares son igualmente compatibles con tabletas: solo cambia la dimensión de los brackets, no la lógica de protección.",
-    products: [
-      {
-        image: "/oem/celulares-power-cord-reel.jpg",
-        code: "POWER CORD REEL",
-        title: "Plataforma modular",
-        body: "Para exhibiciones individuales, mesas con múltiples dispositivos o espacios de marca completos. Unidad central de energía multivoltaje, cables de distintos largos y conectores compatibles con múltiples marcas, con sensores configurables según el formato.",
-      },
-      {
-        image: "/oem/celulares-des50.jpg",
-        code: "DES50",
-        title: "Exhibición segura para celulares",
-        body: "Alarma superior a 100 dB. Diseño modular con sistema retráctil para una exhibición limpia en mostrador. Puede utilizarse con 2 o 4 brackets para mayor seguridad.",
-      },
-      {
-        image: "/oem/celulares-ms001.jpg",
-        code: "MS001 VERTICAL",
-        title: "Exhibición vertical individual",
-        body: "Solución Stand Alone ajustable a prácticamente cualquier modelo actual, con seguridad escalable según la categoría o el riesgo de cada tienda. Sensores de perfil ultradelgado y baja tensión para una manipulación cómoda.",
-      },
-    ],
-  },
-  autonomia: {
-    eyebrow: "ELECTRÓNICAS",
-    title: "Autonomía y exhibición sin cables",
-    intro: "Cuando la exhibición opera sin corriente constante, o cuando no debe verse un solo cable sobre la mesa, cambia la unidad de energía, no el sistema.",
-    products: [
-      {
-        image: "/oem/autonomia-ms004.jpg",
-        code: "MS004",
-        title: "Energía y autonomía extendida",
-        body: "Integra un sistema AP que entrega energía y alarma de 110 dB, en configuración de 2 o 4 brackets. Su batería de respaldo ofrece hasta 48 horas de autonomía, ideal para exhibiciones sin corriente constante o activaciones temporales.",
-      },
-      {
-        image: "/oem/autonomia-rs001.jpg",
-        code: "RS001",
-        title: "Libre de cables sobre la mesa",
-        body: "Exhibición individual y de cross-merchandising, con brackets intercambiables en configuración de 2 o 4 según el nivel de riesgo. El cliente interactúa sin ningún cable visible sobre la mesa.",
-      },
-    ],
-  },
-  laptops: {
-    eyebrow: "ELECTRÓNICAS",
-    title: "Laptops",
-    intro: "Una sola plataforma de protección para todo el portafolio de equipos de cómputo en exhibición, sin una solución distinta para cada modelo.",
-    image: "/oem/laptops.jpg",
+  detalle: {
+    eyebrow: "SEGURIDAD PARA EXHIBICIÓN",
+    title: "Cómo protegemos tu exhibición",
     features: [
-      { icon: "shield", title: "Seguridad que no compite con el diseño", body: "Perfil compacto y refinado que se integra a la identidad visual de la tienda, protegiendo el equipo sin restarle protagonismo al producto." },
-      { icon: "grid", title: "Seguridad universal", body: "Una sola plataforma se adapta a distintos tipos e intensidades de alarma, largos de cable y conectores compatibles con múltiples marcas de laptops." },
-      { icon: "bell", title: "Protección sin concesiones", body: "Alarma de 100 dB combinada con un sistema de bloqueo por cable, que disuade el robo de forma inmediata y decisiva." },
-      { icon: "refresh", title: "Escalable más allá de laptops", body: "La misma plataforma de protección se extiende a otros dispositivos de alto valor del portafolio, no solo a laptops." },
+      { icon: "bell", title: "Alarma de más de 100 dB", body: "Sensores de perfil ultradelgado que no estorban la prueba del producto." },
+      { icon: "refresh", title: "Cable retráctil de hasta 1 metro", body: "Regresa el equipo a su lugar automáticamente." },
+      { icon: "device", title: "Carga integrada", body: "Para que el equipo exhibido siempre tenga batería." },
+      { icon: "eye", title: "Exhibición sin cables visibles", body: "Nada sobre la mesa que reste protagonismo al producto." },
+      { icon: "clock", title: "Hasta 48 horas de autonomía", body: "Por batería, en espacios sin corriente constante o activaciones temporales." },
+      { icon: "tool", title: "Opción mecánica de alta seguridad", body: "Sin consumibles ni mantenimiento." },
+      { icon: "grid", title: "Seguridad escalable", body: "Configuraciones de 2 o 4 brazos, según el nivel de riesgo." },
     ],
   },
-  audio: {
-    eyebrow: "ELECTRÓNICAS",
-    title: "Audio y producto pequeño",
-    intro: "Producto de alto valor y alta manipulación: cada formato exige un tipo de protección distinto, sin bloquear la prueba del producto.",
-    products: [
-      {
-        image: "/oem/audio-cubik.jpg",
-        code: "CUBIK",
-        title: "Audífonos in-ear",
-        body: "Solución mecánica pensada específicamente para audífonos in-ear, con un diseño estético que combina seguridad y funcionalidad para una experiencia de venta óptima.",
-      },
-      {
-        image: "/oem/audio-mebox.jpg",
-        code: "MEBOX",
-        title: "Producto suelto y de tamaño reducido",
-        body: "Cubierta protectora transparente con detección de alarma integrada, indicada para EarPods, relojes, lentes y perfumes. Exhibe el producto sin ocultarlo: visible y protegido al mismo tiempo.",
-      },
-      {
-        image: "/oem/audio-headphone.jpg",
-        code: "HEADPHONE",
-        title: "Audífonos over-ear",
-        body: "Soporte funcional y elegante con carga integrada por cable Micro USB o Tipo C. El cliente ve el audífono siempre cargado y listo para probarse — no solo colgado en un gancho.",
-      },
+  tabla: {
+    eyebrow: "SEGURIDAD PARA EXHIBICIÓN",
+    title: "Protección por tipo de producto",
+    rows: [
+      { producto: "Celulares y tabletas", proteccion: "Soporte con alarma, carga y cable retráctil; mismo sistema para ambos, solo cambia el tamaño del soporte." },
+      { producto: "Laptops", proteccion: "Alarma combinada con bloqueo por cable, compatible con múltiples marcas." },
+      { producto: "Smartwatches", proteccion: "Membrana que protege la carátula, conectada a un sensor en las correas." },
+      { producto: "Audífonos over-ear", proteccion: "Soporte con carga integrada, siempre listos para probarse." },
+      { producto: "Audífonos in-ear", proteccion: "Protección mecánica diseñada para su formato." },
+      { producto: "Producto pequeño (relojes, lentes, perfumes)", proteccion: "Cubierta transparente con alarma: visible y protegido." },
+      { producto: "Mesas con varios dispositivos", proteccion: "Estación de alarma de 2 o 4 puertos, con liberación rápida para cambiar la exhibición." },
     ],
   },
-  wearables: {
-    eyebrow: "ELECTRÓNICAS",
-    title: "Wearables y exhibición multi-dispositivo",
-    intro: "Del reloj individual a la mesa de uso mixto, con sensores y membranas específicos para cada formato.",
-    products: [
-      {
-        image: "/oem/wearables-smartwatch.jpg",
-        code: "STAND ALONE",
-        title: "Smartwatch",
-        body: "Sistema ajustable a prácticamente todos los modelos actuales, que protege la carátula mediante una membrana conectada al sensor en las correas. Sensores de baja tracción para interactuar con libertad.",
-      },
-      {
-        image: "/oem/wearables-miniport.jpg",
-        code: "MINI PORT",
-        title: "Exhibición multi-dispositivo",
-        body: "Estación autónoma de alarma con 2 o 4 puertos, para aplicaciones individuales, mesas de uso mixto o espacios de marca completos, con liberación rápida para remercadeo o resguardo nocturno.",
-      },
+};
+
+export const OEM_EAS = {
+  intro: {
+    eyebrow: "ANTENAS EAS Y CONSUMIBLES",
+    title: "Protección en el momento más vulnerable: la salida",
+    tags: ["Antenas", "Consumibles"],
+    body: "Las antenas en los accesos detectan cualquier producto que no fue desactivado en caja y generan una alarma inmediata.",
+    image: "/oem/eas-hero.jpg",
+  },
+  resuelve: {
+    eyebrow: "ANTENAS EAS",
+    title: "Supervisión de toda tu red desde un solo lugar",
+    features: [
+      { icon: "wifi", title: "Supervisión remota del estado de cada tienda", body: "Para detectar incidencias a tiempo." },
+      { icon: "clock", title: "Menos visitas técnicas", body: "Gracias al acceso remoto." },
+      { icon: "chart", title: "Patrones y horarios de riesgo", body: "Identificados por tienda o región." },
     ],
   },
-  mecanicas: {
-    eyebrow: "MECÁNICAS",
-    title: "Robusta, adaptable y libre de mantenimiento",
-    intro: "Protección de alta seguridad para celulares, tabletas y laptops. Se ancla a la mesa o se fija con adhesivo de máxima seguridad, y no requiere consumibles ni mantenimiento.",
-    products: [
-      {
-        image: "/oem/mecanicas-alta-seguridad.jpg",
-        code: "SUJECIÓN METÁLICA",
-        title: "Alta seguridad",
-        body: "Sujeción metálica reforzada al mobiliario: el cliente manipula el equipo con total libertad y el dispositivo no sale de la mesa.",
-      },
-      {
-        image: "/oem/mecanicas-sin-consumibles.jpg",
-        code: "CERO MANTENIMIENTO",
-        title: "Sin consumibles ni mantenimiento",
-        body: "No usa baterías, cables ni sensores: nada que reponer, nada que recargar y nada a lo que dar servicio a lo largo de su vida útil.",
-      },
-      {
-        image: "/oem/mecanicas-anclada.jpg",
-        code: "FIJACIÓN",
-        title: "Anclada o adherida",
-        body: "Se instala anclada a la mesa o fijada con adhesivo de máxima seguridad, según lo permita el mobiliario de cada tienda.",
-      },
-    ],
-    closing: "Todos los modelos son universales: cualquier celular, tableta, smartwatch o laptop, sin importar marca ni tamaño.",
-  },
-  implementa: {
-    eyebrow: "SEGURIDAD PARA DISPLAY",
-    title: "Lo que deja implementar esta solución",
-    items: [
-      { number: "01", title: "Un estándar consistente", body: "El mismo nivel de protección y experiencia en cada tienda, sin importar quién la opere ni qué mueble use." },
-      { number: "02", title: "Menor costo de reposición", body: "Menos pérdida por robo en piso, incluyendo las categorías de mayor rotación." },
-      { number: "03", title: "El momento de verdad, protegido", body: "El cliente prueba el producto sin fricción, sin que eso implique un riesgo mayor." },
-      { number: "04", title: "Implementación sin fricción", body: "Instalación en minutos, fácil de replicar en cientos de puntos de venta." },
-      { number: "05", title: "Venta cruzada desde la misma base", body: "Cada base segura puede integrarse con Digital Signage para promover accesorios, planes o garantías, sin ocupar piso adicional." },
-    ],
+  consumibles: {
+    eyebrow: "CONSUMIBLES EAS",
+    title: "El accesorio también es objetivo de robo",
+    body: "Protegen audífonos, cargadores, fundas y accesorios empacados con etiquetas duras reutilizables en más de 40 formatos, etiquetas adhesivas de un solo uso y sistemas de cable y spider wrap para empaques irregulares. El formato se elige según el tamaño, la forma y el riesgo de cada producto.",
   },
 };
 
 export const OEM_SIGNAGE = {
   intro: {
     eyebrow: "DIGITAL SIGNAGE",
-    title: "Una pantalla, un canal de marca",
-    tags: ["Pantalla del producto", "Anaquel", "Precio digital", "Experiencias"],
-    body: "Convertimos cada pantalla del punto de venta en un canal de marca controlado desde un solo lugar: lo que se muestra, cuándo se muestra y dónde. El recorrido de esta línea va de dónde vive el contenido, a cómo se controla, a qué muestra frente al shopper y a qué datos devuelve.",
+    title: "Cada pantalla, un canal de venta",
+    tags: ["Pantalla del producto", "Anaquel", "Precio digital"],
+    body: "Controla desde una plataforma qué se muestra en cada pantalla de tu red, cuándo y dónde.",
     image: "/oem/signage-hero.jpg",
     imageCredit: "Getty Images / Vladimir Fedorov",
   },
   donde: {
     eyebrow: "DIGITAL SIGNAGE",
-    title: "Dónde vive el contenido",
-    intro: "Tres superficies distintas, un mismo sistema de contenido y control.",
+    title: "Dónde aparece el contenido",
     products: [
       {
         image: "/oem/signage-pantalla-producto.jpg",
-        title: "Pantalla del producto",
-        body: "El mismo celular, tableta o laptop en exhibición muestra promociones, características y precio en su propia pantalla, con acceso a la configuración bloqueado.",
+        title: "En el propio equipo exhibido",
+        body: "Con la configuración bloqueada.",
       },
       {
         image: "/oem/signage-pantalla-secundaria.jpg",
-        title: "Pantalla secundaria",
-        body: "Televisores, tótems y kioscos dentro de la exhibición se integran al mismo sistema, bajo la misma lógica de contenido.",
+        title: "En televisores, tótems y kioscos",
+        body: "De la tienda, bajo la misma lógica de contenido.",
       },
       {
         image: "/oem/signage-pantalla-anaquel.jpg",
-        title: "Pantalla de anaquel",
-        body: "Mini pantallas Vivitag instaladas junto al producto: un espacio de marca propio sin ocupar piso adicional.",
+        title: "En mini pantallas táctiles de anaquel",
+        body: "Se activan cuando el cliente está a un metro del producto y muestran al personal la guía de acomodo del anaquel.",
       },
     ],
   },
   control: {
     eyebrow: "DIGITAL SIGNAGE",
     title: "Cómo se controla",
-    intro: "Una sola plataforma decide qué aparece en cada pantalla de la red, sin intervención manual en cada tienda.",
     features: [
-      { icon: "wifi", title: "Control remoto y centralizado", body: "Se actualiza el contenido de todas las pantallas de la red desde un solo punto, sin que nadie tenga que intervenir tienda por tienda." },
-      { icon: "clock", title: "Campañas por hora, día, tienda o región", body: "Una promoción de mañana y otra de tarde; una campaña para el norte del país y otra para el centro — sin reprogramar cada pantalla a mano." },
-      { icon: "play", title: "Compatible con demo mode", body: "Se integra con el modo de demostración que los fabricantes ya incluyen en los equipos exhibidos, sin sustituirlo ni interferir con él." },
-      { icon: "grid", title: "Mapas de calor por clic", body: "Cada clic sobre la pantalla queda registrado y se traduce en mapas de calor: qué contenido se toca, en qué zona y a qué hora." },
+      { icon: "wifi", title: "Actualización remota de toda la red", body: "Sin intervenir tienda por tienda." },
+      { icon: "clock", title: "Campañas por hora, día, tienda o región", body: "Un mensaje distinto para cada momento y cada plaza." },
+      { icon: "play", title: "Compatible con el modo demostración", body: "Que ya traen los equipos." },
+      { icon: "grid", title: "Registro de cada toque", body: "En mapas de calor por zona y producto." },
     ],
   },
   pricingApp: {
     eyebrow: "DIGITAL SIGNAGE",
-    title: "Digital Pricing App: el precio, siempre correcto",
-    intro: "Convierte el mismo celular o tableta en exhibición en una etiqueta de precio digital interactiva, eliminando por completo la tarjeta de precio impresa.",
+    title: "Precio digital en el equipo exhibido",
+    body: "El celular o la tableta en exhibición muestra su propio precio: detecta modelo y memoria automáticamente, se protege con PIN o huella, borra datos personales de forma automática y no requiere hardware adicional.",
     image: "/oem/pricing-app.jpg",
-    features: [
-      { icon: "refresh", title: "Instalación sin fricción", body: "Detecta automáticamente el modelo y la memoria de cada equipo, sin configuración manual.", highlight: false },
-      { icon: "tag", title: "Precio siempre correcto", body: "Se actualiza de forma remota por tienda en segundos: el precio en exhibición coincide siempre con el de caja.", highlight: true },
-      { icon: "lock", title: "Seguridad reforzada", body: "Acceso oculto a la app, bloqueo por PIN o huella, y borrado automático de datos personales.", highlight: false },
-      { icon: "device", title: "Sin hardware adicional", body: "Aprovecha el equipo que ya está en exhibición: la misma pantalla que protege, ahora también vende.", highlight: false },
-    ],
-    footnote: "Acceso inmediato a la información del equipo y del plan, para resolver dudas sin tiempos de espera.",
-  },
-  vivitag: {
-    eyebrow: "DIGITAL SIGNAGE",
-    title: "Pantalla Vivitag",
-    intro: "Mini pantallas táctiles instaladas directamente en el anaquel, junto al producto — más allá del precio, un espacio de marca propio.",
-    features: [
-      { icon: "eye", title: "Información al alcance del toque", body: "Precio, características, tallas, colores, fotos y video directamente en el anaquel, sin depender de que un vendedor esté disponible." },
-      { icon: "wifi", title: "Activación por proximidad", body: "Un sensor detecta al cliente a un metro de distancia y activa el contenido relevante en el momento exacto en que se acerca al producto." },
-      { icon: "grid", title: "Apoyo al personal de tienda", body: "Un gesto específico revela la guía de acomodo (planograma) en la pantalla, ayudando a reponer el anaquel de forma correcta." },
-      { icon: "device", title: "Un tamaño para cada categoría", body: "Disponible en múltiples formatos, para adaptarse al espacio y al tipo de producto de cada anaquel." },
-    ],
   },
 };
 
 export const OEM_INTERACCION = {
   intro: {
-    eyebrow: "INTERACCIÓN EN EL PUNTO DE VENTA",
-    title: "El efecto en el punto de venta",
-    features: [
-      { icon: "store", title: "Más conversión", body: "Mejora la calidad de la experiencia en el punto de venta y eleva la atención del cliente, invitándolo a interactuar con el producto." },
-      { icon: "tap", title: "Simple de operar, poderosa", body: "Informa a clientes y a personal de un solo vistazo, con contenido elegante y atractivo, y resuelve de forma fácil y automática muchos problemas operativos." },
-      { icon: "device", title: "En cualquier superficie", body: "Tableta, teléfono inteligente, pantalla o nuestro preciador independiente: precio, datos pertinentes y promociones de temporada." },
-      { icon: "chart", title: "Datos reales, no estimados", body: "Cada toque y cada segundo de interacción queda registrado. Con mapas de calor por zona y por producto se decide el acomodo con evidencia." },
-    ],
-    closing: "El shopper decide con más información. La marca decide con más datos.",
-  },
-  productoResponde: {
-    eyebrow: "INTERACCIÓN EN EL PUNTO DE VENTA",
-    title: "El producto responde cuando el cliente lo toca",
+    eyebrow: "INTERACCIÓN EN PUNTO DE VENTA",
+    title: "El producto se demuestra solo",
     tags: ["Táctil", "Lift & Learn", "Audio"],
-    body: "Quien toca el producto está mucho más cerca de comprarlo. Estas tres experiencias convierten la mesa de exhibición en una demostración que ocurre sola: el cliente toca, levanta o escucha, y el contenido correcto aparece en ese momento — sin depender de que haya un vendedor disponible.",
+    body: "Quien toca el producto está más cerca de comprarlo. Estas experiencias hacen que la demostración ocurra sin depender de un vendedor.",
     image: "/oem/interaccion-hero.jpg",
   },
   formas: {
@@ -325,107 +294,21 @@ export const OEM_INTERACCION = {
       {
         image: "/oem/interaccion-tactil.jpg",
         code: "TÁCTIL",
-        title: "El equipo es la demostración",
-        body: "El cliente navega características, compara modelos y descubre promociones tocando la pantalla del propio equipo exhibido. La demostración corre sola y siempre muestra el mensaje de marca aprobado.",
+        title: "El cliente navega en la pantalla",
+        body: "Navega características, compara modelos y descubre promociones en la pantalla del equipo exhibido.",
       },
       {
         image: "/oem/interaccion-lift-learn.jpg",
         code: "LIFT & LEARN",
         title: "Levantar para descubrir",
-        body: "Al levantar el celular, la tableta o el laptop, un sensor dispara el contenido correspondiente en la pantalla contigua. El gesto natural de tomar el producto se vuelve el inicio de la historia de marca.",
+        body: "Al tomar el celular, la tableta o la laptop, la pantalla contigua muestra su contenido.",
       },
       {
         image: "/oem/interaccion-audio.jpg",
         code: "AUDIO",
         title: "Escuchar antes de decidir",
-        body: "Audífonos y bocinas se prueban sin intervención del personal: al tomar el producto se reproduce la pista de demostración y en pantalla aparecen sus características y su precio.",
+        body: "Al tomar audífonos o bocinas se reproduce la demostración, junto con características y precio en pantalla.",
       },
-    ],
-    closing: "Interactuar es el paso previo a comprar: entre más fácil sea probar el producto, más alta la conversión y el ticket promedio.",
-  },
-};
-
-export const OEM_IA = {
-  intro: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
-    title: "Las cámaras que ya operan, convertidas en datos",
-    tags: ["Tráfico", "Comportamiento", "Operación"],
-    body: "Convertimos las cámaras que ya operan en el piso de venta en datos accionables sobre cómo se comporta la marca ahí: quién entra, qué zona genera más interés y qué necesita atención inmediata — en celulares, tabletas, laptops, wearables y audífonos.",
-    image: "/oem/ia-hero.png",
-    darkIllustration: true,
-  },
-  implementa: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
-    title: "Cómo se implementa y cómo escala",
-    intro: "Sin cámaras nuevas, sin infraestructura local y sin inversión extra en hardware.",
-    columns: [
-      {
-        heading: "Cómo se implementa",
-        items: [
-          { icon: "camera", title: "Se integra al sistema de cámaras existente", body: "Se conecta al circuito de video que la tienda ya opera." },
-          { icon: "cloud", title: "100% en la nube", body: "Sin almacenamiento local, sin integración adicional y sin inversión extra en hardware." },
-          { icon: "grid", title: "Compatible con cualquier cámara IP", body: "Funciona sin importar el fabricante del sistema instalado." },
-        ],
-      },
-      {
-        heading: "Escalabilidad y control",
-        items: [
-          { icon: "store", title: "Solución escalable", body: "Funciona igual para una tienda que para cientos: la misma plataforma crece con la red." },
-          { icon: "chart", title: "Dashboards comparables entre tiendas", body: "Compara el desempeño de sucursales en una sola vista, para identificar qué funciona y por qué." },
-          { icon: "device", title: "App móvil", body: "Consulta el estado de la operación y de la exhibición desde cualquier lugar." },
-        ],
-      },
-    ],
-  },
-  funciones: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
-    title: "Funciones principales",
-    intro: "Lo que la plataforma observa y reporta del piso de venta, con el detalle necesario para decidir con evidencia.",
-    features: [
-      { icon: "user", title: "Análisis de clientes", body: "Ingresos, género, rango de edad y visitantes frecuentes, excluyendo empleados y proveedores del conteo." },
-      { icon: "grid", title: "Mapas de calor", body: "Zonas de mayor y menor tráfico, permanencia, visitantes por área y puntos de interés — flujo y recorrido del shopper.", highlight: true },
-      { icon: "device", title: "Detección de anaqueles vacíos", body: "Identifica cuando un exhibidor se quedó sin producto, para reponerlo antes de perder la venta." },
-      { icon: "eye", title: "Listas negras y seguridad", body: "Reconoce visitantes previamente identificados como sospechosos y detecta intrusión en áreas restringidas." },
-      { icon: "tool", title: "Asignación y verificación de tareas", body: "Monitorea el cumplimiento de tareas operativas en piso: reposición, limpieza y atención al cliente." },
-    ],
-    stat: { label: "EJEMPLO DE REPORTE POR ZONA", items: [
-      { value: "256", note: "visitantes" },
-      { value: "4.2 min", note: "permanencia" },
-      { value: "65%", note: "tasa de permanencia" },
-    ]},
-  },
-  aplicaciones: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
-    title: "Aplicaciones para el negocio",
-    intro: "Cuatro decisiones que dejan de tomarse por intuición cuando el dato del piso de venta está disponible.",
-    features: [
-      { icon: "grid", title: "Layout", body: "Redistribuye categorías y zonas de impulso con base en tráfico y permanencia real." },
-      { icon: "tag", title: "Trade marketing", body: "Mide si los displays o promociones realmente detienen al shopper." },
-      { icon: "tool", title: "Operación", body: "Detecta áreas con bajo aprovechamiento para corregir la ejecución en piso." },
-      { icon: "store", title: "Remodelaciones", body: "Rediseña espacios de exhibición con evidencia de comportamiento real, no supuestos." },
-    ],
-  },
-};
-
-export const OEM_CERRADURAS = {
-  intro: {
-    eyebrow: "CERRADURAS ELECTRÓNICAS",
-    title: "De llave física a acceso autorizado",
-    tags: ["RFID", "Bluetooth", "Trazabilidad"],
-    body: "Transformamos vitrinas, cajones y áreas restringidas en puntos de acceso controlados. Se instalan de forma oculta dentro del mobiliario, sin modificar su estructura, con operación por RFID y Bluetooth, historial de uso y administración digital.",
-    image: "/oem/cerraduras-hero.png",
-    darkIllustration: true,
-  },
-  control: {
-    eyebrow: "CERRADURAS ELECTRÓNICAS",
-    title: "El control de acceso, con trazabilidad",
-    intro: "De un esquema manual y poco auditable a un modelo con usuarios autorizados, historial y menor exposición a merma — sin modificar el mueble existente.",
-    features: [
-      { icon: "shield", title: "Menos exposición a merma", body: "Restringir el acceso a los dispositivos de mayor valor reduce robo, manipulación no autorizada y aperturas fuera de protocolo." },
-      { icon: "clock", title: "Más control operativo", body: "Cada apertura puede vincularse a un usuario, una hora y un tiempo de uso, con mayor disciplina operativa.", highlight: true },
-      { icon: "key", title: "Menos dependencia de llaves físicas", body: "El acceso por RFID o Bluetooth elimina la gestión manual de llaves y agiliza la atención frente al cliente." },
-      { icon: "eye", title: "Protección discreta y profesional", body: "Al ser una solución oculta, protege el mobiliario sin afectar la imagen de marca ni saturar la vitrina." },
-      { icon: "bell", title: "Durabilidad y alertas en tiempo real", body: "Diseñada para el uso rudo del punto de venta, con alertas inmediatas cuando una puerta permanece abierta." },
     ],
   },
 };
@@ -435,20 +318,18 @@ export const OEM_ESL = {
     eyebrow: "ETIQUETAS ESL",
     title: "El fin de la tarjeta de precio impresa",
     tags: ["Precio remoto", "Ventana horaria", "Anaquel"],
-    body: "Cada modelo, color y capacidad requiere su propio precio visible junto al equipo. Las etiquetas electrónicas reemplazan esas tarjetas por pantallas digitales que se actualizan de forma remota, sin recorrer mueble por mueble ni tienda por tienda.",
+    body: "Pantallas digitales en el anaquel que se actualizan de forma remota.",
     image: "/oem/esl-hero.jpg",
   },
   detalle: {
     eyebrow: "ETIQUETAS ESL",
     title: "Precio correcto en cada anaquel",
-    intro: "Un mismo cambio de precio se ejecuta en toda la red, sin recorrer mueble por mueble.",
     features: [
-      { icon: "tag", title: "Precisión", body: "Elimina las discrepancias entre el precio junto al dispositivo exhibido y el que se cobra en caja." },
-      { icon: "wifi", title: "Actualización instantánea en toda la red", body: "Cambia precios y lanza promociones de nuevos modelos en todas las tiendas al mismo tiempo.", highlight: true },
-      { icon: "eye", title: "Más información al decidir", body: "Muestra características, plan o promoción junto al dispositivo, sin depender de un vendedor." },
-      { icon: "tool", title: "Menos carga operativa", body: "Elimina imprimir y colocar tarjetas cada vez que cambia un modelo, un color o una promoción." },
-      { icon: "refresh", title: "Menos residuos", body: "Elimina por completo el papel impreso, con una batería de larga duración en cada etiqueta." },
-      { icon: "clock", title: "Promociones por ventana horaria", body: "Activa y desactiva precios de lanzamiento en horarios específicos, algo que la tarjeta impresa no puede ejecutar." },
+      { icon: "tag", title: "Precio exacto", body: "Coincide siempre con el que se cobra en caja." },
+      { icon: "wifi", title: "Cambios en toda la red al mismo tiempo", body: "Incluidos los lanzamientos de nuevos modelos.", highlight: true },
+      { icon: "clock", title: "Promociones por horario", body: "Que se activan y desactivan solas." },
+      { icon: "eye", title: "Más información junto al producto", body: "Características, plan o promoción." },
+      { icon: "refresh", title: "Cero papel y menos carga operativa", body: "Nada que imprimir ni colocar en cada cambio." },
     ],
     specs: [
       { value: "10 años", note: "de batería" },
@@ -458,85 +339,138 @@ export const OEM_ESL = {
   },
 };
 
-export const OEM_EAS = {
+export const OEM_CERRADURAS = {
   intro: {
-    eyebrow: "ANTENAS EAS",
-    title: "Protección en el momento más vulnerable: la salida",
-    tags: ["Antenas", "Consumibles"],
-    body: "Instalamos antenas en los accesos que detectan las etiquetas de seguridad activas al salir: si un producto no fue desactivado en caja, se genera una alarma inmediata. Sumamos reconocimiento facial contra una base de reincidentes y un panel de control remoto con monitoreo en tiempo real.",
-    image: "/oem/eas-hero.jpg",
+    eyebrow: "CERRADURAS ELECTRÓNICAS",
+    title: "De llave física a acceso autorizado",
+    tags: ["RFID", "Bluetooth", "Trazabilidad"],
+    body: "Se instalan ocultas dentro de vitrinas y cajones, sin modificar el mueble.",
+    image: "/oem/cerraduras-hero.png",
+    darkIllustration: true,
   },
-  resuelve: {
-    eyebrow: "ANTENAS EAS",
-    title: "Lo que resuelve el sistema en la salida",
-    intro: "Detección en el acceso, reconocimiento de reincidentes y monitoreo remoto de toda la red.",
-    image: "/oem/eas-resuelve.jpg",
+  control: {
+    eyebrow: "CERRADURAS ELECTRÓNICAS",
+    title: "El control de acceso, con trazabilidad",
     features: [
-      { icon: "shield", title: "Protege las categorías de mayor riesgo", body: "Celulares, tabletas y laptops en exhibición, los equipos más atractivos para el robo en cualquier tienda." },
-      { icon: "wifi", title: "Supervisión centralizada de la red", body: "Consulta el estado de cada tienda y detecta incidencias antes de que se conviertan en un problema mayor." },
-      { icon: "clock", title: "Menor tiempo de atención y costo operativo", body: "El acceso remoto evita desplazamientos físicos innecesarios a cada punto de venta." },
-      { icon: "chart", title: "Seguridad convertida en información de negocio", body: "Identifica patrones y horarios de riesgo por tienda o región, para reforzar protocolos donde se necesita." },
+      { icon: "key", title: "Apertura por tarjeta RFID o Bluetooth", body: "Sin gestión de llaves." },
+      { icon: "clock", title: "Historial de cada apertura", body: "Usuario, hora y tiempo de uso.", highlight: true },
+      { icon: "bell", title: "Alerta en tiempo real", body: "Cuando una puerta queda abierta." },
+      { icon: "shield", title: "Acceso solo para personal autorizado", body: "A los equipos de mayor valor." },
+      { icon: "tool", title: "Diseñadas para uso rudo", body: "En el punto de venta." },
     ],
   },
-  consumibles: {
-    eyebrow: "CONSUMIBLES EAS",
-    title: "El accesorio también es objetivo de robo",
-    intro: "Etiquetas duras reutilizables (más de 40 formatos), etiquetas suaves adhesivas de un solo uso y sistemas de cable y spider wrap para empaques irregulares o de mayor tamaño.",
-    products: [
-      {
-        image: "/oem/eas-consumibles-accesorios.jpg",
-        title: "Cierra el círculo de protección",
-        body: "Extiende la protección más allá del dispositivo principal: audífonos, cargadores, fundas y accesorios empacados.",
-      },
-      {
-        image: "/oem/eas-consumibles-cosmeticos.jpg",
-        title: "Un consumible para cada categoría",
-        body: "Se adapta el formato correcto según el tamaño, la forma y el perfil de riesgo de cada producto.",
-      },
-      {
-        image: "/oem/eas-consumibles-spiderwrap.jpg",
-        title: "Complementa la protección electrónica",
-        body: "Cable y spider wrap trabajan junto con las antenas EAS sin afectar la experiencia de exhibición.",
-      },
+};
+
+export const OEM_IA = {
+  intro: {
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    title: "Data en tiempo real de tu comprador en tienda",
+    tags: ["Tráfico", "Comportamiento", "Operación"],
+    body: "Convertimos las cámaras que ya operan en tienda en datos accionables sobre tu comprador y tu piso de venta.",
+    image: "/oem/ia-hero.png",
+    darkIllustration: true,
+  },
+  implementa: {
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    title: "Cómo se implementa",
+    body: "Con cualquier cámara IP existente, 100% en la nube, escalable de una a cientos de tiendas, con tableros comparables entre sucursales y app móvil.",
+  },
+  funciones: {
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    title: "Qué te muestra",
+    features: [
+      { icon: "user", title: "Perfil de tu comprador", body: "Rango de edad, género y visitantes nuevos y recurrentes, sin contar a empleados ni proveedores." },
+      { icon: "grid", title: "Recorrido en tienda", body: "Zonas de mayor y menor tráfico, permanencia y puntos de interés.", highlight: true },
+      { icon: "bell", title: "Alertas de seguridad", body: "Visitantes previamente identificados en incidentes y accesos a áreas restringidas." },
+      { icon: "device", title: "Anaqueles vacíos", body: "Detectados antes de perder la venta." },
+      { icon: "tool", title: "Cumplimiento operativo", body: "Reposición, limpieza y atención en piso." },
+    ],
+  },
+  aplicaciones: {
+    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    title: "Decisiones con evidencia",
+    features: [
+      { icon: "grid", title: "Layout", body: "Acomodo según tráfico real." },
+      { icon: "tag", title: "Trade marketing", body: "Saber si un display detiene al comprador." },
+      { icon: "tool", title: "Operación", body: "Detectar zonas con bajo aprovechamiento." },
+      { icon: "store", title: "Remodelaciones", body: "Rediseñar con base en comportamiento real." },
     ],
   },
 };
 
 export const OEM_PROCESS = {
-  eyebrow: "CÓMO ENTRA EN OPERACIÓN",
-  title: "De un piloto medible a toda tu red",
+  eyebrow: "CÓMO TRABAJAMOS CONTIGO",
+  title: "Cómo trabajamos contigo",
   steps: [
     {
       number: "01",
       title: "Diagnóstico en piso",
-      body: "Levantamiento de mobiliario, accesos y categorías de tu exhibición actual.",
+      body: "Revisamos tu mobiliario, accesos y categorías.",
     },
     {
       number: "02",
       title: "Piloto medible",
-      body: "Un grupo controlado con métricas de partida para comparar el antes y el después.",
+      body: "Probamos en un grupo de tiendas, con métricas de antes y después.",
     },
     {
       number: "03",
-      title: "Despliegue en red",
-      body: "Instalación replicable en minutos, sin obra ni herramientas. Cobertura a nivel nacional: el despliegue avanza al mismo ritmo en cualquier plaza de la República.",
+      title: "Implementación nacional",
+      body: "Instalación replicable en cualquier plaza de la República.",
     },
     {
       number: "04",
-      title: "Soporte y datos",
-      body: "Monitoreo remoto, atención técnica vía call center y tableros consolidados de toda tu red.",
+      title: "Acompañamiento continuo",
+      body: "Soporte técnico con call center propio y monitoreo remoto.",
+    },
+  ],
+  note: "Más de 25 años acompañando al retail físico en México.",
+};
+
+export const OEM_RECURSOS = {
+  eyebrow: "RECURSOS PARA TU OPERACIÓN",
+  title: "Recursos para tu operación",
+  body: "Guías prácticas para tomar mejores decisiones sobre tu exhibición. Solicítalas sin costo.",
+  items: [
+    { title: "Autodiagnóstico: ¿tu exhibición vende o solo se ve?" },
+    { title: "Guía: cómo exhibir tecnología sin perder inventario" },
+    { title: "Guía de decisión: del precio impreso al precio digital" },
+    { title: "Guía: qué te pueden decir tus cámaras sobre tu comprador" },
+    { title: "Guía para marcas: tu producto, igual en cada punto de venta" },
+  ],
+};
+
+export const OEM_FAQ = {
+  eyebrow: "PREGUNTAS FRECUENTES",
+  title: "Preguntas frecuentes",
+  items: [
+    {
+      question: "¿Funciona con cualquier marca de celular, laptop o smartwatch?",
+      answer: "Sí. Las soluciones de exhibición se adaptan a cualquier marca y tamaño; solo cambian los soportes según el equipo.",
+    },
+    {
+      question: "¿Tengo que cambiar mis cámaras para usar inteligencia artificial?",
+      answer: "No. Funciona con cualquier cámara IP que ya tengas instalada y opera en la nube, sin equipo adicional en tienda.",
+    },
+    {
+      question: "Tengo una sola tienda, ¿esto es para mí?",
+      answer: "Sí. Todas las soluciones funcionan igual en una tienda que en cientos, y puedes empezar por la categoría que más te preocupa.",
+    },
+    {
+      question: "¿Hay opciones que no requieran mantenimiento?",
+      answer: "Sí. La seguridad mecánica no usa baterías, cables ni sensores: no hay nada que recargar ni reponer.",
+    },
+    {
+      question: "¿Dan servicio fuera de la Ciudad de México?",
+      answer: "Sí. Tenemos cobertura nacional y soporte técnico a través de nuestro call center.",
+    },
+    {
+      question: "¿Puedo ver las soluciones antes de decidir?",
+      answer: "Sí. Puedes probarlas en nuestros showrooms de Polanco, CDMX, y Culiacán, Sinaloa, o hacer un piloto medible en tus tiendas.",
     },
   ],
 };
 
-export const OEM_CLOSING = {
-  eyebrow: "CIERRE",
-  title: "Una exhibición que vende, protege y decide con datos",
-  items: [
-    { number: "01", icon: "store", title: "Mejor experiencia de exhibición", body: "El cliente toca, prueba y decide sin fricción." },
-    { number: "02", icon: "shield", title: "Menor exposición a merma", body: "En cada categoría de dispositivo, en cada punto de venta." },
-    { number: "03", icon: "chart", title: "Mayor ticket e ingresos adicionales", body: "Venta cruzada y campañas dirigidas por tienda, hora o región." },
-    { number: "04", icon: "grid", title: "Datos en tiempo real", body: "Para decidir con evidencia, no con intuición." },
-  ],
-  closing: "Un entorno integrado. Un socio que te acompaña en cada etapa.",
+export const OEM_CIERRE = {
+  title: "Ve cómo funciona antes de invertir",
+  body: "Prueba la exhibición segura, las pantallas y el precio digital en un entorno real. Visita nuestros showrooms en Polanco, CDMX, y en Culiacán, Sinaloa.",
 };
