@@ -10,6 +10,7 @@ import { DoingGrid } from "@/components/oem/doing-grid";
 import { SectionZone } from "@/components/oem/section-zone";
 import { SolutionIntro } from "@/components/oem/solution-intro";
 import { SectionHeader } from "@/components/oem/section-header";
+import { CategoryHeader } from "@/components/oem/category-header";
 import { ProductCards } from "@/components/oem/product-cards";
 import { FeatureGrid } from "@/components/oem/feature-grid";
 import { ProductTable } from "@/components/oem/product-table";
@@ -48,7 +49,7 @@ export default function OemElectronicaPage() {
 
       <SideProgressNav />
       <div className="xl:pl-72">
-        <div className="zone-azul bg-azul-primario">
+        <div className="zone-light" style={{ backgroundColor: "#ffffff" }}>
           <Section id="reto" className="scroll-mt-20 py-12 sm:py-16">
             <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
             <FeatureGrid features={OEM_RETO.features} columns={3} />
@@ -85,18 +86,44 @@ export default function OemElectronicaPage() {
 
           <Section className="py-12 sm:py-16">
             <SectionHeader
-              eyebrow={OEM_SEGURIDAD.detalle.eyebrow}
-              title={OEM_SEGURIDAD.detalle.title}
+              eyebrow={OEM_SEGURIDAD.categorias.eyebrow}
+              title={OEM_SEGURIDAD.categorias.title}
+              intro={OEM_SEGURIDAD.categorias.body}
             />
-            <FeatureGrid features={OEM_SEGURIDAD.detalle.features} columns={4} />
+          </Section>
+
+          <Section className="py-12 sm:py-16">
+            <CategoryHeader
+              icon={OEM_SEGURIDAD.electronicas.icon}
+              label={OEM_SEGURIDAD.electronicas.label}
+              title={OEM_SEGURIDAD.electronicas.title}
+              body={OEM_SEGURIDAD.electronicas.body}
+            />
+            <FeatureGrid features={OEM_SEGURIDAD.electronicas.features} columns={4} />
+            <div className="mt-10">
+              <ProductTable rows={OEM_SEGURIDAD.electronicas.tabla.rows} />
+            </div>
+          </Section>
+
+          <Section className="py-12 sm:py-16">
+            <CategoryHeader
+              icon={OEM_SEGURIDAD.mecanicas.icon}
+              label={OEM_SEGURIDAD.mecanicas.label}
+              title={OEM_SEGURIDAD.mecanicas.title}
+              body={OEM_SEGURIDAD.mecanicas.body}
+            />
+            <FeatureGrid features={OEM_SEGURIDAD.mecanicas.features} columns={3} />
+            <div className="mt-10">
+              <ProductTable rows={OEM_SEGURIDAD.mecanicas.tabla.rows} />
+            </div>
           </Section>
 
           <Section className="py-12 sm:py-16">
             <SectionHeader
-              eyebrow={OEM_SEGURIDAD.tabla.eyebrow}
-              title={OEM_SEGURIDAD.tabla.title}
+              eyebrow={OEM_SEGURIDAD.logros.eyebrow}
+              title={OEM_SEGURIDAD.logros.title}
             />
-            <ProductTable rows={OEM_SEGURIDAD.tabla.rows} />
+            <FeatureGrid features={OEM_SEGURIDAD.logros.items} columns={2} />
           </Section>
         </SectionZone>
 

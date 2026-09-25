@@ -175,34 +175,65 @@ export const OEM_SEGURIDAD = {
   intro: {
     title: "Soluciones para exhibición",
     tagline: "Tocar, probar, decidir",
-    body: "El cliente toma el equipo y explora todas sus funciones. Si alguien intenta llevárselo, se activa una alarma inmediata.",
+    body: "La forma de exhibir tecnología para que se venda: el cliente toca, prueba y compara con total libertad, mientras tu inventario permanece protegido. Dejas de elegir entre experiencia y seguridad: exhibes más producto abierto a prueba, reduces pérdidas y cuidas la imagen de tu exhibición.",
     image: "/oem/seguridad-hero.jpg",
     imageCredit: "Getty Images / SimpleImages",
   },
-  detalle: {
+  categorias: {
     eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
-    title: "Cómo protegemos tu exhibición",
-    features: [
-      { icon: "bell", title: "Alarma de más de 100 dB", body: "Sensores de perfil ultradelgado que no estorban la prueba del producto." },
-      { icon: "refresh", title: "Cable retráctil de hasta 1 metro", body: "Regresa el equipo a su lugar automáticamente." },
-      { icon: "device", title: "Carga integrada", body: "Para que el equipo exhibido siempre tenga batería." },
-      { icon: "eye", title: "Exhibición sin cables visibles", body: "Nada sobre la mesa que reste protagonismo al producto." },
-      { icon: "clock", title: "Hasta 48 horas de autonomía", body: "Por batería, en espacios sin corriente constante o activaciones temporales." },
-      { icon: "tool", title: "Opción mecánica de alta seguridad", body: "Sin consumibles ni mantenimiento." },
-      { icon: "grid", title: "Seguridad escalable", body: "Configuraciones de 2 o 4 brazos, según el nivel de riesgo." },
-    ],
+    title: "Dos formas de proteger tu exhibición",
+    body: "Electrónica, con alerta inmediata, y mecánica, con sujeción física. Son escalables —el nivel de protección crece con el riesgo de cada tienda o categoría, sin cambiar de sistema— y universales: funcionan con cualquier marca y tamaño de equipo.",
   },
-  tabla: {
+  electronicas: {
+    icon: "bell",
+    label: "ELECTRÓNICAS",
+    title: "Protección que se escucha, experiencia que no se interrumpe",
+    body: "Para exhibiciones donde la experiencia lo es todo: el equipo siempre cargado y listo para probarse, con una alerta inmediata ante cualquier intento de retiro.",
+    features: [
+      { icon: "bell", title: "Alarma de más de 100 dB", body: "Se activa al instante." },
+      { icon: "eye", title: "Sensores de perfil ultradelgado", body: "No estorban la prueba del producto." },
+      { icon: "refresh", title: "Cable retráctil de hasta 1 metro", body: "Regresa el equipo a su lugar." },
+      { icon: "device", title: "Carga integrada", body: "Para que el equipo exhibido siempre tenga batería." },
+      { icon: "grid", title: "Exhibición sin cables visibles", body: "Nada sobre la mesa que reste protagonismo al producto." },
+      { icon: "clock", title: "Hasta 48 horas de autonomía", body: "Por batería, en espacios sin corriente constante o activaciones temporales." },
+      { icon: "tool", title: "Configuración de 2 o 4 brazos", body: "Según el nivel de riesgo." },
+    ],
+    tabla: {
+      rows: [
+        { producto: "Celulares y tabletas", proteccion: "Soporte con alarma, carga y cable retráctil; mismo sistema para ambos, solo cambia el tamaño del soporte." },
+        { producto: "Laptops", proteccion: "Alarma combinada con bloqueo por cable, compatible con múltiples marcas." },
+        { producto: "Smartwatches", proteccion: "Membrana que protege la carátula, conectada a un sensor en las correas." },
+        { producto: "Audífonos over-ear", proteccion: "Soporte con carga integrada, siempre listos para probarse." },
+        { producto: "Producto pequeño (relojes, lentes, perfumes)", proteccion: "Cubierta transparente con alarma: visible y protegido." },
+        { producto: "Mesas con varios dispositivos", proteccion: "Estación de alarma de 2 o 4 puertos, con liberación rápida para cambiar la exhibición o resguardar en la noche." },
+      ],
+    },
+  },
+  mecanicas: {
+    icon: "tool",
+    label: "MECÁNICAS",
+    title: "Alta seguridad, operación simple",
+    body: "Para quien necesita alta seguridad con la operación más sencilla: se instala una vez y protege durante toda su vida útil.",
+    features: [
+      { icon: "lock", title: "Sujeción metálica reforzada", body: "El cliente manipula el equipo con libertad y el dispositivo no sale de la mesa." },
+      { icon: "tool", title: "Instalación anclada o adherida", body: "Se fija a la mesa o con adhesivo de máxima seguridad, según lo permita el mobiliario." },
+      { icon: "shield", title: "Libres de consumibles y mantenimiento", body: "Sin baterías, cables ni sensores: nada que reponer, recargar ni dar servicio, con o sin toma de corriente." },
+    ],
+    tabla: {
+      rows: [
+        { producto: "Celulares, tabletas y laptops", proteccion: "Sujeción metálica anclada o adherida a la mesa." },
+        { producto: "Audífonos in-ear", proteccion: "Soporte mecánico diseñado para su formato." },
+      ],
+    },
+  },
+  logros: {
     eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
-    title: "Protección por tipo de producto",
-    rows: [
-      { producto: "Celulares y tabletas", proteccion: "Soporte con alarma, carga y cable retráctil; mismo sistema para ambos, solo cambia el tamaño del soporte." },
-      { producto: "Laptops", proteccion: "Alarma combinada con bloqueo por cable, compatible con múltiples marcas." },
-      { producto: "Smartwatches", proteccion: "Membrana que protege la carátula, conectada a un sensor en las correas." },
-      { producto: "Audífonos over-ear", proteccion: "Soporte con carga integrada, siempre listos para probarse." },
-      { producto: "Audífonos in-ear", proteccion: "Protección mecánica diseñada para su formato." },
-      { producto: "Producto pequeño (relojes, lentes, perfumes)", proteccion: "Cubierta transparente con alarma: visible y protegido." },
-      { producto: "Mesas con varios dispositivos", proteccion: "Estación de alarma de 2 o 4 puertos, con liberación rápida para cambiar la exhibición." },
+    title: "Lo que logras con esta solución",
+    items: [
+      { icon: "check", title: "Un estándar en cada tienda", body: "El mismo nivel de protección y experiencia, sin importar quién la opere ni qué mueble use." },
+      { icon: "check", title: "Menor costo de reposición", body: "Menos robo en piso, incluso en las categorías de mayor rotación." },
+      { icon: "check", title: "Implementación replicable", body: "Fácil de instalar en uno o en cientos de puntos de venta." },
+      { icon: "check", title: "Venta cruzada desde la misma base", body: "Cada soporte electrónico puede integrarse con pantallas para promover accesorios, planes o garantías, sin ocupar espacio adicional." },
     ],
   },
 };
