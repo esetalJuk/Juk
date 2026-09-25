@@ -173,14 +173,14 @@ export const OEM_SOLUTION_LINES = [
 
 export const OEM_SEGURIDAD = {
   intro: {
-    eyebrow: "SEGURIDAD PARA EXHIBICIÓN",
-    title: "Tocar, probar, decidir",
+    title: "Soluciones para exhibición",
+    tagline: "Tocar, probar, decidir",
     body: "El cliente toma el equipo y explora todas sus funciones. Si alguien intenta llevárselo, se activa una alarma inmediata.",
     image: "/oem/seguridad-hero.jpg",
     imageCredit: "Getty Images / SimpleImages",
   },
   detalle: {
-    eyebrow: "SEGURIDAD PARA EXHIBICIÓN",
+    eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Cómo protegemos tu exhibición",
     features: [
       { icon: "bell", title: "Alarma de más de 100 dB", body: "Sensores de perfil ultradelgado que no estorban la prueba del producto." },
@@ -193,7 +193,7 @@ export const OEM_SEGURIDAD = {
     ],
   },
   tabla: {
-    eyebrow: "SEGURIDAD PARA EXHIBICIÓN",
+    eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Protección por tipo de producto",
     rows: [
       { producto: "Celulares y tabletas", proteccion: "Soporte con alarma, carga y cable retráctil; mismo sistema para ambos, solo cambia el tamaño del soporte." },
@@ -209,14 +209,14 @@ export const OEM_SEGURIDAD = {
 
 export const OEM_EAS = {
   intro: {
-    eyebrow: "ANTENAS EAS Y CONSUMIBLES",
-    title: "Protección en el momento más vulnerable: la salida",
+    title: "Soluciones de antenas EAS y consumibles",
+    tagline: "Protección en el momento más vulnerable: la salida",
     tags: ["Antenas", "Consumibles"],
     body: "Las antenas en los accesos detectan cualquier producto que no fue desactivado en caja y generan una alarma inmediata.",
     image: "/oem/eas-hero.jpg",
   },
   resuelve: {
-    eyebrow: "ANTENAS EAS",
+    eyebrow: "SOLUCIONES DE ANTENAS EAS Y CONSUMIBLES",
     title: "Supervisión de toda tu red desde un solo lugar",
     features: [
       { icon: "wifi", title: "Supervisión remota del estado de cada tienda", body: "Para detectar incidencias a tiempo." },
@@ -225,7 +225,7 @@ export const OEM_EAS = {
     ],
   },
   consumibles: {
-    eyebrow: "CONSUMIBLES EAS",
+    eyebrow: "SOLUCIONES DE ANTENAS EAS Y CONSUMIBLES",
     title: "El accesorio también es objetivo de robo",
     body: "Protegen audífonos, cargadores, fundas y accesorios empacados con etiquetas duras reutilizables en más de 40 formatos, etiquetas adhesivas de un solo uso y sistemas de cable y spider wrap para empaques irregulares. El formato se elige según el tamaño, la forma y el riesgo de cada producto.",
   },
@@ -233,15 +233,15 @@ export const OEM_EAS = {
 
 export const OEM_SIGNAGE = {
   intro: {
-    eyebrow: "DIGITAL SIGNAGE",
-    title: "Cada pantalla, un canal de venta",
+    title: "Soluciones de Digital Signage",
+    tagline: "Cada pantalla, un canal de venta",
     tags: ["Pantalla del producto", "Anaquel", "Precio digital"],
     body: "Controla desde una plataforma qué se muestra en cada pantalla de tu red, cuándo y dónde.",
     image: "/oem/signage-hero.jpg",
     imageCredit: "Getty Images / Vladimir Fedorov",
   },
   donde: {
-    eyebrow: "DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
     title: "Dónde aparece el contenido",
     products: [
       {
@@ -262,7 +262,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   control: {
-    eyebrow: "DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
     title: "Cómo se controla",
     features: [
       { icon: "wifi", title: "Actualización remota de toda la red", body: "Sin intervenir tienda por tienda." },
@@ -272,7 +272,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   pricingApp: {
-    eyebrow: "DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
     title: "Precio digital en el equipo exhibido",
     body: "El celular o la tableta en exhibición muestra su propio precio: detecta modelo y memoria automáticamente, se protege con PIN o huella, borra datos personales de forma automática y no requiere hardware adicional.",
     image: "/oem/pricing-app.jpg",
@@ -281,14 +281,14 @@ export const OEM_SIGNAGE = {
 
 export const OEM_INTERACCION = {
   intro: {
-    eyebrow: "INTERACCIÓN EN PUNTO DE VENTA",
-    title: "El producto se demuestra solo",
+    title: "Soluciones de interacción en punto de venta",
+    tagline: "El producto se demuestra solo",
     tags: ["Táctil", "Lift & Learn", "Audio"],
     body: "Quien toca el producto está más cerca de comprarlo. Estas experiencias hacen que la demostración ocurra sin depender de un vendedor.",
     image: "/oem/interaccion-hero.jpg",
   },
   formas: {
-    eyebrow: "INTERACCIÓN",
+    eyebrow: "SOLUCIONES DE INTERACCIÓN EN PUNTO DE VENTA",
     title: "Tres formas de que el producto se demuestre solo",
     products: [
       {
@@ -315,14 +315,14 @@ export const OEM_INTERACCION = {
 
 export const OEM_ESL = {
   intro: {
-    eyebrow: "ETIQUETAS ESL",
-    title: "El fin de la tarjeta de precio impresa",
+    title: "Soluciones de etiquetas ESL",
+    tagline: "El fin de la tarjeta de precio impresa",
     tags: ["Precio remoto", "Ventana horaria", "Anaquel"],
     body: "Pantallas digitales en el anaquel que se actualizan de forma remota.",
     image: "/oem/esl-hero.jpg",
   },
   detalle: {
-    eyebrow: "ETIQUETAS ESL",
+    eyebrow: "SOLUCIONES DE ETIQUETAS ESL",
     title: "Precio correcto en cada anaquel",
     features: [
       { icon: "tag", title: "Precio exacto", body: "Coincide siempre con el que se cobra en caja." },
@@ -341,15 +341,15 @@ export const OEM_ESL = {
 
 export const OEM_CERRADURAS = {
   intro: {
-    eyebrow: "CERRADURAS ELECTRÓNICAS",
-    title: "De llave física a acceso autorizado",
+    title: "Soluciones de cerraduras electrónicas",
+    tagline: "De llave física a acceso autorizado",
     tags: ["RFID", "Bluetooth", "Trazabilidad"],
     body: "Se instalan ocultas dentro de vitrinas y cajones, sin modificar el mueble.",
     image: "/oem/cerraduras-hero.png",
     darkIllustration: true,
   },
   control: {
-    eyebrow: "CERRADURAS ELECTRÓNICAS",
+    eyebrow: "SOLUCIONES DE CERRADURAS ELECTRÓNICAS",
     title: "El control de acceso, con trazabilidad",
     features: [
       { icon: "key", title: "Apertura por tarjeta RFID o Bluetooth", body: "Sin gestión de llaves." },
@@ -363,20 +363,20 @@ export const OEM_CERRADURAS = {
 
 export const OEM_IA = {
   intro: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
-    title: "Data en tiempo real de tu comprador en tienda",
+    title: "Soluciones de inteligencia artificial",
+    tagline: "Data en tiempo real de tu comprador en tienda",
     tags: ["Tráfico", "Comportamiento", "Operación"],
     body: "Convertimos las cámaras que ya operan en tienda en datos accionables sobre tu comprador y tu piso de venta.",
     image: "/oem/ia-hero.png",
     darkIllustration: true,
   },
   implementa: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    eyebrow: "SOLUCIONES DE INTELIGENCIA ARTIFICIAL",
     title: "Cómo se implementa",
     body: "Con cualquier cámara IP existente, 100% en la nube, escalable de una a cientos de tiendas, con tableros comparables entre sucursales y app móvil.",
   },
   funciones: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    eyebrow: "SOLUCIONES DE INTELIGENCIA ARTIFICIAL",
     title: "Qué te muestra",
     features: [
       { icon: "user", title: "Perfil de tu comprador", body: "Rango de edad, género y visitantes nuevos y recurrentes, sin contar a empleados ni proveedores." },
@@ -387,7 +387,7 @@ export const OEM_IA = {
     ],
   },
   aplicaciones: {
-    eyebrow: "INTELIGENCIA ARTIFICIAL",
+    eyebrow: "SOLUCIONES DE INTELIGENCIA ARTIFICIAL",
     title: "Decisiones con evidencia",
     features: [
       { icon: "grid", title: "Layout", body: "Acomodo según tráfico real." },

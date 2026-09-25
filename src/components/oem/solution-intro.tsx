@@ -5,10 +5,12 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useSectionAccent } from "@/components/oem/section-accent-context";
 import { ACCENT_BAR_CLASS, ACCENT_TEXT_CLASS } from "@/components/oem/section-zone";
 
+const TOTAL_SOLUTIONS = 7;
+
 export function SolutionIntro({
   number,
-  eyebrow,
   title,
+  tagline,
   tags,
   body,
   image,
@@ -16,8 +18,8 @@ export function SolutionIntro({
   fit = "cover",
 }: {
   number?: string;
-  eyebrow: string;
   title: string;
+  tagline?: string;
   tags?: string[];
   body: string;
   image: string;
@@ -39,10 +41,21 @@ export function SolutionIntro({
           </span>
         )}
         <span className={`relative block h-[3px] w-12 ${ACCENT_BAR_CLASS[accent]}`} />
-        <p className="eyebrow relative mt-5 text-verde-acento">{eyebrow}</p>
+        {number && (
+          <p className="eyebrow relative mt-5 text-white">
+            Solución {number} de {String(TOTAL_SOLUTIONS).padStart(2, "0")}
+          </p>
+        )}
         <h2 className="font-display text-balance relative mt-5 text-4xl sm:text-5xl">
           {title}
         </h2>
+        {tagline && (
+          <p
+            className={`font-display relative mt-2 text-lg sm:text-xl ${ACCENT_TEXT_CLASS[accent]}`}
+          >
+            {tagline}
+          </p>
+        )}
         {tags && (
           <div className="relative mt-5 flex flex-wrap gap-2">
             {tags.map((tag) => (
