@@ -80,19 +80,19 @@ export default function OemElectronicaPage() {
 
         {/* 01 — Seguridad para exhibición */}
         <SectionZone id="seguridad" accent="azul-primario">
-          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" />
+          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" centered />
 
           <Section className="py-12 sm:py-16">
             <div className="grid overflow-hidden border border-line bg-line gap-px lg:grid-cols-2">
-              <Reveal className="flex flex-col items-center justify-center bg-tinta-raised p-8 text-center sm:p-10">
-                <span className="mx-auto block h-[3px] w-9 bg-azul-primario" />
+              <Reveal className="flex flex-col justify-center bg-tinta-raised p-8 sm:p-10">
+                <span className="block h-[3px] w-9 bg-azul-primario" />
                 <p className="eyebrow mt-4 text-white">
                   {OEM_SEGURIDAD.categorias.eyebrow}
                 </p>
-                <h2 className="font-display mt-3 text-4xl sm:text-5xl">
+                <h2 className="font-display mt-3 text-3xl sm:text-4xl">
                   {OEM_SEGURIDAD.categorias.title}
                 </h2>
-                <p className="mx-auto mt-4 max-w-xl font-body text-sm normal-case tracking-normal text-ink-muted">
+                <p className="mt-4 max-w-xl font-body text-sm normal-case tracking-normal text-ink-muted">
                   {OEM_SEGURIDAD.categorias.body}
                 </p>
               </Reveal>

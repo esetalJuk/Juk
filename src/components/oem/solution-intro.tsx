@@ -16,6 +16,7 @@ export function SolutionIntro({
   image,
   imageCredit,
   fit = "cover",
+  centered = false,
 }: {
   number?: string;
   title: string;
@@ -25,13 +26,17 @@ export function SolutionIntro({
   image?: string;
   imageCredit?: string;
   fit?: "cover" | "contain";
+  /** Centers the text and gives the title more visual weight — only meaningful without an image. */
+  centered?: boolean;
 }) {
   const ref = useScrollReveal<HTMLDivElement>({ y: 24, once: true });
   const accent = useSectionAccent();
 
   return (
     <div ref={ref} className={`grid border-b border-line/60 ${image ? "lg:grid-cols-2" : ""}`}>
-      <div className="relative flex flex-col justify-center overflow-hidden px-6 py-16 sm:px-10 lg:py-24">
+      <div
+        className={`relative flex flex-col justify-center overflow-hidden px-6 py-16 sm:px-10 lg:py-24 ${centered ? "items-center text-center" : ""}`}
+      >
         {number && (
           <span
             aria-hidden="true"
@@ -40,13 +45,17 @@ export function SolutionIntro({
             {number}
           </span>
         )}
-        <span className={`relative block h-[3px] w-12 ${ACCENT_BAR_CLASS[accent]}`} />
+        <span
+          className={`relative block h-[3px] w-12 ${centered ? "mx-auto" : ""} ${ACCENT_BAR_CLASS[accent]}`}
+        />
         {number && (
           <p className="eyebrow relative mt-5 text-white">
             Solución {number} de {String(TOTAL_SOLUTIONS).padStart(2, "0")}
           </p>
         )}
-        <h2 className="font-display text-balance relative mt-5 text-4xl sm:text-5xl">
+        <h2
+          className={`font-display text-balance relative mt-5 ${centered ? "text-4xl sm:text-5xl md:text-6xl" : "text-4xl sm:text-5xl"}`}
+        >
           {title}
         </h2>
         {tagline && (
@@ -69,7 +78,7 @@ export function SolutionIntro({
           </div>
         )}
         <p
-          className={`relative mt-6 font-body text-base normal-case tracking-normal text-ink-muted ${image ? "max-w-md" : "max-w-xl"}`}
+          className={`relative mt-6 font-body text-base normal-case tracking-normal text-ink-muted ${centered ? "mx-auto max-w-2xl" : image ? "max-w-md" : "max-w-xl"}`}
         >
           {body}
         </p>
