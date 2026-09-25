@@ -11,6 +11,7 @@ export function SolutionIntro({
   number,
   title,
   tagline,
+  taglineGreen,
   tags,
   body,
   image,
@@ -20,6 +21,8 @@ export function SolutionIntro({
   number?: string;
   title: string;
   tagline?: string;
+  /** Highlights the tagline in verde-acento instead of the zone's accent — for the one pull-quote that calls for it. */
+  taglineGreen?: boolean;
   tags?: string[];
   body: string;
   image?: string;
@@ -51,7 +54,7 @@ export function SolutionIntro({
         </h2>
         {tagline && (
           <p
-            className={`font-display relative mt-2 text-lg sm:text-xl ${ACCENT_TEXT_CLASS[accent]}`}
+            className={`font-display relative mt-2 text-lg sm:text-xl ${taglineGreen ? "text-verde-acento" : ACCENT_TEXT_CLASS[accent]}`}
           >
             {tagline}
           </p>
