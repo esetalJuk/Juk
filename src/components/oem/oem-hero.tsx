@@ -52,7 +52,7 @@ export function OemHero() {
         </p>
         <h1
           data-hero-item
-          className="font-display text-balance mt-6 max-w-3xl text-4xl sm:text-6xl lg:text-7xl"
+          className="font-display text-balance mt-6 max-w-3xl text-4xl text-verde-acento sm:text-6xl lg:text-7xl"
         >
           {OEM_HERO.h1}
         </h1>
