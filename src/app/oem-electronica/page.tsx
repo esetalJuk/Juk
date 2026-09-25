@@ -82,12 +82,19 @@ export default function OemElectronicaPage() {
         <SectionZone id="seguridad" accent="azul-primario">
           <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" />
 
-          <Section className="py-12 sm:py-16">
-            <SectionHeader
-              eyebrow={OEM_SEGURIDAD.categorias.eyebrow}
-              title={OEM_SEGURIDAD.categorias.title}
-              intro={OEM_SEGURIDAD.categorias.body}
-            />
+          <Section className="py-16 sm:py-24">
+            <Reveal className="text-center">
+              <span className="mx-auto block h-[3px] w-12 bg-azul-primario" />
+              <p className="eyebrow mt-5 text-white">
+                {OEM_SEGURIDAD.categorias.eyebrow}
+              </p>
+              <h2 className="font-display text-balance mt-4 text-4xl sm:text-5xl md:text-6xl">
+                {OEM_SEGURIDAD.categorias.title}
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl font-body text-base normal-case tracking-normal text-ink-muted sm:text-lg">
+                {OEM_SEGURIDAD.categorias.body}
+              </p>
+            </Reveal>
           </Section>
 
           <Section className="py-12 sm:py-16">

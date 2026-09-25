@@ -182,7 +182,7 @@ export const OEM_SEGURIDAD = {
   categorias: {
     eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Dos formas de proteger tu exhibición",
-    body: "Electrónica, con alerta inmediata, y mecánica, con sujeción física. Son escalables —el nivel de protección crece con el riesgo de cada tienda o categoría, sin cambiar de sistema— y universales: funcionan con cualquier marca y tamaño de equipo.",
+    body: "Electrónica, con alerta inmediata, y mecánica, con sujeción física: la opción más robusta, libre de consumibles y mantenimiento. Son escalables —el nivel de protección crece con el riesgo de cada tienda o categoría, sin cambiar de sistema— y universales: funcionan con cualquier marca y tamaño de equipo.",
   },
   electronicas: {
     icon: "bell",
