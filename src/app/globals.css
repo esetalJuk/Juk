@@ -159,6 +159,21 @@ li {
   color-scheme: light;
 }
 
+/* Bright-blue section variant (OEM page): boosts muted-text opacity and the
+   line color so body copy and dividers stay legible directly on the
+   saturated azul-primario field, and flips the accent bar (which is
+   azul-primario itself) to white so it doesn't disappear into the backdrop. */
+.zone-azul {
+  --color-ink-muted: rgba(255, 255, 255, 0.88);
+  --color-ink-faint: rgba(255, 255, 255, 0.7);
+  --color-line: rgba(255, 255, 255, 0.22);
+  --color-line-strong: rgba(255, 255, 255, 0.34);
+}
+
+.zone-azul .bg-azul-primario {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 @keyframes modal-in {
   from {
     opacity: 0;

@@ -48,34 +48,36 @@ export default function OemElectronicaPage() {
 
       <SideProgressNav />
       <div className="xl:pl-72">
-        <Section id="reto" className="scroll-mt-20 py-16 sm:py-20">
-          <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
-          <FeatureGrid features={OEM_RETO.features} columns={3} />
-        </Section>
+        <div className="zone-azul bg-azul-primario">
+          <Section id="reto" className="scroll-mt-20 py-16 sm:py-20">
+            <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
+            <FeatureGrid features={OEM_RETO.features} columns={3} />
+          </Section>
 
-        <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
-          <Reveal className="max-w-2xl">
-            <p className="eyebrow text-white">{OEM_ENTORNO_INTRO.eyebrow}</p>
-            <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
-              {OEM_ENTORNO_INTRO.title}
-            </h2>
-            <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
-              {OEM_ENTORNO_INTRO.body}
-            </p>
-          </Reveal>
+          <Section id="entorno" className="scroll-mt-20 py-16 sm:py-20">
+            <Reveal className="max-w-2xl">
+              <p className="eyebrow text-white">{OEM_ENTORNO_INTRO.eyebrow}</p>
+              <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
+                {OEM_ENTORNO_INTRO.title}
+              </h2>
+              <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
+                {OEM_ENTORNO_INTRO.body}
+              </p>
+            </Reveal>
 
-          <div className="mt-10">
-            <DoingGrid />
-          </div>
-        </Section>
+            <div className="mt-10">
+              <DoingGrid />
+            </div>
+          </Section>
 
-        <Section className="py-16 sm:py-20">
-          <SectionHeader
-            eyebrow={OEM_PARA_QUIEN.eyebrow}
-            title={OEM_PARA_QUIEN.title}
-          />
-          <FeatureGrid features={OEM_PARA_QUIEN.features} columns={3} />
-        </Section>
+          <Section className="py-16 sm:py-20">
+            <SectionHeader
+              eyebrow={OEM_PARA_QUIEN.eyebrow}
+              title={OEM_PARA_QUIEN.title}
+            />
+            <FeatureGrid features={OEM_PARA_QUIEN.features} columns={3} />
+          </Section>
+        </div>
 
         {/* 01 — Seguridad para exhibición */}
         <SectionZone id="seguridad" accent="azul-primario">
