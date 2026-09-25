@@ -175,7 +175,7 @@ export const OEM_SEGURIDAD = {
   intro: {
     title: "Soluciones para exhibición",
     tagline: "Tocar, probar, decidir",
-    body: "La forma de exhibir tecnología para que se venda: el cliente toca, prueba y compara con total libertad, mientras tu inventario permanece protegido. Dejas de elegir entre experiencia y seguridad: exhibes más producto abierto a prueba, reduces pérdidas y cuidas la imagen de tu exhibición.",
+    body: "Tu cliente quiere tocar, probar y comparar antes de comprar. Con nuestras bases de seguridad puede hacerlo con total libertad, mientras tu inventario permanece protegido. El resultado: más producto abierto a prueba, menos pérdidas y una exhibición que siempre luce bien. Experiencia y seguridad, sin tener que elegir.",
     image: "/oem/seguridad-hero.jpg",
     imageCredit: "Getty Images / SimpleImages",
   },
