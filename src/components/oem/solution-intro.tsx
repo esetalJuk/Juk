@@ -5,12 +5,11 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useSectionAccent } from "@/components/oem/section-accent-context";
 import { ACCENT_BAR_CLASS, ACCENT_TEXT_CLASS } from "@/components/oem/section-zone";
 
-const TOTAL_SOLUTIONS = 7;
-
 export function SolutionIntro({
   number,
   title,
   tagline,
+  taglineGreen,
   tags,
   body,
   image,
@@ -21,6 +20,8 @@ export function SolutionIntro({
   number?: string;
   title: string;
   tagline?: string;
+  /** Highlights the tagline in verde-acento instead of the zone's accent. */
+  taglineGreen?: boolean;
   tags?: string[];
   body: string;
   image?: string;
@@ -48,11 +49,6 @@ export function SolutionIntro({
         <span
           className={`relative block h-[3px] w-12 ${centered ? "mx-auto" : ""} ${ACCENT_BAR_CLASS[accent]}`}
         />
-        {number && (
-          <p className="eyebrow relative mt-5 text-white">
-            Solución {number} de {String(TOTAL_SOLUTIONS).padStart(2, "0")}
-          </p>
-        )}
         <h2
           className={`font-display text-balance relative mt-5 ${centered ? "text-4xl sm:text-5xl md:text-6xl" : "text-4xl sm:text-5xl"}`}
         >
@@ -60,7 +56,7 @@ export function SolutionIntro({
         </h2>
         {tagline && (
           <p
-            className={`font-display relative mt-2 text-lg sm:text-xl ${ACCENT_TEXT_CLASS[accent]}`}
+            className={`font-display relative mt-2 text-lg sm:text-xl ${taglineGreen ? "text-verde-acento" : ACCENT_TEXT_CLASS[accent]}`}
           >
             {tagline}
           </p>

@@ -50,7 +50,7 @@ export default function OemElectronicaPage() {
         <div className="zone-light" style={{ backgroundColor: "#ffffff" }}>
           <Section id="reto" className="scroll-mt-20 py-12 sm:py-16">
             <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
-            <FeatureGrid features={OEM_RETO.features} columns={3} />
+            <FeatureGrid features={OEM_RETO.features} columns={3} variant="blue" />
           </Section>
 
           <Section id="entorno" className="scroll-mt-20 py-12 sm:py-16">
@@ -74,13 +74,13 @@ export default function OemElectronicaPage() {
               eyebrow={OEM_PARA_QUIEN.eyebrow}
               title={OEM_PARA_QUIEN.title}
             />
-            <FeatureGrid features={OEM_PARA_QUIEN.features} columns={3} />
+            <FeatureGrid features={OEM_PARA_QUIEN.features} columns={3} variant="blue" />
           </Section>
         </div>
 
         {/* 01 — Seguridad para exhibición */}
         <SectionZone id="seguridad" accent="azul-primario">
-          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" centered />
+          <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" centered taglineGreen />
 
           <Section className="py-12 sm:py-16">
             <div className="grid overflow-hidden border border-line bg-line gap-px lg:grid-cols-2">
