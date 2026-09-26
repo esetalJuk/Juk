@@ -175,6 +175,7 @@ export const OEM_SEGURIDAD = {
   intro: {
     title: "Soluciones para exhibición",
     tagline: "Tocar, probar, decidir",
+    tags: ["Celulares", "Tabletas", "Laptops", "Smartwatch", "Audífonos wearables"],
     body: "Tu cliente quiere tocar, probar y comparar antes de comprar. Con nuestras bases de seguridad puede hacerlo con total libertad, mientras tu inventario permanece protegido. El resultado: más producto abierto a prueba, menos pérdidas y una exhibición que siempre luce bien. Experiencia y seguridad, sin tener que elegir.",
   },
   categorias: {
