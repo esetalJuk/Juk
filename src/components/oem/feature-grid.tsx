@@ -38,7 +38,7 @@ export function FeatureGrid({
           data-reveal-item
           className={`group p-6 transition-colors ${
             variant === "blue"
-              ? "bg-azul-primario hover:bg-azul-corporativo"
+              ? "bg-azul-corporativo hover:bg-azul-primario"
               : feature.highlight
                 ? "bg-azul-corporativo hover:bg-azul-primario"
                 : "bg-tinta-raised hover:bg-tinta-card"
