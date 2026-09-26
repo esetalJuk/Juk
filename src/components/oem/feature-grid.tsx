@@ -33,7 +33,7 @@ export function FeatureGrid({
       className={`grid gap-px overflow-hidden border border-line bg-line ${COLUMN_CLASS[columns]}`}
     >
       {features.map((feature) => (
-        <div key={feature.title} data-reveal-item className="bg-tinta p-6">
+        <div key={feature.title} data-reveal-item className="bg-[#070d14] p-6">
           <Icon
             name={feature.icon}
             className={`h-6 w-6 ${
@@ -41,11 +41,11 @@ export function FeatureGrid({
             }`}
           />
           <h3
-            className={`font-display mt-4 text-lg leading-tight ${variant === "verde" ? "text-verde-acento" : ""}`}
+            className={`font-display mt-4 text-lg leading-tight ${variant === "verde" ? "text-verde-acento" : "text-[#fff]"}`}
           >
             {feature.title}
           </h3>
-          <p className="mt-2 text-sm text-ink-muted">{feature.body}</p>
+          <p className="mt-2 text-sm text-[#fff]/70">{feature.body}</p>
         </div>
       ))}
     </Reveal>

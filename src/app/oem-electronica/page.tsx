@@ -84,15 +84,15 @@ export default function OemElectronicaPage() {
 
           <Section className="py-12 sm:py-16">
             <div className="grid overflow-hidden border border-line bg-line gap-px lg:grid-cols-2">
-              <Reveal className="flex flex-col justify-center bg-tinta p-8 sm:p-10">
+              <Reveal className="flex flex-col justify-center bg-[#070d14] p-8 sm:p-10">
                 <span className="block h-[3px] w-9 bg-azul-primario" />
-                <p className="eyebrow mt-4 text-white">
+                <p className="eyebrow mt-4 text-[#fff]">
                   {OEM_SEGURIDAD.categorias.eyebrow}
                 </p>
-                <h2 className="font-display mt-3 text-3xl sm:text-4xl">
+                <h2 className="font-display mt-3 text-3xl text-[#fff] sm:text-4xl">
                   {OEM_SEGURIDAD.categorias.title}
                 </h2>
-                <p className="mt-4 max-w-xl font-body text-sm normal-case tracking-normal text-ink-muted">
+                <p className="mt-4 max-w-xl font-body text-sm normal-case tracking-normal text-[#fff]/70">
                   {OEM_SEGURIDAD.categorias.body}
                 </p>
               </Reveal>
@@ -179,14 +179,14 @@ export default function OemElectronicaPage() {
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
               </Reveal>
-              <Reveal className="flex flex-col justify-center bg-tinta p-8 sm:p-10">
-                <p className="eyebrow text-white">
+              <Reveal className="flex flex-col justify-center bg-[#070d14] p-8 sm:p-10">
+                <p className="eyebrow text-[#fff]">
                   {OEM_SIGNAGE.pricingApp.eyebrow}
                 </p>
-                <h3 className="font-display mt-3 text-2xl leading-tight sm:text-3xl">
+                <h3 className="font-display mt-3 text-2xl leading-tight text-[#fff] sm:text-3xl">
                   {OEM_SIGNAGE.pricingApp.title}
                 </h3>
-                <p className="mt-4 max-w-md font-body text-sm normal-case tracking-normal text-ink-muted">
+                <p className="mt-4 max-w-md font-body text-sm normal-case tracking-normal text-[#fff]/70">
                   {OEM_SIGNAGE.pricingApp.body}
                 </p>
               </Reveal>
@@ -272,12 +272,12 @@ export default function OemElectronicaPage() {
                 <div
                   key={spec.note}
                   data-reveal-item
-                  className="bg-tinta px-6 py-5 text-center"
+                  className="bg-[#070d14] px-6 py-5 text-center"
                 >
                   <p className="font-display text-2xl text-verde-acento">
                     {spec.value}
                   </p>
-                  <p className="text-xs text-ink-muted">{spec.note}</p>
+                  <p className="text-xs text-[#fff]/70">{spec.note}</p>
                 </div>
               ))}
             </Reveal>

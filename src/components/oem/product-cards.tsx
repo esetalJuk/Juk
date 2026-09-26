@@ -26,7 +26,7 @@ export function ProductCards({
       }`}
     >
       {products.map((product) => (
-        <div key={product.title} data-reveal-item className="flex flex-col bg-tinta">
+        <div key={product.title} data-reveal-item className="flex flex-col bg-[#070d14]">
           <div className="relative aspect-[4/3] overflow-hidden bg-white">
             <Image
               src={product.image}
@@ -40,10 +40,10 @@ export function ProductCards({
             {product.code && (
               <p className="eyebrow text-azul-primario">{product.code}</p>
             )}
-            <h3 className="font-display mt-2 text-xl leading-tight">
+            <h3 className="font-display mt-2 text-xl leading-tight text-[#fff]">
               {product.title}
             </h3>
-            <p className="mt-3 text-sm text-ink-muted">{product.body}</p>
+            <p className="mt-3 text-sm text-[#fff]/70">{product.body}</p>
           </div>
         </div>
       ))}
