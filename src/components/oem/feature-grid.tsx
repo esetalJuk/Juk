@@ -33,41 +33,19 @@ export function FeatureGrid({
       className={`grid gap-px overflow-hidden border border-line bg-line ${COLUMN_CLASS[columns]}`}
     >
       {features.map((feature) => (
-        <div
-          key={feature.title}
-          data-reveal-item
-          className={`group p-6 transition-colors ${
-            variant === "verde"
-              ? "bg-tinta hover:bg-tinta-raised"
-              : feature.highlight
-                ? "bg-azul-corporativo hover:bg-azul-primario"
-                : "bg-tinta-raised hover:bg-tinta-card"
-          }`}
-        >
+        <div key={feature.title} data-reveal-item className="bg-tinta p-6">
           <Icon
             name={feature.icon}
-            className={`h-6 w-6 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-0.5 ${
-              variant === "verde"
-                ? "text-verde-acento"
-                : feature.highlight
-                  ? "text-[#fff]"
-                  : "text-azul-primario"
+            className={`h-6 w-6 ${
+              variant === "verde" ? "text-verde-acento" : feature.highlight ? "text-[#fff]" : "text-azul-primario"
             }`}
           />
           <h3
-            className={`font-display mt-4 text-lg leading-tight ${
-              variant === "verde" ? "text-verde-acento" : feature.highlight ? "text-[#fff]" : ""
-            }`}
+            className={`font-display mt-4 text-lg leading-tight ${variant === "verde" ? "text-verde-acento" : ""}`}
           >
             {feature.title}
           </h3>
-          <p
-            className={`mt-2 text-sm ${
-              variant === "verde" ? "text-ink-muted" : feature.highlight ? "text-[#fff]/85" : "text-ink-muted"
-            }`}
-          >
-            {feature.body}
-          </p>
+          <p className="mt-2 text-sm text-ink-muted">{feature.body}</p>
         </div>
       ))}
     </Reveal>

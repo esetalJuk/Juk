@@ -26,17 +26,13 @@ export function ProductCards({
       }`}
     >
       {products.map((product) => (
-        <div
-          key={product.title}
-          data-reveal-item
-          className="group flex flex-col bg-tinta-raised transition-colors hover:bg-tinta-card"
-        >
+        <div key={product.title} data-reveal-item className="flex flex-col bg-tinta">
           <div className="relative aspect-[4/3] overflow-hidden bg-white">
             <Image
               src={product.image}
               alt={product.title}
               fill
-              className="object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-105"
+              className="object-contain p-6"
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
           </div>
