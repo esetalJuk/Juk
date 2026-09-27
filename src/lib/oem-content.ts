@@ -181,7 +181,7 @@ export const OEM_SEGURIDAD = {
   categorias: {
     eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Dos formas de proteger tu exhibición",
-    body: "Electrónica, con alerta inmediata, y mecánica, con sujeción física: la opción más robusta, libre de consumibles y mantenimiento. Son escalables —el nivel de protección crece con el riesgo de cada tienda o categoría, sin cambiar de sistema— y universales: funcionan con cualquier marca y tamaño de equipo.",
+    body: "Elige la protección que cada tienda necesita. La electrónica reacciona al instante ante cualquier manipulación; la mecánica sujeta el equipo físicamente, sin consumibles ni mantenimiento. Y como son escalables, subes el nivel de seguridad donde el riesgo es mayor, sin cambiar de sistema. Todo compatible con cualquier marca y tamaño de dispositivo.",
     image: "/oem/seguridad-hero.jpg",
     imageCredit: "Getty Images / SimpleImages",
   },
