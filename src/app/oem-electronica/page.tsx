@@ -104,11 +104,6 @@ export default function OemElectronicaPage() {
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
-                {OEM_SEGURIDAD.categorias.imageCredit && (
-                  <span className="absolute bottom-3 right-3 rounded bg-black/50 px-2 py-1 text-[10px] text-[#fff]/70">
-                    {OEM_SEGURIDAD.categorias.imageCredit}
-                  </span>
-                )}
               </Reveal>
             </div>
           </Section>

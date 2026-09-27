@@ -182,8 +182,7 @@ export const OEM_SEGURIDAD = {
     eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Dos formas de proteger tu exhibición",
     body: "Elige la protección que cada tienda necesita. La electrónica reacciona al instante ante cualquier manipulación; la mecánica sujeta el equipo físicamente, sin consumibles ni mantenimiento. Y como son escalables, subes el nivel de seguridad donde el riesgo es mayor, sin cambiar de sistema. Todo compatible con cualquier marca y tamaño de dispositivo.",
-    image: "/oem/seguridad-hero.jpg",
-    imageCredit: "Getty Images / SimpleImages",
+    image: "/oem/seguridad-electronica-mecanica.jpg",
   },
   electronicas: {
     icon: "bell",
