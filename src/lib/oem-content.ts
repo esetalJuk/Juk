@@ -179,7 +179,7 @@ export const OEM_SEGURIDAD = {
     body: "Tu cliente quiere tocar, probar y comparar antes de comprar. Con nuestras bases de seguridad puede hacerlo con total libertad, mientras tu inventario permanece protegido. El resultado: más producto abierto a prueba, menos pérdidas y una exhibición que siempre luce bien. Experiencia y seguridad, sin tener que elegir.",
   },
   categorias: {
-    eyebrow: "EXHIBICIÓN PARA DISPLAY",
+    eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Dos formas de proteger tu exhibición",
     body: "Elige la protección que cada tienda necesita. La electrónica reacciona al instante ante cualquier manipulación; la mecánica sujeta el equipo físicamente, sin consumibles ni mantenimiento. Y como son escalables, subes el nivel de seguridad donde el riesgo es mayor, sin cambiar de sistema. Todo compatible con cualquier marca y tamaño de dispositivo.",
     image: "/oem/seguridad-electronica-mecanica.jpg",
@@ -227,7 +227,7 @@ export const OEM_SEGURIDAD = {
     },
   },
   logros: {
-    eyebrow: "EXHIBICIÓN PARA DISPLAY",
+    eyebrow: "SOLUCIONES PARA EXHIBICIÓN",
     title: "Lo que logras con esta solución",
     items: [
       { icon: "check", title: "Un estándar en cada tienda", body: "El mismo nivel de protección y experiencia, sin importar quién la opere ni qué mueble use." },
