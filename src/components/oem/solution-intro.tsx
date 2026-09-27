@@ -66,7 +66,7 @@ export function SolutionIntro({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="eyebrow cursor-default border border-line-strong px-3 py-1.5 text-xs normal-case tracking-normal text-ink-muted transition-colors hover:border-azul-primario hover:text-white"
+                className="eyebrow border border-line-strong px-3 py-1.5 text-xs normal-case tracking-normal text-ink-muted"
               >
                 {tag}
               </span>
