@@ -24,7 +24,6 @@ import {
   OEM_PARA_QUIEN,
   OEM_SEGURIDAD,
   OEM_SIGNAGE,
-  OEM_INTERACCION,
   OEM_IA,
   OEM_CERRADURAS,
   OEM_ESL,
@@ -160,7 +159,7 @@ export default function OemElectronicaPage() {
               eyebrow={OEM_SIGNAGE.control.eyebrow}
               title={OEM_SIGNAGE.control.title}
             />
-            <FeatureGrid features={OEM_SIGNAGE.control.features} columns={4} />
+            <FeatureGrid features={OEM_SIGNAGE.control.features} columns={3} />
           </Section>
 
           <Section className="py-8 sm:py-10">
@@ -186,25 +185,61 @@ export default function OemElectronicaPage() {
                 </p>
               </Reveal>
             </div>
+            <div className="mt-px">
+              <FeatureGrid features={OEM_SIGNAGE.pricingApp.features} columns={4} />
+            </div>
           </Section>
-        </SectionZone>
-
-        {/* 03 — Interacción en punto de venta */}
-        <SectionZone id="interaccion" accent="azul-corporativo">
-          <SolutionIntro {...OEM_INTERACCION.intro} number="03" />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
-              eyebrow={OEM_INTERACCION.formas.eyebrow}
-              title={OEM_INTERACCION.formas.title}
+              eyebrow={OEM_SIGNAGE.anaquel.eyebrow}
+              title={OEM_SIGNAGE.anaquel.title}
             />
-            <ProductCards products={OEM_INTERACCION.formas.products} />
+            <FeatureGrid features={OEM_SIGNAGE.anaquel.features} columns={4} />
+          </Section>
+
+          <Section className="py-8 sm:py-10">
+            <Reveal className="max-w-2xl">
+              <p className="eyebrow text-white">{OEM_SIGNAGE.formas.eyebrow}</p>
+              <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
+                {OEM_SIGNAGE.formas.title}
+              </h2>
+              <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
+                {OEM_SIGNAGE.formas.body}
+              </p>
+            </Reveal>
+            <div className="mt-10">
+              <ProductCards products={OEM_SIGNAGE.formas.products} />
+            </div>
+          </Section>
+
+          <Section className="py-8 sm:py-10">
+            <Reveal className="max-w-2xl">
+              <p className="eyebrow text-white">{OEM_SIGNAGE.insights.eyebrow}</p>
+              <h2 className="font-display mt-3 text-3xl sm:text-4xl">
+                {OEM_SIGNAGE.insights.title}
+              </h2>
+              <p className="mt-4 max-w-xl font-body text-sm normal-case tracking-normal text-ink-muted">
+                {OEM_SIGNAGE.insights.body}
+              </p>
+            </Reveal>
+          </Section>
+
+          <Section className="py-8 sm:py-10">
+            <SectionHeader
+              eyebrow={OEM_SIGNAGE.ventajas.eyebrow}
+              title={OEM_SIGNAGE.ventajas.title}
+            />
+            <FeatureGrid features={OEM_SIGNAGE.ventajas.features} columns={3} />
+            <p className="font-display mt-10 max-w-2xl text-xl leading-snug text-azul-primario sm:text-2xl">
+              {OEM_SIGNAGE.ventajas.statement}
+            </p>
           </Section>
         </SectionZone>
 
-        {/* 04 — Inteligencia artificial */}
+        {/* 03 — Inteligencia artificial */}
         <SectionZone id="ia" accent="verde-acento">
-          <SolutionIntro {...OEM_IA.intro} number="04" fit="contain" />
+          <SolutionIntro {...OEM_IA.intro} number="03" fit="contain" />
 
           <Section className="py-8 sm:py-10">
             <Reveal className="max-w-2xl">
@@ -235,9 +270,9 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 05 — Cerraduras electrónicas */}
+        {/* 04 — Cerraduras electrónicas */}
         <SectionZone id="cerraduras" accent="azul-primario">
-          <SolutionIntro {...OEM_CERRADURAS.intro} number="05" fit="contain" />
+          <SolutionIntro {...OEM_CERRADURAS.intro} number="04" fit="contain" />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
@@ -248,9 +283,9 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 06 — Etiquetas ESL */}
+        {/* 05 — Etiquetas ESL */}
         <SectionZone id="esl" accent="azul-corporativo">
-          <SolutionIntro {...OEM_ESL.intro} number="06" />
+          <SolutionIntro {...OEM_ESL.intro} number="05" />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
@@ -279,9 +314,9 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 07 — Antenas EAS y consumibles */}
+        {/* 06 — Antenas EAS y consumibles */}
         <SectionZone id="eas" accent="verde-acento">
-          <SolutionIntro {...OEM_EAS.intro} number="07" />
+          <SolutionIntro {...OEM_EAS.intro} number="06" />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader

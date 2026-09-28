@@ -57,7 +57,7 @@ export const OEM_LO_QUE_HACEMOS = [
     label: "VENDER",
     title: "El producto se explica solo",
     body: "Precio, características y promociones aparecen en el momento en que el cliente toca, levanta o escucha el producto.",
-    linkLabel: "Digital Signage · Interacción en punto de venta",
+    linkLabel: "Digital Signage",
     targetSlug: "signage",
     accent: "verde-acento",
   },
@@ -120,21 +120,12 @@ export const OEM_SOLUTION_LINES = [
     slug: "signage",
     label: "Digital Signage",
     icon: "device",
-    kicker: "Producto · Anaquel · Precio digital",
+    kicker: "Producto · Anaquel · Precio digital · Interacción",
     description: "Convierte cada pantalla del punto de venta en un canal de venta controlado.",
     accent: "verde-acento",
   },
   {
     number: "03",
-    slug: "interaccion",
-    label: "Interacción en punto de venta",
-    icon: "tap",
-    kicker: "Táctil · Lift & Learn · Audio",
-    description: "El producto se demuestra solo cuando el cliente lo toca, lo levanta o lo escucha.",
-    accent: "azul-corporativo",
-  },
-  {
-    number: "04",
     slug: "ia",
     label: "Inteligencia artificial",
     icon: "camera",
@@ -143,7 +134,7 @@ export const OEM_SOLUTION_LINES = [
     accent: "verde-acento",
   },
   {
-    number: "05",
+    number: "04",
     slug: "cerraduras",
     label: "Cerraduras electrónicas",
     icon: "lock",
@@ -152,7 +143,7 @@ export const OEM_SOLUTION_LINES = [
     accent: "azul-primario",
   },
   {
-    number: "06",
+    number: "05",
     slug: "esl",
     label: "Etiquetas ESL",
     icon: "tag",
@@ -161,7 +152,7 @@ export const OEM_SOLUTION_LINES = [
     accent: "azul-corporativo",
   },
   {
-    number: "07",
+    number: "06",
     slug: "eas",
     icon: "wifi",
     label: "Antenas EAS y consumibles",
@@ -266,81 +257,99 @@ export const OEM_SIGNAGE = {
   intro: {
     title: "Soluciones de Digital Signage",
     tagline: "Cada pantalla, un canal de venta",
-    tags: ["Pantalla del producto", "Anaquel", "Precio digital"],
-    body: "Controla desde una plataforma qué se muestra en cada pantalla de tu red, cuándo y dónde.",
+    tags: ["Pantalla del producto", "Exhibición", "Anaquel", "Precio digital", "Interacción"],
+    body: "Tu tienda ya tiene pantallas: el equipo exhibido, el televisor del muro, el espacio junto al anaquel. Hacemos que todas muestren el mensaje y el precio correctos, y que te digan qué hace el cliente frente a cada una. Todo se controla desde una sola plataforma.",
     image: "/oem/signage-hero.jpg",
     imageCredit: "Getty Images / Vladimir Fedorov",
   },
   donde: {
     eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
-    title: "Dónde aparece el contenido",
+    title: "Tu mensaje, donde el cliente mira",
     products: [
       {
         image: "/oem/signage-pantalla-producto.jpg",
-        title: "En el propio equipo exhibido",
-        body: "Con la configuración bloqueada.",
+        title: "En el equipo exhibido",
+        body: "El celular, la tableta o la laptop muestra promociones, características y precio en su propia pantalla.",
       },
       {
         image: "/oem/signage-pantalla-secundaria.jpg",
         title: "En televisores, tótems y kioscos",
-        body: "De la tienda, bajo la misma lógica de contenido.",
+        body: "Se suman al mismo sistema y siguen la misma lógica de contenido que el resto de la tienda.",
       },
       {
         image: "/oem/signage-pantalla-anaquel.jpg",
-        title: "En mini pantallas táctiles de anaquel",
-        body: "Se activan cuando el cliente está a un metro del producto y muestran al personal la guía de acomodo del anaquel.",
+        title: "En el anaquel",
+        body: "Mini pantallas táctiles junto al producto crean un espacio de marca propio sin ocupar piso adicional.",
       },
     ],
   },
   control: {
     eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
-    title: "Cómo se controla",
+    title: "Cambia toda tu red sin visitar una sola tienda",
     features: [
-      { icon: "wifi", title: "Actualización remota de toda la red", body: "Sin intervenir tienda por tienda." },
-      { icon: "clock", title: "Campañas por hora, día, tienda o región", body: "Un mensaje distinto para cada momento y cada plaza." },
-      { icon: "play", title: "Compatible con el modo demostración", body: "Que ya traen los equipos." },
-      { icon: "grid", title: "Registro de cada toque", body: "En mapas de calor por zona y producto." },
+      { icon: "wifi", title: "Actualización remota", body: "El contenido de todas las pantallas cambia desde un solo punto, sin que nadie intervenga en cada sucursal." },
+      { icon: "clock", title: "Campañas por hora, día, tienda o región", body: "Una promoción en la mañana y otra en la tarde, o una campaña para el norte y otra para el centro, sin reprogramar pantallas a mano." },
+      { icon: "play", title: "Compatible con Demo Retail Mode", body: "Todo el sistema, incluido el precio digital, se integra con el modo de demostración que los fabricantes ya incluyen en sus equipos, sin reemplazarlo ni interferir con él." },
     ],
   },
   pricingApp: {
     eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
-    title: "Precio digital en el equipo exhibido",
-    body: "El celular o la tableta en exhibición muestra su propio precio: detecta modelo y memoria automáticamente, se protege con PIN o huella, borra datos personales de forma automática y no requiere hardware adicional.",
+    title: "El precio en exhibición, igual al de caja",
+    body: "El equipo exhibido muestra su propio precio y la tarjeta impresa desaparece.",
     image: "/oem/pricing-app.jpg",
+    features: [
+      { icon: "tool", title: "Se configura solo", body: "Detecta automáticamente el modelo de cada equipo." },
+      { icon: "clock", title: "Se actualiza en segundos", body: "El cambio se hace a distancia, tienda por tienda." },
+      { icon: "shield", title: "Protegido", body: "La aplicación queda oculta, se bloquea con PIN o huella y borra automáticamente los datos no deseados." },
+      { icon: "device", title: "Sin hardware adicional", body: "La misma pantalla que se protege también vende." },
+    ],
   },
-};
-
-export const OEM_INTERACCION = {
-  intro: {
-    title: "Soluciones de interacción en punto de venta",
-    tagline: "El producto se demuestra solo",
-    tags: ["Táctil", "Lift & Learn", "Audio"],
-    body: "Quien toca el producto está más cerca de comprarlo. Estas experiencias hacen que la demostración ocurra sin depender de un vendedor.",
-    image: "/oem/interaccion-hero.jpg",
+  anaquel: {
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    title: "El anaquel también informa",
+    features: [
+      { icon: "tap", title: "Todo a un toque", body: "Precio, características, colores, fotos y video, aunque no haya un vendedor cerca." },
+      { icon: "eye", title: "Se activa al acercarse", body: "Un sensor detecta al cliente a un metro y muestra el contenido en ese momento." },
+      { icon: "user", title: "Apoya al personal", body: "Con un gesto aparece la guía de acomodo para reponer correctamente." },
+      { icon: "grid", title: "Un formato para cada categoría", body: "Varios tamaños según el espacio y el tipo de producto." },
+    ],
   },
   formas: {
-    eyebrow: "SOLUCIONES DE INTERACCIÓN EN PUNTO DE VENTA",
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
     title: "Tres formas de que el producto se demuestre solo",
+    body: "Probar el producto es el paso previo a comprarlo. Estas experiencias hacen que la demostración ocurra aunque no haya un vendedor disponible.",
     products: [
       {
         image: "/oem/interaccion-tactil.jpg",
-        code: "TÁCTIL",
-        title: "El cliente navega en la pantalla",
-        body: "Navega características, compara modelos y descubre promociones en la pantalla del equipo exhibido.",
+        title: "Tocar",
+        body: "El cliente recorre características, compara modelos y encuentra promociones en la pantalla del propio equipo, que siempre muestra el mensaje de marca aprobado.",
       },
       {
         image: "/oem/interaccion-lift-learn.jpg",
-        code: "LIFT & LEARN",
-        title: "Levantar para descubrir",
-        body: "Al tomar el celular, la tableta o la laptop, la pantalla contigua muestra su contenido.",
+        title: "Levantar",
+        body: "Al tomar el celular, la tableta o la laptop, un sensor activa su contenido en la pantalla contigua. Tomar el producto se convierte en el inicio de su historia.",
       },
       {
         image: "/oem/interaccion-audio.jpg",
-        code: "AUDIO",
-        title: "Escuchar antes de decidir",
-        body: "Al tomar audífonos o bocinas se reproduce la demostración, junto con características y precio en pantalla.",
+        title: "Escuchar",
+        body: "Al tomar audífonos o bocinas se reproduce la pista de demostración y en pantalla aparecen sus características y su precio.",
       },
     ],
+  },
+  insights: {
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    title: "Sabes qué pasa frente a tu exhibición",
+    body: "Cada toque y cada segundo de interacción quedan registrados. Los mapas de calor muestran qué contenido se toca, en qué zona, en qué producto y a qué hora. Con eso el acomodo y las campañas se deciden con evidencia y no por intuición.",
+  },
+  ventajas: {
+    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    title: "Ventajas",
+    features: [
+      { icon: "chart", title: "Más conversión", body: "Una experiencia que capta la atención e invita a interactuar con el producto. Mientras más fácil sea probarlo, mayores serán la conversión y el ticket promedio." },
+      { icon: "device", title: "En cualquier superficie", body: "Tableta, teléfono inteligente, pantalla o nuestro preciador independiente: precio, datos pertinentes y promociones de temporada." },
+      { icon: "check", title: "Simple de operar", body: "Clientes y personal se informan de un vistazo, y muchas tareas operativas se resuelven de forma automática." },
+    ],
+    statement: "El cliente decide con más información. Tú decides con más datos.",
   },
 };
 
@@ -468,6 +477,10 @@ export const OEM_FAQ = {
     {
       question: "¿Tengo que cambiar mis cámaras para usar inteligencia artificial?",
       answer: "No. Funciona con cualquier cámara IP que ya tengas instalada y opera en la nube, sin equipo adicional en tienda.",
+    },
+    {
+      question: "¿Necesito comprar pantallas nuevas para Digital Signage?",
+      answer: "No necesariamente. El precio digital y la interacción táctil usan el equipo que ya está en exhibición, y los televisores, tótems y kioscos que ya tienes se suman al mismo sistema.",
     },
     {
       question: "Tengo una sola tienda, ¿esto es para mí?",
