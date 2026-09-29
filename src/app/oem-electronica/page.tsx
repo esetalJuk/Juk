@@ -237,9 +237,40 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 03 — Inteligencia artificial */}
+        {/* 03 — Etiquetas ESL */}
+        <SectionZone id="esl" accent="tinta">
+          <SolutionIntro {...OEM_ESL.intro} number="03" centered taglineGreen />
+
+          <Section className="py-8 sm:py-10">
+            <SectionHeader
+              eyebrow={OEM_ESL.detalle.eyebrow}
+              title={OEM_ESL.detalle.title}
+            />
+            <FeatureGrid features={OEM_ESL.detalle.features} columns={3} />
+            <Reveal
+              group
+              stagger={0.08}
+              className="mt-px grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3"
+            >
+              {OEM_ESL.detalle.specs.map((spec) => (
+                <div
+                  key={spec.note}
+                  data-reveal-item
+                  className="bg-[#070d14] px-6 py-5 text-center"
+                >
+                  <p className="font-display text-2xl text-verde-acento">
+                    {spec.value}
+                  </p>
+                  <p className="text-xs text-[#fff]/70">{spec.note}</p>
+                </div>
+              ))}
+            </Reveal>
+          </Section>
+        </SectionZone>
+
+        {/* 04 — Inteligencia artificial */}
         <SectionZone id="ia" accent="tinta">
-          <SolutionIntro {...OEM_IA.intro} number="03" centered taglineGreen />
+          <SolutionIntro {...OEM_IA.intro} number="04" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <Reveal className="max-w-2xl">
@@ -270,9 +301,9 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 04 — Cerraduras electrónicas */}
+        {/* 05 — Cerraduras electrónicas */}
         <SectionZone id="cerraduras" accent="verde-acento">
-          <SolutionIntro {...OEM_CERRADURAS.intro} number="04" centered taglineGreen />
+          <SolutionIntro {...OEM_CERRADURAS.intro} number="05" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
@@ -280,37 +311,6 @@ export default function OemElectronicaPage() {
               title={OEM_CERRADURAS.control.title}
             />
             <FeatureGrid features={OEM_CERRADURAS.control.features} columns={3} />
-          </Section>
-        </SectionZone>
-
-        {/* 05 — Etiquetas ESL */}
-        <SectionZone id="esl" accent="tinta">
-          <SolutionIntro {...OEM_ESL.intro} number="05" centered taglineGreen />
-
-          <Section className="py-8 sm:py-10">
-            <SectionHeader
-              eyebrow={OEM_ESL.detalle.eyebrow}
-              title={OEM_ESL.detalle.title}
-            />
-            <FeatureGrid features={OEM_ESL.detalle.features} columns={3} />
-            <Reveal
-              group
-              stagger={0.08}
-              className="mt-px grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3"
-            >
-              {OEM_ESL.detalle.specs.map((spec) => (
-                <div
-                  key={spec.note}
-                  data-reveal-item
-                  className="bg-[#070d14] px-6 py-5 text-center"
-                >
-                  <p className="font-display text-2xl text-verde-acento">
-                    {spec.value}
-                  </p>
-                  <p className="text-xs text-[#fff]/70">{spec.note}</p>
-                </div>
-              ))}
-            </Reveal>
           </Section>
         </SectionZone>
 
