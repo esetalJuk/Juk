@@ -45,7 +45,7 @@ export function SectionZone({
   return (
     <div
       id={id}
-      className={`scroll-mt-20 ${accent === LIGHT_ACCENT ? "zone-light" : ""}`}
+      className={`scroll-mt-20 mt-10 sm:mt-16 ${accent === LIGHT_ACCENT ? "zone-light" : ""}`}
       style={{ backgroundColor: ACCENT_PANEL_BACKGROUND[accent] }}
     >
       <SectionAccentProvider accent={accent}>{children}</SectionAccentProvider>
