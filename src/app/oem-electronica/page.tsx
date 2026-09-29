@@ -47,12 +47,12 @@ export default function OemElectronicaPage() {
       <SideProgressNav />
       <div className="xl:pl-72">
         <div className="zone-light" style={{ backgroundColor: "#ffffff" }}>
-          <Section id="reto" className="scroll-mt-20 py-8 sm:py-10">
+          <Section id="reto" className="scroll-mt-20 py-12 sm:py-16">
             <SectionHeader eyebrow={OEM_RETO.eyebrow} title={OEM_RETO.title} />
             <FeatureGrid features={OEM_RETO.features} columns={3} variant="verde" />
           </Section>
 
-          <Section id="entorno" className="scroll-mt-20 py-8 sm:py-10">
+          <Section id="entorno" className="scroll-mt-20 py-12 sm:py-16">
             <Reveal className="max-w-2xl">
               <p className="eyebrow text-white">{OEM_ENTORNO_INTRO.eyebrow}</p>
               <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
@@ -68,7 +68,7 @@ export default function OemElectronicaPage() {
             </div>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_PARA_QUIEN.eyebrow}
               title={OEM_PARA_QUIEN.title}
@@ -81,7 +81,7 @@ export default function OemElectronicaPage() {
         <SectionZone id="seguridad" accent="azul-primario">
           <SolutionIntro {...OEM_SEGURIDAD.intro} number="01" centered taglineGreen />
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <div className="grid overflow-hidden border border-line bg-line gap-px lg:grid-cols-2">
               <Reveal className="flex flex-col justify-center bg-[#070d14] p-8 sm:p-10">
                 <span className="block h-[3px] w-9 bg-azul-primario" />
@@ -107,7 +107,7 @@ export default function OemElectronicaPage() {
             </div>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <CategoryHeader
               icon={OEM_SEGURIDAD.electronicas.icon}
               label={OEM_SEGURIDAD.electronicas.label}
@@ -120,7 +120,7 @@ export default function OemElectronicaPage() {
             </div>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <CategoryHeader
               icon={OEM_SEGURIDAD.mecanicas.icon}
               label={OEM_SEGURIDAD.mecanicas.label}
@@ -133,7 +133,7 @@ export default function OemElectronicaPage() {
             </div>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_SEGURIDAD.logros.eyebrow}
               title={OEM_SEGURIDAD.logros.title}
@@ -146,7 +146,7 @@ export default function OemElectronicaPage() {
         <SectionZone id="signage" accent="verde-acento">
           <SolutionIntro {...OEM_SIGNAGE.intro} number="02" centered taglineGreen />
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_SIGNAGE.donde.eyebrow}
               title={OEM_SIGNAGE.donde.title}
@@ -154,7 +154,7 @@ export default function OemElectronicaPage() {
             <ProductCards products={OEM_SIGNAGE.donde.products} />
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_SIGNAGE.control.eyebrow}
               title={OEM_SIGNAGE.control.title}
@@ -162,7 +162,7 @@ export default function OemElectronicaPage() {
             <FeatureGrid features={OEM_SIGNAGE.control.features} columns={3} />
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <div className="grid overflow-hidden border border-line bg-line gap-px lg:grid-cols-2">
               <Reveal className="relative min-h-[280px] bg-tinta-raised">
                 <Image
@@ -190,7 +190,7 @@ export default function OemElectronicaPage() {
             </div>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_SIGNAGE.anaquel.eyebrow}
               title={OEM_SIGNAGE.anaquel.title}
@@ -198,7 +198,7 @@ export default function OemElectronicaPage() {
             <FeatureGrid features={OEM_SIGNAGE.anaquel.features} columns={4} />
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <Reveal className="max-w-2xl">
               <p className="eyebrow text-white">{OEM_SIGNAGE.formas.eyebrow}</p>
               <h2 className="font-display text-balance mt-4 text-3xl sm:text-4xl">
@@ -213,7 +213,7 @@ export default function OemElectronicaPage() {
             </div>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <Reveal className="max-w-2xl">
               <p className="eyebrow text-white">{OEM_SIGNAGE.insights.eyebrow}</p>
               <h2 className="font-display mt-3 text-3xl sm:text-4xl">
@@ -225,7 +225,7 @@ export default function OemElectronicaPage() {
             </Reveal>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_SIGNAGE.ventajas.eyebrow}
               title={OEM_SIGNAGE.ventajas.title}
@@ -241,7 +241,7 @@ export default function OemElectronicaPage() {
         <SectionZone id="esl" accent="tinta">
           <SolutionIntro {...OEM_ESL.intro} number="03" centered taglineGreen />
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_ESL.detalle.eyebrow}
               title={OEM_ESL.detalle.title}
@@ -272,7 +272,7 @@ export default function OemElectronicaPage() {
         <SectionZone id="ia" accent="tinta">
           <SolutionIntro {...OEM_IA.intro} number="04" centered taglineGreen />
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <Reveal className="max-w-2xl">
               <p className="eyebrow text-white">{OEM_IA.implementa.eyebrow}</p>
               <h2 className="font-display mt-3 text-3xl sm:text-4xl">
@@ -284,7 +284,7 @@ export default function OemElectronicaPage() {
             </Reveal>
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_IA.funciones.eyebrow}
               title={OEM_IA.funciones.title}
@@ -292,7 +292,7 @@ export default function OemElectronicaPage() {
             <FeatureGrid features={OEM_IA.funciones.features} columns={3} />
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_IA.aplicaciones.eyebrow}
               title={OEM_IA.aplicaciones.title}
@@ -305,7 +305,7 @@ export default function OemElectronicaPage() {
         <SectionZone id="cerraduras" accent="verde-acento">
           <SolutionIntro {...OEM_CERRADURAS.intro} number="05" centered taglineGreen />
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_CERRADURAS.control.eyebrow}
               title={OEM_CERRADURAS.control.title}
@@ -318,7 +318,7 @@ export default function OemElectronicaPage() {
         <SectionZone id="eas" accent="verde-acento">
           <SolutionIntro {...OEM_EAS.intro} number="06" centered taglineGreen />
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <SectionHeader
               eyebrow={OEM_EAS.resuelve.eyebrow}
               title={OEM_EAS.resuelve.title}
@@ -326,7 +326,7 @@ export default function OemElectronicaPage() {
             <FeatureGrid features={OEM_EAS.resuelve.features} columns={3} />
           </Section>
 
-          <Section className="py-8 sm:py-10">
+          <Section className="py-12 sm:py-16">
             <Reveal className="max-w-2xl">
               <p className="eyebrow text-white">{OEM_EAS.consumibles.eyebrow}</p>
               <h2 className="font-display mt-3 text-3xl sm:text-4xl">
@@ -339,7 +339,7 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        <Section className="py-8 sm:py-10">
+        <Section className="py-12 sm:py-16">
           <SectionHeader
             eyebrow={OEM_PROCESS.eyebrow}
             title={OEM_PROCESS.title}
@@ -348,7 +348,7 @@ export default function OemElectronicaPage() {
           <p className="mt-8 text-sm text-ink-faint">{OEM_PROCESS.note}</p>
         </Section>
 
-        <Section className="py-8 sm:py-10">
+        <Section className="py-12 sm:py-16">
           <SectionHeader eyebrow={OEM_FAQ.eyebrow} title={OEM_FAQ.title} />
           <Faq />
         </Section>
