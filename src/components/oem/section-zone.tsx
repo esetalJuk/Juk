@@ -11,6 +11,7 @@ export const ACCENT_PANEL_BACKGROUND = {
   "azul-primario": "#0b1c2f",
   "verde-acento": "#ffffff",
   "azul-corporativo": "#0c1730",
+  tinta: "#070d14",
 } as const;
 
 export type SectionAccentKey = keyof typeof ACCENT_PANEL_BACKGROUND;
@@ -21,12 +22,14 @@ export const ACCENT_TEXT_CLASS: Record<string, string> = {
   "azul-primario": "text-azul-primario",
   "verde-acento": "text-azul-primario",
   "azul-corporativo": "text-azul-primario",
+  tinta: "text-azul-primario",
 };
 
 export const ACCENT_BAR_CLASS: Record<string, string> = {
   "azul-primario": "bg-azul-primario",
   "verde-acento": "bg-azul-primario",
   "azul-corporativo": "bg-azul-primario",
+  tinta: "bg-azul-primario",
 };
 
 /** Full-bleed, solid accent-tinted chapter wrapper for one solution line. */

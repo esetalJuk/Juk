@@ -238,7 +238,7 @@ export default function OemElectronicaPage() {
         </SectionZone>
 
         {/* 03 — Inteligencia artificial */}
-        <SectionZone id="ia" accent="verde-acento">
+        <SectionZone id="ia" accent="tinta">
           <SolutionIntro {...OEM_IA.intro} number="03" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
@@ -271,7 +271,7 @@ export default function OemElectronicaPage() {
         </SectionZone>
 
         {/* 04 — Cerraduras electrónicas */}
-        <SectionZone id="cerraduras" accent="azul-primario">
+        <SectionZone id="cerraduras" accent="verde-acento">
           <SolutionIntro {...OEM_CERRADURAS.intro} number="04" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
@@ -284,7 +284,7 @@ export default function OemElectronicaPage() {
         </SectionZone>
 
         {/* 05 — Etiquetas ESL */}
-        <SectionZone id="esl" accent="azul-corporativo">
+        <SectionZone id="esl" accent="tinta">
           <SolutionIntro {...OEM_ESL.intro} number="05" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
