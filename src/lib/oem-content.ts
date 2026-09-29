@@ -235,7 +235,6 @@ export const OEM_EAS = {
     tagline: "Protección en el momento más vulnerable: la salida",
     tags: ["Antenas", "Consumibles"],
     body: "Las antenas en los accesos detectan cualquier producto que no fue desactivado en caja y generan una alarma inmediata.",
-    image: "/oem/eas-hero.jpg",
   },
   resuelve: {
     eyebrow: "SOLUCIONES DE ANTENAS EAS Y CONSUMIBLES",
@@ -259,8 +258,6 @@ export const OEM_SIGNAGE = {
     tagline: "Cada pantalla, un canal de venta",
     tags: ["Pantalla del producto", "Exhibición", "Anaquel", "Precio digital", "Interacción"],
     body: "Tu tienda ya tiene pantallas: el equipo exhibido, el televisor del muro, el espacio junto al anaquel. Hacemos que todas muestren el mensaje y el precio correctos, y que te digan qué hace el cliente frente a cada una. Todo se controla desde una sola plataforma.",
-    image: "/oem/signage-hero.jpg",
-    imageCredit: "Getty Images / Vladimir Fedorov",
   },
   donde: {
     eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
@@ -359,7 +356,6 @@ export const OEM_ESL = {
     tagline: "El fin de la tarjeta de precio impresa",
     tags: ["Precio remoto", "Ventana horaria", "Anaquel"],
     body: "Pantallas digitales en el anaquel que se actualizan de forma remota.",
-    image: "/oem/esl-hero.jpg",
   },
   detalle: {
     eyebrow: "SOLUCIONES DE ETIQUETAS ESL",
@@ -385,8 +381,6 @@ export const OEM_CERRADURAS = {
     tagline: "De llave física a acceso autorizado",
     tags: ["RFID", "Bluetooth", "Trazabilidad"],
     body: "Se instalan ocultas dentro de vitrinas y cajones, sin modificar el mueble.",
-    image: "/oem/cerraduras-hero.png",
-    darkIllustration: true,
   },
   control: {
     eyebrow: "SOLUCIONES DE CERRADURAS ELECTRÓNICAS",
@@ -407,8 +401,6 @@ export const OEM_IA = {
     tagline: "Data en tiempo real de tu comprador en tienda",
     tags: ["Tráfico", "Comportamiento", "Operación"],
     body: "Convertimos las cámaras que ya operan en tienda en datos accionables sobre tu comprador y tu piso de venta.",
-    image: "/oem/ia-hero.png",
-    darkIllustration: true,
   },
   implementa: {
     eyebrow: "SOLUCIONES DE INTELIGENCIA ARTIFICIAL",

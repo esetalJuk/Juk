@@ -144,7 +144,7 @@ export default function OemElectronicaPage() {
 
         {/* 02 — Digital Signage */}
         <SectionZone id="signage" accent="verde-acento">
-          <SolutionIntro {...OEM_SIGNAGE.intro} number="02" />
+          <SolutionIntro {...OEM_SIGNAGE.intro} number="02" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
@@ -239,7 +239,7 @@ export default function OemElectronicaPage() {
 
         {/* 03 — Inteligencia artificial */}
         <SectionZone id="ia" accent="verde-acento">
-          <SolutionIntro {...OEM_IA.intro} number="03" fit="contain" />
+          <SolutionIntro {...OEM_IA.intro} number="03" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <Reveal className="max-w-2xl">
@@ -272,7 +272,7 @@ export default function OemElectronicaPage() {
 
         {/* 04 — Cerraduras electrónicas */}
         <SectionZone id="cerraduras" accent="azul-primario">
-          <SolutionIntro {...OEM_CERRADURAS.intro} number="04" fit="contain" />
+          <SolutionIntro {...OEM_CERRADURAS.intro} number="04" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
@@ -285,7 +285,7 @@ export default function OemElectronicaPage() {
 
         {/* 05 — Etiquetas ESL */}
         <SectionZone id="esl" accent="azul-corporativo">
-          <SolutionIntro {...OEM_ESL.intro} number="05" />
+          <SolutionIntro {...OEM_ESL.intro} number="05" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
@@ -316,7 +316,7 @@ export default function OemElectronicaPage() {
 
         {/* 06 — Antenas EAS y consumibles */}
         <SectionZone id="eas" accent="verde-acento">
-          <SolutionIntro {...OEM_EAS.intro} number="06" />
+          <SolutionIntro {...OEM_EAS.intro} number="06" centered taglineGreen />
 
           <Section className="py-8 sm:py-10">
             <SectionHeader
