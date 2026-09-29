@@ -292,7 +292,7 @@ export const OEM_SIGNAGE = {
   pricingApp: {
     eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
     title: "El precio en exhibición, igual al de caja",
-    body: "El equipo exhibido muestra su propio precio y la tarjeta impresa desaparece.",
+    body: "Esta aplicación transforma sus dispositivos en etiquetas de precio digitales interactivas y centros de información, eliminando la necesidad de las tarjetas de precio tradicionales y enriqueciendo la experiencia del cliente con acceso directo a precios e información de productos.",
     image: "/oem/pricing-app.jpg",
     features: [
       { icon: "tool", title: "Se configura solo", body: "Detecta automáticamente el modelo de cada equipo." },
