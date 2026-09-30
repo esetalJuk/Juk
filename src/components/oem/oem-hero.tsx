@@ -52,13 +52,13 @@ export function OemHero() {
         </p>
         <h1
           data-hero-item
-          className="font-display text-balance mt-6 max-w-3xl text-4xl text-verde-acento sm:text-6xl lg:text-7xl"
+          className="font-display text-balance mt-6 max-w-3xl text-4xl text-[#fff] sm:text-6xl lg:text-7xl"
         >
           {OEM_HERO.h1}
         </h1>
         <p
           data-hero-item
-          className="font-display mt-6 max-w-xl text-xl normal-case tracking-normal text-azul-primario sm:text-2xl"
+          className="font-display mt-6 max-w-xl text-xl normal-case tracking-normal text-verde-acento sm:text-2xl"
         >
           {OEM_HERO.hook}
         </p>
