@@ -36,7 +36,7 @@ import {
 export const metadata: Metadata = {
   title: OEM_HERO.h1,
   description:
-    "Seguridad para exhibición, Digital Signage, interacción en punto de venta, inteligencia artificial, cerraduras electrónicas, etiquetas ESL y antenas EAS para exhibición de electrónica de consumo en México.",
+    "Seguridad para exhibición, Digital Tools, interacción en punto de venta, inteligencia artificial, cerraduras electrónicas, etiquetas ESL y sistemas EAS para exhibición de electrónica de consumo en México.",
 };
 
 export default function OemElectronicaPage() {
@@ -142,7 +142,7 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 02 — Digital Signage */}
+        {/* 02 — Digital Tools */}
         <SectionZone id="signage" accent="verde-acento">
           <SolutionIntro {...OEM_SIGNAGE.intro} number="02" centered taglineGreen />
 
@@ -314,7 +314,7 @@ export default function OemElectronicaPage() {
           </Section>
         </SectionZone>
 
-        {/* 06 — Antenas EAS y consumibles */}
+        {/* 06 — Sistemas EAS y consumibles */}
         <SectionZone id="eas" accent="verde-acento">
           <SolutionIntro {...OEM_EAS.intro} number="06" centered taglineGreen />
 

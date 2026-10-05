@@ -39,7 +39,7 @@ const organizationJsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/brand/dasok-logo.png`,
   description:
-    "Convertimos espacios comerciales en entornos inteligentes, más seguros y rentables, con antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas.",
+    "Convertimos espacios comerciales en entornos inteligentes, más seguros y rentables, con sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas.",
   sameAs: SOCIAL_LINKS.map((social) => social.href),
 };
 
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     template: "%s | Dások All Solutions",
   },
   description:
-    "Convertimos espacios comerciales en entornos inteligentes, más seguros y rentables. Antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas para retail en México.",
+    "Convertimos espacios comerciales en entornos inteligentes, más seguros y rentables. Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas para retail en México.",
   keywords: [
     "reducir merma en retail",
-    "antenas EAS",
+    "sistemas EAS",
     "etiquetas ESL",
     "seguridad electrónica retail México",
     "prevención de pérdidas",

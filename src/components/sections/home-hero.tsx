@@ -61,7 +61,7 @@ export function HomeHero() {
           data-hero-item
           className="mt-7 max-w-xl font-body text-lg normal-case tracking-normal text-ink-muted"
         >
-          Antenas EAS, etiquetas ESL, Digital Signage, inteligencia
+          Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia
           artificial con datos en tiempo real y cerraduras electrónicas, con
           Dások como tu socio estratégico en cada etapa: diagnóstico,
           instalación, capacitación y operación.

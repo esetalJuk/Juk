@@ -47,7 +47,7 @@ export const OEM_LO_QUE_HACEMOS = [
     label: "PROTEGER",
     title: "Que lo prueben todo, que nada salga sin pagar",
     body: "Tus equipos quedan protegidos en la mesa y en la salida, sin frenar la prueba del producto.",
-    linkLabel: "Seguridad para exhibición · Antenas EAS y consumibles",
+    linkLabel: "Seguridad para exhibición · Sistemas EAS y consumibles",
     targetSlug: "seguridad",
     accent: "azul-primario",
   },
@@ -57,7 +57,7 @@ export const OEM_LO_QUE_HACEMOS = [
     label: "VENDER",
     title: "El producto se explica solo",
     body: "Precio, características y promociones aparecen en el momento en que el cliente toca, levanta o escucha el producto.",
-    linkLabel: "Digital Signage",
+    linkLabel: "Digital Tools",
     targetSlug: "signage",
     accent: "verde-acento",
   },
@@ -118,7 +118,7 @@ export const OEM_SOLUTION_LINES = [
   {
     number: "02",
     slug: "signage",
-    label: "Digital Signage",
+    label: "Digital Tools",
     icon: "device",
     kicker: "Producto · Anaquel · Precio digital · Interacción",
     description: "Convierte cada pantalla del punto de venta en un canal de venta controlado.",
@@ -155,7 +155,7 @@ export const OEM_SOLUTION_LINES = [
     number: "06",
     slug: "eas",
     icon: "wifi",
-    label: "Antenas EAS y consumibles",
+    label: "Sistemas EAS y consumibles",
     kicker: "Antenas · Consumibles",
     description: "Detección en el acceso y monitoreo remoto de toda la red de tiendas.",
     accent: "verde-acento",
@@ -231,13 +231,13 @@ export const OEM_SEGURIDAD = {
 
 export const OEM_EAS = {
   intro: {
-    title: "Soluciones de antenas EAS y consumibles",
+    title: "Soluciones de sistemas EAS y consumibles",
     tagline: "Protección en el momento más vulnerable: la salida",
     tags: ["Antenas", "Consumibles"],
     body: "Las antenas en los accesos detectan cualquier producto que no fue desactivado en caja y generan una alarma inmediata.",
   },
   resuelve: {
-    eyebrow: "SOLUCIONES DE ANTENAS EAS Y CONSUMIBLES",
+    eyebrow: "SOLUCIONES DE SISTEMAS EAS Y CONSUMIBLES",
     title: "Supervisión de toda tu red desde un solo lugar",
     features: [
       { icon: "wifi", title: "Supervisión remota del estado de cada tienda", body: "Para detectar incidencias a tiempo." },
@@ -246,7 +246,7 @@ export const OEM_EAS = {
     ],
   },
   consumibles: {
-    eyebrow: "SOLUCIONES DE ANTENAS EAS Y CONSUMIBLES",
+    eyebrow: "SOLUCIONES DE SISTEMAS EAS Y CONSUMIBLES",
     title: "El accesorio también es objetivo de robo",
     body: "Protegen audífonos, cargadores, fundas y accesorios empacados con etiquetas duras reutilizables en más de 40 formatos, etiquetas adhesivas de un solo uso y sistemas de cable y spider wrap para empaques irregulares. El formato se elige según el tamaño, la forma y el riesgo de cada producto.",
   },
@@ -254,13 +254,13 @@ export const OEM_EAS = {
 
 export const OEM_SIGNAGE = {
   intro: {
-    title: "Soluciones de Digital Signage",
+    title: "Soluciones de Digital Tools",
     tagline: "Cada pantalla, un canal de venta",
     tags: ["Pantalla del producto", "Exhibición", "Anaquel", "Precio digital", "Interacción"],
     body: "Tu tienda ya tiene pantallas: el equipo exhibido, el televisor del muro, el espacio junto al anaquel. Hacemos que todas muestren el mensaje y el precio correctos, y que te digan qué hace el cliente frente a cada una. Todo se controla desde una sola plataforma.",
   },
   donde: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "Tu mensaje, donde el cliente mira",
     products: [
       {
@@ -281,7 +281,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   control: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "Cambia toda tu red sin visitar una sola tienda",
     features: [
       { icon: "wifi", title: "Actualización remota", body: "El contenido de todas las pantallas cambia desde un solo punto, sin que nadie intervenga en cada sucursal." },
@@ -290,7 +290,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   pricingApp: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "El precio en exhibición, igual al de caja",
     body: "Esta aplicación transforma sus dispositivos en etiquetas de precio digitales interactivas y centros de información, eliminando la necesidad de las tarjetas de precio tradicionales y enriqueciendo la experiencia del cliente con acceso directo a precios e información de productos.",
     image: "/oem/pricing-app.jpg",
@@ -302,7 +302,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   anaquel: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "El anaquel también informa",
     features: [
       { icon: "tap", title: "Todo a un toque", body: "Precio, características, colores, fotos y video, aunque no haya un vendedor cerca." },
@@ -312,7 +312,7 @@ export const OEM_SIGNAGE = {
     ],
   },
   formas: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "Tres formas de que el producto se demuestre solo",
     body: "Probar el producto es el paso previo a comprarlo. Estas experiencias hacen que la demostración ocurra aunque no haya un vendedor disponible.",
     products: [
@@ -334,12 +334,12 @@ export const OEM_SIGNAGE = {
     ],
   },
   insights: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "Sabes qué pasa frente a tu exhibición",
     body: "Cada toque y cada segundo de interacción quedan registrados. Los mapas de calor muestran qué contenido se toca, en qué zona, en qué producto y a qué hora. Con eso el acomodo y las campañas se deciden con evidencia y no por intuición.",
   },
   ventajas: {
-    eyebrow: "SOLUCIONES DE DIGITAL SIGNAGE",
+    eyebrow: "SOLUCIONES DE DIGITAL TOOLS",
     title: "Ventajas",
     features: [
       { icon: "chart", title: "Más conversión", body: "Una experiencia que capta la atención e invita a interactuar con el producto. Mientras más fácil sea probarlo, mayores serán la conversión y el ticket promedio." },
@@ -471,7 +471,7 @@ export const OEM_FAQ = {
       answer: "No. Funciona con cualquier cámara IP que ya tengas instalada y opera en la nube, sin equipo adicional en tienda.",
     },
     {
-      question: "¿Necesito comprar pantallas nuevas para Digital Signage?",
+      question: "¿Necesito comprar pantallas nuevas para Digital Tools?",
       answer: "No necesariamente. El precio digital y la interacción táctil usan el equipo que ya está en exhibición, y los televisores, tótems y kioscos que ya tienes se suman al mismo sistema.",
     },
     {

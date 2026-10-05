@@ -11,7 +11,7 @@ export function SolutionsGrid() {
           Un entorno integral que conecta cada punto de control
         </h2>
         <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
-          Antenas EAS, etiquetas ESL, Digital Signage, inteligencia
+          Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia
           artificial con datos en tiempo real y cerraduras electrónicas, con
           Dások como tu socio estratégico en cada etapa.
         </p>

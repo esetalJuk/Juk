@@ -13,7 +13,7 @@ export type Solution = {
 export const SOLUTIONS: Solution[] = [
   {
     slug: "antenas-eas",
-    label: "Antenas EAS",
+    label: "Sistemas EAS",
     short: "Detección en el punto de salida",
     description:
       "Antenas de vigilancia electrónica que detectan la salida no autorizada de producto en tiempo real, en el perímetro de piso de venta.",
@@ -27,7 +27,7 @@ export const SOLUTIONS: Solution[] = [
   },
   {
     slug: "digital-signage",
-    label: "Digital Signage",
+    label: "Digital Tools",
     short: "Contenido en punto de venta",
     description:
       "Contenido digital en piso de venta que comunica promociones y experiencia de marca en el momento de decisión de compra.",
@@ -62,7 +62,7 @@ export const DIFFERENTIATORS: Differentiator[] = [
     number: "01",
     title: "Ver para decidir",
     kicker: "Dos showrooms interactivos en operación real — CDMX y norte del país",
-    body: "El retailer experimenta antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas en un entorno real, no en maqueta, antes de comprometer presupuesto, sin importar en qué región del país esté su cadena.",
+    body: "El retailer experimenta sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas en un entorno real, no en maqueta, antes de comprometer presupuesto, sin importar en qué región del país esté su cadena.",
     quote: "Elimina el riesgo de adopción y acorta el ciclo de decisión.",
     cta: "Agenda tu visita al showroom más cercano",
   },
@@ -91,7 +91,7 @@ export const DIFFERENTIATORS: Differentiator[] = [
     number: "05",
     title: "Un entorno integrado, un socio estratégico",
     kicker: "Integración real bajo un solo acompañamiento",
-    body: "Antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas bajo un solo punto de contacto y un solo equipo de soporte.",
+    body: "Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas bajo un solo punto de contacto y un solo equipo de soporte.",
     quote: "Un entorno integrado. Un socio que te acompaña en cada etapa.",
   },
 ];
@@ -132,7 +132,7 @@ export const PILLARS: Pillar[] = [
     h1: "Tecnología que protege tu piso de venta y da visibilidad a la operación",
     hook: "La merma en retail rara vez llega como un solo incidente. Es una fuga constante entre anaquel, caja y almacén.",
     intro:
-      "Cada formato de retail pierde margen de manera distinta: merma en perecederos, robo en producto de alto valor, ineficiencia operativa con poco personal en piso. Dások integra antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas en un entorno pensado para el formato específico de tu cadena.",
+      "Cada formato de retail pierde margen de manera distinta: merma en perecederos, robo en producto de alto valor, ineficiencia operativa con poco personal en piso. Dások integra sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas en un entorno pensado para el formato específico de tu cadena.",
     painPoints: [
       { label: "Merma", description: "Pérdida de inventario que no siempre llega como robo: exhibición descontrolada, etiquetado manual, puntos ciegos en piso." },
       { label: "Robo", description: "Sustracción en anaquel abierto y en producto de alto valor unitario, en horarios y zonas predecibles." },
@@ -141,7 +141,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["antenas-eas", "etiquetas-esl", "digital-signage", "inteligencia-artificial", "cerraduras-electronicas"],
     metaDescription:
-      "Antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas para reducir merma y robo en retail físico en México.",
+      "Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas para reducir merma y robo en retail físico en México.",
   },
   {
     slug: "retail/supermercados",
@@ -159,7 +159,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["etiquetas-esl", "antenas-eas", "inteligencia-artificial"],
     metaDescription:
-      "Reduce merma en perecederos y controla el robo hormiga en supermercados con antenas EAS, etiquetas ESL e inteligencia artificial con datos en tiempo real.",
+      "Reduce merma en perecederos y controla el robo hormiga en supermercados con sistemas EAS, etiquetas ESL e inteligencia artificial con datos en tiempo real.",
   },
   {
     slug: "retail/departamentales",
@@ -169,7 +169,7 @@ export const PILLARS: Pillar[] = [
     h1: "Protección para prenda y producto de alto valor, sin frenar la experiencia de compra",
     hook: "En una tienda departamental, el mismo pasillo que exhibe tu producto de mayor margen es el que más se expone al robo.",
     intro:
-      "El comprador de una departamental toca, prueba y compara antes de decidir. La seguridad tiene que convivir con esa experiencia, no restarle. Dások protege prenda y producto de alto valor con antenas EAS y cerraduras electrónicas, y da visibilidad de zonas y comportamiento en piso con inteligencia artificial con datos en tiempo real.",
+      "El comprador de una departamental toca, prueba y compara antes de decidir. La seguridad tiene que convivir con esa experiencia, no restarle. Dások protege prenda y producto de alto valor con sistemas EAS y cerraduras electrónicas, y da visibilidad de zonas y comportamiento en piso con inteligencia artificial con datos en tiempo real.",
     painPoints: [
       { label: "Robo en prenda y calzado", description: "Categorías de alto valor unitario y fácil sustracción, concentradas en pasillos específicos." },
       { label: "Producto de alto valor expuesto", description: "Electrónica, perfumería y accesorios que requieren exhibición abierta para vender, con riesgo de merma." },
@@ -177,7 +177,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["antenas-eas", "cerraduras-electronicas", "inteligencia-artificial", "digital-signage"],
     metaDescription:
-      "Antenas EAS y cerraduras electrónicas para proteger prenda y producto de alto valor en tiendas departamentales, sin afectar la experiencia de compra.",
+      "Sistemas EAS y cerraduras electrónicas para proteger prenda y producto de alto valor en tiendas departamentales, sin afectar la experiencia de compra.",
   },
   {
     slug: "retail/autoservicio",
@@ -195,7 +195,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["etiquetas-esl", "antenas-eas", "inteligencia-artificial"],
     metaDescription:
-      "Etiquetas ESL y antenas EAS para operar de forma eficiente con equipo reducido en tiendas de autoservicio en México.",
+      "Etiquetas ESL y sistemas EAS para operar de forma eficiente con equipo reducido en tiendas de autoservicio en México.",
   },
   {
     slug: "retail/otros-formatos",
@@ -205,7 +205,7 @@ export const PILLARS: Pillar[] = [
     h1: "Un entorno adaptado al formato particular de tu operación",
     hook: "No todo formato de retail encaja en una sola categoría. Tiendas de conveniencia, especializadas o de membresía tienen su propia combinación de dolores.",
     intro:
-      "Cuando el formato no encaja en supermercado, departamental o autoservicio, el diagnóstico empieza por tu operación real, no por un catálogo genérico. Dások adapta la combinación de antenas EAS, etiquetas ESL, Digital Signage, inteligencia artificial con datos en tiempo real y cerraduras electrónicas al riesgo específico de tu formato.",
+      "Cuando el formato no encaja en supermercado, departamental o autoservicio, el diagnóstico empieza por tu operación real, no por un catálogo genérico. Dások adapta la combinación de sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas al riesgo específico de tu formato.",
     painPoints: [
       { label: "Dolor específico del formato", description: "Merma, robo o ineficiencia con un patrón propio, que no responde a una solución estándar." },
       { label: "Escalabilidad entre unidades", description: "Necesidad de un mismo estándar de control conforme la cadena crece o se diversifica." },
@@ -221,7 +221,7 @@ export const PILLARS: Pillar[] = [
     h1: "Exhibición segura para producto de alto valor unitario",
     hook: "Un producto de electrónica de consumo se vende mejor cuando el cliente lo toca. Esa misma exhibición abierta es la que más expone a la marca al robo.",
     intro:
-      "Dások trabaja con fabricantes y distribuidores de electrónica de consumo para que el producto se exhiba abierto, se pueda probar en piso y quede protegido con cerraduras electrónicas y antenas EAS, sin frenar la conversión en punto de venta.",
+      "Dások trabaja con fabricantes y distribuidores de electrónica de consumo para que el producto se exhiba abierto, se pueda probar en piso y quede protegido con cerraduras electrónicas y sistemas EAS, sin frenar la conversión en punto de venta.",
     painPoints: [
       { label: "Producto de alto valor unitario", description: "Cada unidad sustraída representa un margen significativamente mayor que en otras categorías de retail." },
       { label: "Exhibición abierta como requisito de venta", description: "El comprador necesita interactuar con el producto antes de decidir, lo que exige protección sin vitrina cerrada." },
@@ -229,7 +229,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["cerraduras-electronicas", "antenas-eas", "digital-signage"],
     metaDescription:
-      "Soluciones de exhibición segura y antenas EAS para proteger producto OEM y electrónica de consumo de alto valor unitario en punto de venta.",
+      "Soluciones de exhibición segura y sistemas EAS para proteger producto OEM y electrónica de consumo de alto valor unitario en punto de venta.",
   },
   {
     slug: "farmacias",
@@ -247,7 +247,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["antenas-eas", "cerraduras-electronicas", "inteligencia-artificial", "etiquetas-esl"],
     metaDescription:
-      "Antenas EAS y cerraduras electrónicas para controlar el robo hormiga y el acceso a categorías sensibles en farmacias, sin afectar la rapidez en caja.",
+      "Sistemas EAS y cerraduras electrónicas para controlar el robo hormiga y el acceso a categorías sensibles en farmacias, sin afectar la rapidez en caja.",
   },
   {
     slug: "centros-comerciales",
@@ -256,7 +256,7 @@ export const PILLARS: Pillar[] = [
     h1: "Seguridad perimetral y experiencia digital para la administración de plaza",
     hook: "Quien administra una plaza comercial responde por la seguridad de todos los locatarios, no solo por la propia operación.",
     intro:
-      "La administración de un centro comercial necesita control de accesos y seguridad perimetral a nivel plaza, además de una experiencia digital consistente para el visitante. Dások integra Digital Signage e inteligencia artificial con datos en tiempo real con el mismo estándar en cada acceso.",
+      "La administración de un centro comercial necesita control de accesos y seguridad perimetral a nivel plaza, además de una experiencia digital consistente para el visitante. Dások integra Digital Tools e inteligencia artificial con datos en tiempo real con el mismo estándar en cada acceso.",
     painPoints: [
       { label: "Control de accesos", description: "Múltiples puntos de entrada y salida que requieren un estándar único de seguridad." },
       { label: "Seguridad perimetral", description: "Vigilancia de áreas comunes, estacionamiento y accesos de carga, fuera del control directo de cada locatario." },
@@ -264,7 +264,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["digital-signage", "inteligencia-artificial", "antenas-eas"],
     metaDescription:
-      "Control de accesos, seguridad perimetral y Digital Signage para la administración de centros comerciales en México.",
+      "Control de accesos, seguridad perimetral y Digital Tools para la administración de centros comerciales en México.",
   },
 ];
 
