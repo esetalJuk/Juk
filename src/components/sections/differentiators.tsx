@@ -1,6 +1,7 @@
+import { Icon } from "@/components/icons/icon";
 import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/ui/section";
-import { DIFFERENTIATORS } from "@/lib/content";
+import { DASOK_DIFFERENCES, DIFFERENTIATORS } from "@/lib/content";
 
 export function Differentiators() {
   return (
@@ -38,6 +39,24 @@ export function Differentiators() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal className="mt-14">
+        <p className="eyebrow text-verde-acento">Lo que nos hace diferentes</p>
+        <div
+          data-reveal-group
+          className="mt-6 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5"
+        >
+          {DASOK_DIFFERENCES.map((item) => (
+            <div
+              key={item}
+              className="flex items-center gap-3 bg-tinta-raised p-5"
+            >
+              <Icon name="check" className="h-5 w-5 shrink-0 text-verde-acento" />
+              <span className="text-sm text-ink-muted">{item}</span>
+            </div>
+          ))}
+        </div>
+      </Reveal>
     </Section>
   );
 }

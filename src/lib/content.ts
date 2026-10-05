@@ -12,39 +12,46 @@ export type Solution = {
 
 export const SOLUTIONS: Solution[] = [
   {
-    slug: "antenas-eas",
-    label: "Sistemas EAS",
-    short: "Detección en el punto de salida",
+    slug: "display",
+    label: "Display",
+    short: "Exhibe sin arriesgar el producto",
     description:
-      "Sistemas EAS de vigilancia electrónica que detectan la salida no autorizada de producto en tiempo real, en el perímetro de piso de venta.",
-  },
-  {
-    slug: "etiquetas-esl",
-    label: "Etiquetas ESL",
-    short: "Precio y control de anaquel",
-    description:
-      "Etiquetas electrónicas de anaquel que actualizan precio y promociones en toda la tienda a la vez, sin recorridos manuales.",
+      "Soluciones electrónicas y mecánicas de protección para que tu cliente toque, pruebe y compare con libertad mientras tu inventario permanece resguardado. Algunas operan sin consumibles ni mantenimiento recurrente, lo que reduce piezas de repuesto y costos ocultos con el tiempo. Más interacción con el producto, menos merma.",
   },
   {
     slug: "digital-signage",
     label: "Digital Tools",
-    short: "Contenido en punto de venta",
+    short: "La información justa en el momento de decisión",
     description:
-      "Contenido digital en piso de venta que comunica promociones y experiencia de marca en el momento de decisión de compra.",
+      "Acompañan a tu cliente con la información justa en el momento en que decide qué comprar. Tu piso de venta comunica en el lugar y en el momento correctos.",
   },
   {
     slug: "inteligencia-artificial",
     label: "Inteligencia artificial con datos en tiempo real",
-    short: "Visibilidad de tráfico y zonas",
+    short: "Ve lo que hoy nadie está viendo",
     description:
-      "Convierte cámaras existentes en una fuente de datos de tráfico, zonas calientes y alertas operativas, sin instalar hardware adicional.",
+      "Observa el recorrido del cliente en tu tienda y muestra tráfico, zonas de mayor interés y alertas en el momento en que ocurren. Decides exhibición, operación y seguridad con datos, no con intuición.",
+  },
+  {
+    slug: "etiquetas-esl",
+    label: "Etiquetas ESL",
+    short: "El precio correcto en cada anaquel",
+    description:
+      "Actualizan el precio en todos los anaqueles de forma remota, sin recorridos manuales, sin errores y sin discrepancias en caja. Tu equipo recupera tiempo para atender y vender.",
   },
   {
     slug: "cerraduras-electronicas",
-    label: "Cerraduras electrónicas y mecánicas",
-    short: "Control de acceso a categorías sensibles",
+    label: "Cerraduras electrónicas",
+    short: "Resguarda lo más valioso sin esconderlo",
     description:
-      "Cerraduras para vitrinas y anaqueles de producto de alto valor o categorías reguladas, con control de acceso trazable.",
+      "Protegen los artículos de mayor valor y permiten exhibirlos a la vista de tu cliente. Menos exposición del inventario, misma libertad de compra.",
+  },
+  {
+    slug: "antenas-eas",
+    label: "Sistemas EAS",
+    short: "Detecta el robo cuando ocurre",
+    description:
+      "Detectan cualquier intento de robo en el instante, no en el reporte del día siguiente. Actúas a tiempo y reduces la merma.",
   },
 ];
 
@@ -61,8 +68,8 @@ export const DIFFERENTIATORS: Differentiator[] = [
   {
     number: "01",
     title: "Ver para decidir",
-    kicker: "Dos showrooms interactivos en operación real — CDMX y norte del país",
-    body: "El retailer experimenta sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas en un entorno real, no en maqueta, antes de comprometer presupuesto, sin importar en qué región del país esté su cadena.",
+    kicker: "Dos showrooms interactivos en operación real, en CDMX y en el norte del país",
+    body: "Experimenta Display, Digital Tools, inteligencia artificial, etiquetas ESL, cerraduras electrónicas y sistemas EAS en un entorno real, no en maqueta, antes de comprometer presupuesto.",
     quote: "Elimina el riesgo de adopción y acorta el ciclo de decisión.",
     cta: "Agenda tu visita al showroom más cercano",
   },
@@ -70,30 +77,43 @@ export const DIFFERENTIATORS: Differentiator[] = [
     number: "02",
     title: "Acompañamiento integral, siempre disponible",
     kicker: "Un socio estratégico y un call center dedicado",
-    body: "Dások acompaña cada etapa —diagnóstico, instalación, capacitación, operación e incidencias— sin que tu equipo de TI intervenga en cada falla.",
+    body: "Te acompañamos en cada etapa: diagnóstico, instalación, capacitación, operación e incidencias. Nuestro call center dedicado es el respaldo detrás de la tecnología.",
     quote: "La tecnología funciona. Y si no, la atendemos nosotros.",
   },
   {
     number: "03",
-    title: "25 años leyendo el retail mexicano",
+    title: "25 años de trayectoria en retail mexicano",
     kicker: "Inteligencia de mercado con evidencia local",
-    body: "Conocimiento específico de cómo opera una farmacia en Guadalajara, una departamental en CDMX o una tienda en Monterrey — contexto que no se compra en dos años.",
+    body: "25 años de trayectoria respaldan cada decisión que un director toma al elegir a Dások. Ese historial reduce el riesgo de la inversión desde el primer día, con resultados comprobados y no con promesas por confirmar.",
     quote: "No hablamos de tendencias. Las hemos vivido y resuelto.",
   },
   {
     number: "04",
     title: "Tecnología global, criterio local",
     kicker: "Respaldo internacional con implementación mexicana",
-    body: "Dások selecciona e implementa tecnología de primer nivel con conocimiento del mercado mexicano, sin el riesgo de soporte extranjero.",
+    body: "Tecnología de primer nivel, implementada con criterio local y respaldada por soporte en México. Tienes garantía de largo plazo, no solo precio de entrada.",
     quote: "Lo mejor del mundo, implementado por quien conoce tu mercado.",
   },
   {
     number: "05",
     title: "Un entorno integrado, un socio estratégico",
     kicker: "Integración real bajo un solo acompañamiento",
-    body: "Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas bajo un solo punto de contacto y un solo equipo de soporte.",
+    body: "Display, Digital Tools, inteligencia artificial con datos en tiempo real, etiquetas ESL, cerraduras electrónicas y sistemas EAS bajo un solo socio comercial, un solo punto de contacto, un solo equipo de soporte.",
     quote: "Un entorno integrado. Un socio que te acompaña en cada etapa.",
   },
+];
+
+export const DASOK_DIFFERENCES = [
+  "Cobertura a nivel nacional.",
+  "Call center dedicado.",
+  "Acompañamiento en cada etapa.",
+  "Calidad y precio.",
+  "Soluciones globales con soporte local.",
+];
+
+export const SHOWROOMS = [
+  { city: "Ciudad de México", details: "[dirección] y [horario]" },
+  { city: "Norte del país", details: "[ciudad, dirección] y [horario]" },
 ];
 
 export type PainPoint = {

@@ -6,21 +6,21 @@ export function SolutionsGrid() {
   return (
     <Section className="py-20 sm:py-28">
       <Reveal className="max-w-2xl">
-        <p className="eyebrow text-verde-acento">Lo que integra tu entorno</p>
+        <p className="eyebrow text-verde-acento">Nuestras soluciones</p>
         <h2 className="font-display mt-4 text-4xl sm:text-5xl">
           Un entorno integral que conecta cada punto de control
         </h2>
         <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
-          Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia
-          artificial con datos en tiempo real y cerraduras electrónicas, con
-          Dások como tu socio estratégico en cada etapa.
+          Display, Digital Tools, inteligencia artificial con datos en
+          tiempo real, etiquetas ESL, cerraduras electrónicas y sistemas
+          EAS, con Dások como tu socio estratégico en cada etapa.
         </p>
       </Reveal>
 
       <Reveal
         group
         stagger={0.08}
-        className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5"
+        className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3"
       >
         {SOLUTIONS.map((solution, index) => (
           <div

@@ -55,16 +55,16 @@ export function HomeHero() {
           data-hero-item
           className="font-display text-balance mt-6 max-w-4xl text-5xl sm:text-7xl lg:text-[5.5rem]"
         >
-          Convertimos espacios comerciales en entornos inteligentes
+          Convertimos espacios comerciales en entornos inteligentes, seguros
+          y rentables.
         </h1>
         <p
           data-hero-item
           className="mt-7 max-w-xl font-body text-lg normal-case tracking-normal text-ink-muted"
         >
-          Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia
-          artificial con datos en tiempo real y cerraduras electrónicas, con
-          Dások como tu socio estratégico en cada etapa: diagnóstico,
-          instalación, capacitación y operación.
+          Tu tienda exhibe, vende y protege al mismo tiempo. Tus clientes
+          interactúan con el producto, tu equipo decide con datos en tiempo
+          real y tu inventario permanece resguardado.
         </p>
         <div data-hero-item className="mt-10 flex flex-wrap gap-4">
           <CtaButton onClick={() => openModal("showroom")}>
@@ -74,6 +74,12 @@ export function HomeHero() {
             {SECONDARY_CTA_LABEL}
           </CtaButton>
         </div>
+        <p
+          data-hero-item
+          className="mt-5 text-sm normal-case tracking-normal text-ink-faint"
+        >
+          Dos showrooms interactivos: Ciudad de México y norte del país.
+        </p>
 
         <div
           data-hero-item
