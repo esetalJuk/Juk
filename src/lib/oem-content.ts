@@ -156,7 +156,7 @@ export const OEM_SOLUTION_LINES = [
     slug: "eas",
     icon: "wifi",
     label: "Sistemas EAS y consumibles",
-    kicker: "Antenas · Consumibles",
+    kicker: "Sistemas EAS · Consumibles",
     description: "Detección en el acceso y monitoreo remoto de toda la red de tiendas.",
     accent: "verde-acento",
   },
@@ -233,8 +233,8 @@ export const OEM_EAS = {
   intro: {
     title: "Soluciones de sistemas EAS y consumibles",
     tagline: "Protección en el momento más vulnerable: la salida",
-    tags: ["Antenas", "Consumibles"],
-    body: "Las antenas en los accesos detectan cualquier producto que no fue desactivado en caja y generan una alarma inmediata.",
+    tags: ["Sistemas EAS", "Consumibles"],
+    body: "Los sistemas EAS en los accesos detectan cualquier producto que no fue desactivado en caja y generan una alarma inmediata.",
   },
   resuelve: {
     eyebrow: "SOLUCIONES DE SISTEMAS EAS Y CONSUMIBLES",

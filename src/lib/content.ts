@@ -16,7 +16,7 @@ export const SOLUTIONS: Solution[] = [
     label: "Sistemas EAS",
     short: "Detección en el punto de salida",
     description:
-      "Antenas de vigilancia electrónica que detectan la salida no autorizada de producto en tiempo real, en el perímetro de piso de venta.",
+      "Sistemas EAS de vigilancia electrónica que detectan la salida no autorizada de producto en tiempo real, en el perímetro de piso de venta.",
   },
   {
     slug: "etiquetas-esl",
