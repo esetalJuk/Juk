@@ -136,6 +136,25 @@ li {
   mix-blend-mode: overlay;
 }
 
+/* Misma pleca, sin la línea de escaneo — degradado liso. */
+.pleca-clean {
+  position: relative;
+}
+
+.pleca-clean::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-tinta) 0%,
+    var(--color-azul-primario) 100%
+  );
+}
+
 .text-balance {
   text-wrap: balance;
 }

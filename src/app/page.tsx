@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <HomeHero />
       <IntroBlock />
+      <HowItWorks />
       <SolutionsGrid />
       <PillarsGrid />
-      <HowItWorks />
       <Differentiators />
       <Showrooms />
       <CtaBanner

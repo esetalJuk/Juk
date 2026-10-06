@@ -17,7 +17,7 @@ export function Differentiators() {
         {DIFFERENTIATORS.map((item) => (
           <Reveal
             key={item.number}
-            className="pleca grid gap-4 py-10 pl-8 sm:grid-cols-[auto_1fr] sm:gap-10 sm:py-12 sm:pl-10"
+            className="pleca-clean grid gap-4 py-10 pl-8 sm:grid-cols-[auto_1fr] sm:gap-10 sm:py-12 sm:pl-10"
           >
             <span className="font-mono text-3xl text-azul-primario sm:text-4xl">
               {item.number}
