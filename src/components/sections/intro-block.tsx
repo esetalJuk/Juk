@@ -24,10 +24,12 @@ export function IntroBlock() {
     <Section className="py-20 sm:py-28">
       <Reveal>
         <p className="eyebrow text-verde-acento">Introducción</p>
-        <p className="font-display text-balance mt-4 max-w-3xl text-3xl sm:text-4xl">
-          Una tienda rentable no elige entre mostrar su producto y cuidarlo.
-          Cuando el espacio está bien pensado, cada metro de piso de venta
-          cumple tres funciones a la vez:
+        <h2 className="font-display text-balance mt-4 max-w-3xl text-3xl sm:text-4xl">
+          Exhibe, vende y protege en el mismo espacio.
+        </h2>
+        <p className="mt-4 max-w-2xl font-body text-base normal-case tracking-normal text-ink-muted">
+          Cuando el espacio está bien pensado, cada metro de tu piso de
+          venta trabaja para tu negocio.
         </p>
       </Reveal>
 
