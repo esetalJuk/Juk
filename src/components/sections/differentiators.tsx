@@ -9,7 +9,7 @@ export function Differentiators() {
       <Reveal className="max-w-2xl">
         <p className="eyebrow text-verde-acento">Por qué Dások</p>
         <h2 className="font-display mt-4 text-4xl sm:text-5xl">
-          Cinco razones verificables, no atributos de producto
+          Lo que ganas con Dások, y cómo lo comprobamos
         </h2>
       </Reveal>
 
