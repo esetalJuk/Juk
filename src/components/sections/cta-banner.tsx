@@ -13,9 +13,12 @@ import {
 export function CtaBanner({
   title = "Ver para decidir, antes de comprometer presupuesto",
   body = "Dos showrooms interactivos en operación real, CDMX y norte del país. Agenda tu visita o habla con un asesor esta semana.",
+  lightTitle = false,
 }: {
   title?: string;
   body?: string;
+  /** Renders the title in the body typeface instead of the display face, for less visual weight. */
+  lightTitle?: boolean;
 }) {
   const { openModal } = useContactModal();
   const whatsappHref = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(
@@ -30,7 +33,13 @@ export function CtaBanner({
           className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-azul-primario/20 blur-3xl"
         />
         <div className="relative max-w-2xl">
-          <h2 className="font-display text-balance text-4xl sm:text-5xl">
+          <h2
+            className={
+              lightTitle
+                ? "font-body text-balance text-xl normal-case tracking-normal text-white sm:text-2xl"
+                : "font-display text-balance text-4xl sm:text-5xl"
+            }
+          >
             {title}
           </h2>
           <p className="mt-5 font-body text-base normal-case tracking-normal text-ink-muted">

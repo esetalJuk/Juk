@@ -18,8 +18,9 @@ export default function Home() {
       <Differentiators />
       <Showrooms />
       <CtaBanner
-        title="Cada día que estas seis soluciones no están en tu piso de venta es un día más de merma, robo y decisiones sin datos."
-        body="Agenda tu visita a nuestro showroom en CDMX o en el norte del país esta semana y compruébalo tú mismo."
+        title="Tu piso de venta puede proteger, optimizar y vender más de lo que hoy hace. ¿Cuánto te está costando que no lo haga?"
+        body="Agenda tu visita a nuestro showroom en CDMX o en el norte del país y compruébalo tú mismo."
+        lightTitle
       />
     </>
   );
