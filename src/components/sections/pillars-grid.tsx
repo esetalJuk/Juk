@@ -11,12 +11,12 @@ export function PillarsGrid() {
       <Reveal className="max-w-2xl">
         <p className="eyebrow text-verde-acento">Un entorno por operación</p>
         <h2 className="font-display mt-4 text-4xl sm:text-5xl">
-          Tu operación decide el pilar, no el catálogo
+          Una solución para cada operación
         </h2>
         <p className="mt-5 max-w-xl font-body text-base normal-case tracking-normal text-ink-muted">
-          Un director de prevención de pérdidas de una tienda departamental y
-          un administrador de centro comercial no llegan al mismo problema.
-          Cada pilar responde al dolor específico de su operación.
+          Retail, OEMs, farmacias y centros comerciales enfrentan retos
+          distintos. Por eso estamos preparados para atender a cada sector
+          con soluciones pensadas para su operación específica.
         </p>
       </Reveal>
 
