@@ -23,7 +23,7 @@ export function CtaBanner({
   )}`;
 
   return (
-    <Section className="py-20 sm:py-28">
+    <Section className="py-14 sm:py-20">
       <Reveal className="pleca relative overflow-hidden border border-line-strong bg-tinta-raised px-8 py-14 sm:px-14 sm:py-16">
         <div
           aria-hidden="true"

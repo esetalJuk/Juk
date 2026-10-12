@@ -10,7 +10,7 @@ export function Showrooms() {
   const { openModal } = useContactModal();
 
   return (
-    <Section className="py-20 sm:py-28">
+    <Section className="py-14 sm:py-20">
       <Reveal className="max-w-2xl">
         <p className="eyebrow text-verde-acento">Showrooms</p>
         <h2 className="font-display text-balance mt-4 text-4xl sm:text-5xl">
