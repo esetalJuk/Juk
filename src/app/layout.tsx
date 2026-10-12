@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { SmoothScrollProvider } from "@/components/motion/smooth-scroll-provider";
 import { Preloader } from "@/components/motion/preloader";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -87,11 +86,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <Preloader />
         <ContactModalProvider>
-          <SmoothScrollProvider>
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </SmoothScrollProvider>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
           <WhatsAppButton />
         </ContactModalProvider>
       </body>
