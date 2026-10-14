@@ -23,7 +23,7 @@ export function FeatureGrid({
 }: {
   features: Feature[];
   columns?: 2 | 3 | 4;
-  /** "verde": every card in the grid gets the #070D14 background with green icon/title — overrides per-item highlight. */
+  /** "verde": every card in the grid gets the #0080DF background with green icon/title — overrides per-item highlight. */
   variant?: "verde";
 }) {
   return (
@@ -33,7 +33,11 @@ export function FeatureGrid({
       className={`grid gap-px overflow-hidden border border-line bg-line ${COLUMN_CLASS[columns]}`}
     >
       {features.map((feature) => (
-        <div key={feature.title} data-reveal-item className="bg-[#070d14] p-6">
+        <div
+          key={feature.title}
+          data-reveal-item
+          className={`p-6 ${variant === "verde" ? "bg-[#0080df]" : "bg-[#070d14]"}`}
+        >
           <Icon
             name={feature.icon}
             className={`h-6 w-6 ${

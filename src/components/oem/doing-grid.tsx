@@ -23,7 +23,7 @@ export function DoingGrid() {
               ?.scrollIntoView({ behavior: "smooth", block: "start" });
           }}
           data-reveal-item
-          className="group relative flex flex-col justify-between gap-8 bg-[#070d14] p-7 transition-colors duration-300 hover:bg-[#0d1622] sm:p-8"
+          className="group relative flex flex-col justify-between gap-8 bg-[#0080df] p-7 transition-colors duration-300 hover:bg-[#004b8e] sm:p-8"
         >
           <div>
             <div className="flex items-center justify-between">
