@@ -95,7 +95,7 @@ export function SideProgressNav() {
                 {zone.number}
               </span>
               <span className="eyebrow text-[11px] normal-case leading-[1.4] tracking-normal">
-                {zone.zoneLabel.replace(/^Zona \d+ · /, "")}
+                {zone.solutionName}
               </span>
             </a>
           );

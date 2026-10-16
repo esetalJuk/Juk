@@ -47,6 +47,8 @@ export type FarmaciasZone = {
   slug: string;
   accent: "azul-primario" | "verde-acento" | "azul-corporativo" | "tinta";
   zoneLabel: string;
+  /** Nombre corto de la solución, usado en el menú lateral. */
+  solutionName: string;
   title: string;
   icon: string;
   problema: string;
@@ -61,7 +63,8 @@ export const FARMACIAS_ZONAS: FarmaciasZone[] = [
     slug: "dermocosmetica",
     accent: "azul-primario",
     zoneLabel: "Zona 1 · Anaquel de dermocosmética y cuidado personal",
-    title: "Protege lo que más te roban sin esconderlo del cliente",
+    solutionName: "Cajas de seguridad con alarma",
+    title: "Cajas de seguridad con alarma que no esconden el producto",
     icon: "bell",
     problema:
       "Cremas, sérum, protectores solares, maquillaje. Son productos caros, pequeños y fáciles de revender. Por eso son los más robados en farmacias. Si los encierras en vitrina, el cliente no los toca, no los compara y no los compra.",
@@ -81,7 +84,8 @@ export const FARMACIAS_ZONAS: FarmaciasZone[] = [
     slug: "formula-infantil",
     accent: "verde-acento",
     zoneLabel: "Zona 2 · Fórmula infantil y pañales",
-    title: "La fórmula no puede estar bajo llave. Tampoco puede desaparecer del anaquel.",
+    solutionName: "Dispensadores antibarrido",
+    title: "Dispensadores que evitan el barrido sin bloquear el acceso",
     icon: "refresh",
     problema:
       "La fórmula infantil es cara y fácil de revender. El robo no es de una lata: es de varias al mismo tiempo. A eso se le llama barrido de anaquel. Pero encerrarla bajo llave genera fricción con el padre o la madre que necesita acceso rápido.",
@@ -100,7 +104,8 @@ export const FARMACIAS_ZONAS: FarmaciasZone[] = [
     slug: "mostrador",
     accent: "tinta",
     zoneLabel: "Zona 3 · Productos de mostrador y alto valor en anaquel abierto",
-    title: "Anaquel abierto con vigilancia inteligente: el cliente compra con libertad, tú operas con control",
+    solutionName: "Ganchos inteligentes y etiquetas de seguridad",
+    title: "Ganchos inteligentes y etiquetas de seguridad en anaquel abierto",
     icon: "grid",
     problema:
       "Antigripales, vitaminas, suplementos, preservativos, protectores solares y rastrillos son productos que viven en anaquel abierto. Son pequeños y se mueven rápido. La pérdida se acumula sin que nadie la note hasta el conteo de inventario.",
@@ -120,7 +125,8 @@ export const FARMACIAS_ZONAS: FarmaciasZone[] = [
     slug: "linea-cajas",
     accent: "azul-corporativo",
     zoneLabel: "Zona 4 · Línea de cajas",
-    title: "Detecta el problema en el instante, no en el reporte del día siguiente",
+    solutionName: "Monitoreo remoto en caja",
+    title: "Monitoreo remoto y desactivación rápida en la línea de cajas",
     icon: "wifi",
     problema:
       "Muchas pérdidas ocurren justo en la caja: productos que pasan sin escanear, descuentos no autorizados, anulaciones fuera de lugar. Además, si la desactivación de etiquetas de seguridad es lenta, la fila crece y el cliente se desespera.",
@@ -139,7 +145,8 @@ export const FARMACIAS_ZONAS: FarmaciasZone[] = [
     slug: "bodega",
     accent: "verde-acento",
     zoneLabel: "Zona 5 · Bodega, trastienda y accesos restringidos",
-    title: "Controla quién entra, cuándo y a qué",
+    solutionName: "Cerraduras electrónicas",
+    title: "Cerraduras electrónicas con registro de cada acceso",
     icon: "key",
     problema:
       "La trastienda y la bodega guardan lo más valioso: medicamento controlado, producto de alta especialidad y mercancía de reposición. Una llave física no deja registro, se puede copiar fácilmente y no te dice quién entró ni cuándo.",
@@ -158,7 +165,8 @@ export const FARMACIAS_ZONAS: FarmaciasZone[] = [
     slug: "piso-venta",
     accent: "tinta",
     zoneLabel: "Zona 6 · Piso de venta completo",
-    title: "Datos en tiempo real, precios correctos y comunicación visual en cada pasillo",
+    solutionName: "IA, ESL y señalización digital",
+    title: "Inteligencia artificial, etiquetas ESL y señalización digital en piso de venta",
     icon: "chart",
     problema:
       "Sin datos, el acomodo de la farmacia se define por costumbre, no por comportamiento del cliente. Los precios se cambian a mano, lo que consume horas y genera errores. La comunicación en piso depende de material impreso que llega tarde y se pone donde cabe, no donde funciona.",
