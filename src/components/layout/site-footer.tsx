@@ -40,7 +40,7 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <FooterColumn title="Pilares de negocio">
+          <FooterColumn title="Soluciones por sector">
             {topLevelPillars.map((pillar) => (
               <Link
                 key={pillar.slug}

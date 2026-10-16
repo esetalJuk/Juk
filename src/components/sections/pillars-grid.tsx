@@ -40,7 +40,7 @@ export function PillarsGrid() {
               {pillar.painPoints[0]?.label}: {pillar.painPoints[0]?.description}
             </span>
             <span className="eyebrow mt-6 text-azul-primario transition-colors group-hover:text-verde-acento">
-              Ver pilar →
+              Ver más →
             </span>
           </Link>
         ))}

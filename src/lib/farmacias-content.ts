@@ -2,9 +2,9 @@
 // Fuente: "Landing_Farmacias_Contenido.docx" (Dások All Solutions, octubre 2026).
 
 export const FARMACIAS_HERO = {
-  eyebrow: "PILAR · FARMACIAS",
+  eyebrow: "FARMACIAS",
   h1: "Cada zona de tu farmacia tiene un punto ciego. Nosotros lo cerramos.",
-  hook: "Dermocosmética, fórmula infantil, rastrillos: las categorías que más te roban son las mismas que tus clientes necesitan ver, tocar y comparar para comprar. Si las escondes, pierdes venta. Si las dejas expuestas, pierdes producto.",
+  hook: "Las categorías que más te roban son las mismas que tus clientes necesitan ver, tocar y comparar para comprar. Si las escondes, pierdes venta. Si las dejas expuestas, pierdes producto.",
   intro:
     "Dások integra protección, exhibición e inteligencia en cada zona de tu farmacia: desde el anaquel hasta la trastienda, con un solo socio comercial que te acompaña de principio a fin.",
 };

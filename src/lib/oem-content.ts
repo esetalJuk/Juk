@@ -5,7 +5,7 @@
 // acción concreta.
 
 export const OEM_HERO = {
-  eyebrow: "PILAR · OEM Y ELECTRÓNICA DE CONSUMO",
+  eyebrow: "OEM Y ELECTRÓNICA DE CONSUMO",
   h1: "Convertimos la exhibición en tu mejor vendedor",
   hook: "El dispositivo que no se puede tocar, no se vende. El que se puede robar, tampoco.",
   intro:

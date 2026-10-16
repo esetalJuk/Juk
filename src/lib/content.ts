@@ -148,7 +148,7 @@ export const PILLARS: Pillar[] = [
   {
     slug: "retail",
     navLabel: "Retail",
-    eyebrow: "PILAR · RETAIL",
+    eyebrow: "RETAIL",
     h1: "Tecnología que protege tu piso de venta y da visibilidad a la operación",
     hook: "La merma en retail rara vez llega como un solo incidente. Es una fuga constante entre anaquel, caja y almacén.",
     intro:
@@ -237,7 +237,7 @@ export const PILLARS: Pillar[] = [
   {
     slug: "oem-electronica",
     navLabel: "OEM / Electrónica",
-    eyebrow: "PILAR · OEM Y ELECTRÓNICA DE CONSUMO",
+    eyebrow: "OEM Y ELECTRÓNICA DE CONSUMO",
     h1: "Exhibición segura para producto de alto valor unitario",
     hook: "Un producto de electrónica de consumo se vende mejor cuando el cliente lo toca. Esa misma exhibición abierta es la que más expone a la marca al robo.",
     intro:
@@ -254,7 +254,7 @@ export const PILLARS: Pillar[] = [
   {
     slug: "farmacias",
     navLabel: "Farmacias",
-    eyebrow: "PILAR · FARMACIAS",
+    eyebrow: "FARMACIAS",
     h1: "Control de anaquel abierto sin frenar la rapidez de atención en caja",
     hook: "El robo hormiga en farmacia no siempre se nota en el momento. Se nota al cierre de mes, en el anaquel de mayor margen.",
     intro:
@@ -272,7 +272,7 @@ export const PILLARS: Pillar[] = [
   {
     slug: "centros-comerciales",
     navLabel: "Centros comerciales",
-    eyebrow: "PILAR · CENTROS COMERCIALES",
+    eyebrow: "CENTROS COMERCIALES",
     h1: "Seguridad perimetral y experiencia digital para la administración de plaza",
     hook: "Quien administra una plaza comercial responde por la seguridad de todos los locatarios, no solo por la propia operación.",
     intro:
