@@ -6,12 +6,18 @@
   --color-tinta-card: #101b29;
   --color-azul-corporativo: #004b8e;
   --color-azul-primario: #0080df;
+  /* Un paso más oscuro que azul-primario: úsalo (no azul-primario) cuando
+     texto blanco vaya sobre un fondo azul sólido — azul-primario con texto
+     blanco encima no alcanza el contraste mínimo AA (4.08:1). */
+  --color-azul-boton: #0075cc;
   --color-verde-acento: #27d38c;
   --color-white: #ffffff;
   --color-line: rgba(255, 255, 255, 0.1);
   --color-line-strong: rgba(255, 255, 255, 0.18);
   --color-ink-muted: rgba(255, 255, 255, 0.64);
-  --color-ink-faint: rgba(255, 255, 255, 0.42);
+  /* 0.52 (no 0.42): a 0.42 el contraste contra tinta cae a 4.07:1, por
+     debajo del mínimo AA de 4.5:1 para texto normal. */
+  --color-ink-faint: rgba(255, 255, 255, 0.52);
 }
 
 @theme inline {
@@ -20,6 +26,7 @@
   --color-tinta-card: var(--color-tinta-card);
   --color-azul-corporativo: var(--color-azul-corporativo);
   --color-azul-primario: var(--color-azul-primario);
+  --color-azul-boton: var(--color-azul-boton);
   --color-verde-acento: var(--color-verde-acento);
   --color-line: var(--color-line);
   --color-line-strong: var(--color-line-strong);
@@ -170,7 +177,9 @@ li {
   --color-line: rgba(10, 20, 32, 0.12);
   --color-line-strong: rgba(10, 20, 32, 0.22);
   --color-ink-muted: rgba(10, 20, 32, 0.68);
-  --color-ink-faint: rgba(10, 20, 32, 0.48);
+  /* 0.64 (no 0.48): a 0.48 el contraste contra blanco cae a 3.29:1, por
+     debajo del mínimo AA de 4.5:1 para texto normal. */
+  --color-ink-faint: rgba(10, 20, 32, 0.64);
   /* Re-anchors inherited text color at this scope: elements with no
      explicit text-* class (most headings) otherwise keep inheriting
      the dark-theme white resolved higher up the tree. */

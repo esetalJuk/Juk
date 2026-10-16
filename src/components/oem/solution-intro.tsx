@@ -32,6 +32,10 @@ export function SolutionIntro({
 }) {
   const ref = useScrollReveal<HTMLDivElement>({ y: 24, once: true });
   const accent = useSectionAccent();
+  // La zona "verde-acento" tiene fondo blanco: verde sobre blanco cae a
+  // 1.95:1 de contraste. En esa zona ignoramos taglineGreen y usamos el
+  // color de acento de la zona (ya resuelto a uno legible sobre blanco).
+  const isLightZone = accent === "verde-acento";
 
   return (
     <div ref={ref} className={`grid border-b border-line/60 ${image ? "lg:grid-cols-2" : ""}`}>
@@ -56,7 +60,7 @@ export function SolutionIntro({
         </h2>
         {tagline && (
           <p
-            className={`font-display relative mt-2 text-lg sm:text-xl ${taglineGreen ? "text-verde-acento" : ACCENT_TEXT_CLASS[accent]}`}
+            className={`font-display relative mt-2 text-lg sm:text-xl ${taglineGreen && !isLightZone ? "text-verde-acento" : ACCENT_TEXT_CLASS[accent]}`}
           >
             {tagline}
           </p>

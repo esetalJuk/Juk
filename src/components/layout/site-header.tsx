@@ -75,7 +75,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => openModal("showroom")}
-            className="eyebrow border border-azul-primario bg-azul-primario/10 px-5 py-3 text-white transition-colors hover:bg-azul-primario"
+            className="eyebrow border border-azul-primario bg-azul-primario/10 px-5 py-3 text-white transition-colors hover:bg-azul-corporativo"
           >
             {PRIMARY_CTA_LABEL}
           </button>
@@ -235,7 +235,7 @@ function MobileNav({
         <button
           type="button"
           onClick={onCta}
-          className="eyebrow mt-8 border border-azul-primario bg-azul-primario px-6 py-4 text-center text-white"
+          className="eyebrow mt-8 border border-azul-primario bg-azul-corporativo px-6 py-4 text-center text-white"
         >
           {PRIMARY_CTA_LABEL}
         </button>

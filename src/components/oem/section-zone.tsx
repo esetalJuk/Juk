@@ -20,7 +20,9 @@ const LIGHT_ACCENT: SectionAccentKey = "verde-acento";
 
 export const ACCENT_TEXT_CLASS: Record<string, string> = {
   "azul-primario": "text-azul-primario",
-  "verde-acento": "text-azul-primario",
+  // Fondo blanco (zone-light): azul-primario sobre blanco no alcanza 4.5:1.
+  // azul-corporativo sí (8.76:1).
+  "verde-acento": "text-azul-corporativo",
   "azul-corporativo": "text-azul-primario",
   tinta: "text-azul-primario",
 };

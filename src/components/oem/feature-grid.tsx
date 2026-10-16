@@ -23,7 +23,7 @@ export function FeatureGrid({
 }: {
   features: Feature[];
   columns?: 2 | 3 | 4;
-  /** "verde": every card in the grid gets the #0080DF background with green icon/title — overrides per-item highlight. */
+  /** "verde": every card in the grid gets an azul-corporativo background with a green icon — overrides per-item highlight. */
   variant?: "verde";
 }) {
   return (
@@ -36,7 +36,7 @@ export function FeatureGrid({
         <div
           key={feature.title}
           data-reveal-item
-          className={`p-6 ${variant === "verde" ? "bg-[#0080df]" : "bg-[#070d14]"}`}
+          className={`p-6 ${variant === "verde" ? "bg-azul-corporativo" : "bg-[#070d14]"}`}
         >
           <Icon
             name={feature.icon}
@@ -44,9 +44,9 @@ export function FeatureGrid({
               variant === "verde" ? "text-verde-acento" : feature.highlight ? "text-[#fff]" : "text-azul-primario"
             }`}
           />
-          <h3
-            className={`font-display mt-4 text-lg leading-tight ${variant === "verde" ? "text-verde-acento" : "text-[#fff]"}`}
-          >
+          {/* Título en blanco (no verde-acento): verde sobre azul-corporativo
+              queda justo en el límite del contraste mínimo AA. */}
+          <h3 className="font-display mt-4 text-lg leading-tight text-[#fff]">
             {feature.title}
           </h3>
           <p className="mt-2 text-sm text-[#fff]/70">{feature.body}</p>

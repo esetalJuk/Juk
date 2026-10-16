@@ -23,24 +23,27 @@ export function DoingGrid() {
               ?.scrollIntoView({ behavior: "smooth", block: "start" });
           }}
           data-reveal-item
-          className="group relative flex flex-col justify-between gap-8 bg-[#0080df] p-7 transition-colors duration-300 hover:bg-[#004b8e] sm:p-8"
+          className="group relative flex flex-col justify-between gap-8 bg-azul-corporativo p-7 transition-colors duration-300 hover:bg-azul-boton sm:p-8"
         >
           <div>
             <div className="flex items-center justify-between">
-              <span className="eyebrow text-[#fff]/45">{category.label}</span>
+              {/* /75 (no /45): a /45 el contraste contra el fondo azul cae por debajo del mínimo AA. */}
+              <span className="eyebrow text-[#fff]/75">{category.label}</span>
               <Icon
                 name={category.icon}
                 className="h-6 w-6 text-verde-acento transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <h3 className="font-display mt-4 text-xl leading-tight text-verde-acento sm:text-2xl">
+            {/* Título y enlace en blanco (no verde-acento): verde sobre azul
+                sólido no alcanza el contraste mínimo AA. */}
+            <h3 className="font-display mt-4 text-xl leading-tight text-[#fff] sm:text-2xl">
               {category.title}
             </h3>
             <p className="mt-3 font-body text-sm normal-case tracking-normal text-[#fff]/70">
               {category.body}
             </p>
           </div>
-          <span className="eyebrow inline-flex items-center gap-2 normal-case tracking-normal text-verde-acento transition-colors">
+          <span className="eyebrow inline-flex items-center gap-2 normal-case tracking-normal text-[#fff] transition-colors">
             {category.linkLabel}
             <Icon
               name="arrowRight"

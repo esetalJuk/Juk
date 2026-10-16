@@ -73,7 +73,7 @@ export function ContactForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="eyebrow mt-2 w-full bg-azul-primario px-6 py-4 text-center text-white transition-colors hover:bg-azul-corporativo disabled:opacity-60"
+        className="eyebrow mt-2 w-full bg-azul-corporativo px-6 py-4 text-center text-white transition-colors hover:bg-azul-boton disabled:opacity-60"
       >
         {status === "submitting" ? "Enviando…" : "Enviar solicitud"}
       </button>
