@@ -58,7 +58,7 @@ export function FarmaciasHero() {
         </h1>
         <p
           data-hero-item
-          className="font-display mt-6 max-w-xl text-xl normal-case tracking-normal text-verde-acento sm:text-2xl"
+          className="font-body mt-6 max-w-xl text-[19px] normal-case tracking-normal text-verde-acento"
         >
           {FARMACIAS_HERO.hook}
         </p>
