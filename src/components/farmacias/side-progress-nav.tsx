@@ -1,11 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FARMACIAS_ZONAS } from "@/lib/farmacias-content";
+import {
+  FARMACIAS_ZONAS,
+  FARMACIAS_GRUPOS,
+  type FarmaciasGroupKey,
+} from "@/lib/farmacias-content";
+
+const GROUP_ORDER: FarmaciasGroupKey[] = ["exhibicion", "seguridad"];
 
 /**
- * Persistent left sidebar with every zone always visible — no hover required.
- * Mirrors the OEM/Electrónica side nav pattern for visual consistency.
+ * Persistent left sidebar with every solution always visible, grouped under
+ * Exhibición / Seguridad — no hover required. Mirrors the OEM/Electrónica
+ * side nav pattern for visual consistency.
  */
 export function SideProgressNav() {
   const [active, setActive] = useState<string>(FARMACIAS_ZONAS[0].slug);
@@ -30,19 +37,19 @@ export function SideProgressNav() {
   }, []);
 
   useEffect(() => {
-    const dolor = document.getElementById("dolor");
+    const start = document.getElementById(FARMACIAS_GRUPOS.exhibicion.slug);
     const cierre = document.getElementById("cierre");
-    if (!dolor || !cierre) return;
+    if (!start || !cierre) return;
 
     const HEADER_OFFSET = 80;
     const CIERRE_HIDE_RATIO = 0.55;
     let ticking = false;
 
     const check = () => {
-      const pastDolor = dolor.getBoundingClientRect().top <= HEADER_OFFSET;
+      const pastStart = start.getBoundingClientRect().top <= HEADER_OFFSET;
       const pastCierreStart =
         cierre.getBoundingClientRect().top <= window.innerHeight * CIERRE_HIDE_RATIO;
-      setVisible(pastDolor && !pastCierreStart);
+      setVisible(pastStart && !pastCierreStart);
       ticking = false;
     };
 
@@ -63,44 +70,52 @@ export function SideProgressNav() {
 
   return (
     <nav
-      aria-label="Navegación de zonas"
-      className={`fixed left-6 top-1/2 z-30 hidden w-52 -translate-y-1/2 transition-all duration-500 xl:block ${
+      aria-label="Navegación de soluciones"
+      className={`fixed left-6 top-1/2 z-30 hidden max-h-[85vh] w-56 -translate-y-1/2 overflow-y-auto transition-all duration-500 xl:block ${
         visible
           ? "opacity-100"
           : "pointer-events-none -translate-x-4 opacity-0"
       }`}
     >
-      <p className="eyebrow mb-4 pl-4 text-ink-faint">Zonas</p>
-      <div className="flex flex-col gap-3">
-        {FARMACIAS_ZONAS.map((zone) => {
-          const isActive = active === zone.slug;
-          return (
-            <a
-              key={zone.slug}
-              href={`#${zone.slug}`}
-              onClick={(event) => {
-                event.preventDefault();
-                document
-                  .getElementById(zone.slug)
-                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
-              aria-current={isActive ? "true" : undefined}
-              className={`flex items-start gap-2.5 border-l-2 py-2 pl-[13px] pr-2 transition-colors duration-300 ${
-                isActive
-                  ? "border-verde-acento text-verde-acento"
-                  : "border-white/10 text-ink-muted hover:border-white/30 hover:text-white"
-              }`}
-            >
-              <span className="font-mono text-[10px] leading-[1.4] opacity-70">
-                {zone.number}
-              </span>
-              <span className="eyebrow text-[11px] normal-case leading-[1.4] tracking-normal">
-                {zone.solutionName}
-              </span>
-            </a>
-          );
-        })}
-      </div>
+      {GROUP_ORDER.map((groupKey) => (
+        <div key={groupKey} className="mb-6 last:mb-0">
+          <p className="eyebrow mb-3 pl-4 text-ink-faint">
+            {FARMACIAS_GRUPOS[groupKey].label}
+          </p>
+          <div className="flex flex-col gap-2.5">
+            {FARMACIAS_ZONAS.filter((zone) => zone.group === groupKey).map(
+              (zone) => {
+                const isActive = active === zone.slug;
+                return (
+                  <a
+                    key={zone.slug}
+                    href={`#${zone.slug}`}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      document
+                        .getElementById(zone.slug)
+                        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`flex items-start gap-2.5 border-l-2 py-1.5 pl-[13px] pr-2 transition-colors duration-300 ${
+                      isActive
+                        ? "border-verde-acento text-verde-acento"
+                        : "border-white/10 text-ink-muted hover:border-white/30 hover:text-white"
+                    }`}
+                  >
+                    <span className="font-mono text-[10px] leading-[1.4] opacity-70">
+                      {zone.number}
+                    </span>
+                    <span className="eyebrow text-[11px] normal-case leading-[1.4] tracking-normal">
+                      {zone.navLabel}
+                    </span>
+                  </a>
+                );
+              },
+            )}
+          </div>
+        </div>
+      ))}
     </nav>
   );
 }

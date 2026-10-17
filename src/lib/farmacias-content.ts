@@ -1,54 +1,42 @@
 // Contenido de la página Farmacias.
-// Fuente: "Landing_Farmacias_Contenido.docx" (Dások All Solutions, octubre 2026).
+// Fuente: "Landing_Farmacias_Pilares.docx" (Dások All Solutions, octubre 2026).
 
 export const FARMACIAS_HERO = {
   eyebrow: "FARMACIAS",
-  h1: "Cada zona de tu farmacia tiene un punto ciego. Nosotros lo cerramos.",
-  hook: "Las categorías que más te roban son las mismas que tus clientes necesitan ver, tocar y comparar para comprar. Si las escondes, pierdes venta. Si las dejas expuestas, pierdes producto.",
+  h1: "Farmacia: la categoría que más necesitas exhibir es la misma que más te roban.",
+  hook: "Dermocuidado, cosméticos, suplementos, fragancias y medicamentos de alto valor son los productos que más atraen al cliente de farmacia. También son los que más desaparecen del anaquel.",
   intro:
-    "Dások integra protección, exhibición e inteligencia en cada zona de tu farmacia: desde el anaquel hasta la trastienda, con un solo socio comercial que te acompaña de principio a fin.",
+    "Encerrarlos en vitrina reduce el robo, pero también reduce la venta: el cliente no puede comparar, leer ingredientes ni elegir con libertad. Dások te da las herramientas para exhibir sin miedo y proteger sin fricción, sin tener que elegir entre una cosa y la otra.",
 };
 
-export const FARMACIAS_DOLOR = {
-  eyebrow: "DOLOR DE NEGOCIO",
-  title: "Lo que hoy le cuesta dinero a tu farmacia",
-  features: [
-    {
-      icon: "shield",
-      title: "Se roban lo que más vendes",
-      body: "Cremas, protectores solares, fórmula infantil y rastrillos son productos pequeños, caros y fáciles de revender. Son los que más desaparecen del anaquel. La pérdida no se nota en el momento: se nota cuando cierras el mes y el número no cuadra.",
-    },
-    {
-      icon: "lock",
-      title: "Escondes el producto para protegerlo y eso frena la venta",
-      body: "Poner el producto detrás del mostrador o dentro de una vitrina cerrada reduce el robo, pero también reduce la venta. El cliente que no puede tomar el producto, no compara. Y si no compara, no compra.",
-    },
-    {
-      icon: "tag",
-      title: "Los precios en el anaquel no siempre están actualizados",
-      body: "Cambiar precios a mano lleva horas, genera errores y crea diferencias entre lo que dice el anaquel y lo que cobra la caja. Eso frustra al cliente y le cuesta tiempo a tu equipo.",
-    },
-    {
-      icon: "chart",
-      title: "No sabes qué pasa en tu piso de venta",
-      body: "Sin datos de tráfico, zonas calientes y patrones de compra, las decisiones de exhibición, personal y seguridad se toman por costumbre, no por información.",
-    },
-  ],
-};
+export type FarmaciasGroupKey = "exhibicion" | "seguridad";
 
-export const FARMACIAS_ZONAS_INTRO = {
-  eyebrow: "ZONA POR ZONA",
-  title: "Soluciones que trabajan juntas, zona por zona",
-  body: "Cada área de tu farmacia tiene un reto diferente. Dások lo resuelve con tecnología que se conecta en un solo entorno, no con piezas sueltas.",
+export const FARMACIAS_GRUPOS: Record<
+  FarmaciasGroupKey,
+  { slug: string; label: string; title: string; body: string }
+> = {
+  exhibicion: {
+    slug: "exhibicion-intro",
+    label: "Exhibición",
+    title: "Cada producto que escondes es una venta que pierdes.",
+    body: "El cliente de farmacia quiere tocar el empaque, leer la fórmula, comparar presentaciones. Si el producto está detrás de un acrílico, si tiene que esperar a que alguien le abra la vitrina, si la experiencia se siente incómoda, se va sin comprar. En categorías como dermocuidado y cosméticos, la exhibición abierta no es un lujo: es la condición mínima para competir.",
+  },
+  seguridad: {
+    slug: "seguridad-intro",
+    label: "Seguridad",
+    title: "Si no puedes medir lo que pasa en tu piso de venta, no puedes controlarlo.",
+    body: "La seguridad en farmacia no se resuelve solo con cámaras y guardias. Se resuelve con tecnología que detecte, alerte y registre en tiempo real. Desde las antenas en la puerta hasta la cerradura de la trastienda, cada punto de la sucursal necesita inteligencia.",
+  },
 };
 
 export type FarmaciasZone = {
+  group: FarmaciasGroupKey;
   number: string;
   slug: string;
   accent: "azul-primario" | "verde-acento" | "azul-corporativo" | "tinta";
   zoneLabel: string;
   /** Nombre corto de la solución, usado en el menú lateral. */
-  solutionName: string;
+  navLabel: string;
   title: string;
   icon: string;
   problema: string;
@@ -58,180 +46,272 @@ export type FarmaciasZone = {
 };
 
 export const FARMACIAS_ZONAS: FarmaciasZone[] = [
+  // ───────────────── Exhibición ─────────────────
   {
-    number: "01",
-    slug: "dermocosmetica",
+    group: "exhibicion",
+    number: "1.1",
+    slug: "bases-seguridad",
     accent: "azul-primario",
-    zoneLabel: "Zona 1 · Anaquel de dermocosmética y cuidado personal",
-    solutionName: "Cajas de seguridad con alarma",
-    title: "Cajas de seguridad con alarma que no esconden el producto",
+    zoneLabel: "Exhibición · 1.1",
+    navLabel: "Bases de seguridad",
+    title: "Bases de seguridad para exhibición (Safers)",
+    icon: "shield",
+    problema:
+      "Cremas de dermocuidado, sueros faciales, fragancias premium y dispositivos como medidores de glucosa o tensiómetros son productos de alto valor que el cliente necesita ver y comparar. Muchas farmacias los encierran en vitrina, pero eso elimina la experiencia de autoservicio que el comprador espera.",
+    solucion: [
+      "Bases y cajas de seguridad que mantienen el producto visible y accesible en el anaquel. El cliente puede tomarlo, leer la etiqueta, comparar presentaciones y decidir sin esperar a nadie. Si alguien intenta retirar el dispositivo de seguridad sin desactivación, la alarma suena de inmediato.",
+    ],
+    highlights: [
+      "Formato ajustable que se adapta a distintos tamaños: desde un sérum hasta un dispositivo médico portátil",
+      "Alarma inmediata ante manipulación",
+      "El producto siempre está visible y accesible para autoservicio",
+      "Reduce la dependencia de personal para mostrar producto en categorías premium",
+    ],
+  },
+  {
+    group: "exhibicion",
+    number: "1.2",
+    slug: "ganchos-inteligentes",
+    accent: "tinta",
+    zoneLabel: "Exhibición · 1.2",
+    navLabel: "Ganchos inteligentes",
+    title: "Ganchos inteligentes",
     icon: "bell",
     problema:
-      "Cremas, sérum, protectores solares, maquillaje. Son productos caros, pequeños y fáciles de revender. Por eso son los más robados en farmacias. Si los encierras en vitrina, el cliente no los toca, no los compara y no los compra.",
+      "Accesorios de cuidado personal, cepillos eléctricos, bandas de test, baterías y productos en blíster cuelgan en ganchos estándar. Son piezas pequeñas, fáciles de ocultar y difíciles de monitorear. La pérdida se acumula sin que nadie la note hasta el conteo de inventario.",
     solucion: [
-      "Cajas de seguridad que protegen el producto sin ocultarlo. El cliente puede verlo y tocarlo con libertad. Si alguien intenta retirar el dispositivo de seguridad, la alarma suena al instante. Un solo formato se adapta a distintos tamaños de producto, lo que simplifica la operación.",
-      "Como complemento, ganchos inteligentes en el anaquel detectan cuando alguien retira varios productos al mismo tiempo y envían una alerta al personal en tiempo real.",
-    ],
-    highlights: [
-      "Exhibición abierta, protección activa",
-      "Alarma inmediata ante manipulación",
-      "Un formato para múltiples categorías",
-      "Alerta al personal en tiempo real",
-    ],
-  },
-  {
-    number: "02",
-    slug: "formula-infantil",
-    accent: "verde-acento",
-    zoneLabel: "Zona 2 · Fórmula infantil y pañales",
-    solutionName: "Dispensadores antibarrido",
-    title: "Dispensadores que evitan el barrido sin bloquear el acceso",
-    icon: "refresh",
-    problema:
-      "La fórmula infantil es cara y fácil de revender. El robo no es de una lata: es de varias al mismo tiempo. A eso se le llama barrido de anaquel. Pero encerrarla bajo llave genera fricción con el padre o la madre que necesita acceso rápido.",
-    solucion: [
-      "Dispensadores diseñados para fórmula infantil. Solo permiten sacar un producto a la vez, lo que impide el barrido. El personal puede reabastecer de frente, sin herramientas y sin interrumpir la operación. Los productos siempre quedan al frente del anaquel, listos para el siguiente cliente.",
-    ],
-    highlights: [
-      "Impide que se lleven varios productos a la vez",
-      "Dispensado uno a uno",
-      "Recarga frontal sin herramientas",
-      "Producto siempre al frente del anaquel",
-    ],
-  },
-  {
-    number: "03",
-    slug: "mostrador",
-    accent: "tinta",
-    zoneLabel: "Zona 3 · Productos de mostrador y alto valor en anaquel abierto",
-    solutionName: "Ganchos inteligentes y etiquetas de seguridad",
-    title: "Ganchos inteligentes y etiquetas de seguridad en anaquel abierto",
-    icon: "grid",
-    problema:
-      "Antigripales, vitaminas, suplementos, preservativos, protectores solares y rastrillos son productos que viven en anaquel abierto. Son pequeños y se mueven rápido. La pérdida se acumula sin que nadie la note hasta el conteo de inventario.",
-    solucion: [
-      "Ganchos y organizadores inteligentes que registran cada retiro de producto. Cuando alguien toma varios productos en segundos, el sistema genera una alerta discreta y notifica al personal. El anaquel sigue abierto para el cliente, pero se vuelve vigilante contra el robo hormiga.",
-      "Como complemento, etiquetas de seguridad con alarma integrada que se activan si alguien intenta retirarlas sin desactivación. Son compatibles con las antenas en las salidas de la farmacia.",
+      "Ganchos con sensor integrado que registran cada retiro de producto. Cuando alguien toma varios productos en segundos, el sistema genera una alerta discreta y notifica al personal. El gancho sigue abierto para el comprador legítimo, pero se vuelve vigilante contra el robo hormiga.",
     ],
     highlights: [
       "Cada retiro de producto queda registrado",
-      "Alerta ante patrones de sustracción",
-      "El anaquel sigue abierto para el comprador",
-      "Compatible con antenas de seguridad en salidas",
+      "Alerta automática ante patrones de sustracción (varios retiros en pocos segundos)",
+      "No interrumpe la experiencia del comprador legítimo",
+      "Datos de retiro por SKU y por horario para decisiones de reposición",
     ],
   },
   {
-    number: "04",
-    slug: "linea-cajas",
+    group: "exhibicion",
+    number: "1.3",
+    slug: "dispensadores",
     accent: "azul-corporativo",
-    zoneLabel: "Zona 4 · Línea de cajas",
-    solutionName: "Monitoreo remoto en caja",
-    title: "Monitoreo remoto y desactivación rápida en la línea de cajas",
+    zoneLabel: "Exhibición · 1.3",
+    navLabel: "Dispensadores",
+    title: "Dispensadores",
+    icon: "refresh",
+    problema:
+      "Productos de alto valor en empaque pequeño (suplementos premium, vitaminas importadas, cremas especializadas, cartuchos de rasuradoras) se acomodan en anaquel abierto. El robo no es de una pieza: es de varias al mismo tiempo. Un solo barrido de anaquel puede representar miles de pesos en pérdida.",
+    solucion: [
+      "Dispensadores que solo permiten sacar un producto a la vez, lo que impide el barrido. El personal puede reabastecer de frente, sin herramientas y sin interrumpir la operación. Los productos siempre quedan al frente del anaquel, listos para el siguiente cliente.",
+    ],
+    highlights: [
+      "Impide que alguien se lleve varios productos a la vez",
+      "Dispensado uno a uno, sin fricción para el comprador",
+      "Recarga frontal sin herramientas",
+      "Producto siempre al frente, siempre visible",
+    ],
+  },
+  {
+    group: "exhibicion",
+    number: "1.4",
+    slug: "etiquetas-suaves",
+    accent: "verde-acento",
+    zoneLabel: "Exhibición · 1.4",
+    navLabel: "Etiquetas suaves",
+    title: "Etiquetas suaves (Soft Tags)",
+    icon: "tag",
+    problema:
+      "Medicamentos OTC de alto costo, pruebas de embarazo, suplementos y productos en caja sellada no pueden llevar una base de seguridad. Son pequeños, fáciles de guardar en una bolsa y salen de la farmacia sin que nadie se entere.",
+    solucion: [
+      "Etiquetas adhesivas delgadas que se colocan directamente sobre el empaque sin dañarlo. Si alguien pasa por las antenas de seguridad en la salida sin haber desactivado la etiqueta, la alarma se activa. Son discretas, no afectan la presentación del producto y se desactivan en caja de forma rápida.",
+    ],
+    highlights: [
+      "Protección para productos que no aceptan dispositivos rígidos",
+      "No altera la presentación visual del empaque",
+      "Desactivación rápida en punto de venta",
+      "Compatible con todos los sistemas EAS",
+    ],
+  },
+  {
+    group: "exhibicion",
+    number: "1.5",
+    slug: "etiquetas-rigidas",
+    accent: "tinta",
+    zoneLabel: "Exhibición · 1.5",
+    navLabel: "Etiquetas rígidas",
+    title: "Etiquetas rígidas (Hard Tags)",
+    icon: "lock",
+    problema:
+      "Fragancias, sets de regalo, kits de dermocuidado y productos de mayor tamaño necesitan una protección más robusta que una etiqueta adhesiva. El robo organizado arranca etiquetas suaves con facilidad, sobre todo en categorías de alto valor por pieza.",
+    solucion: [
+      "Etiquetas rígidas con sistema de cierre mecánico que solo se puede retirar con el desactivador autorizado. Si alguien intenta forzarla, la etiqueta emite alarma. Son reutilizables, lo que reduce el costo por uso a lo largo del tiempo.",
+    ],
+    highlights: [
+      "Protección robusta contra robo organizado",
+      "Alarma ante intento de remoción forzada",
+      "Reutilizables: menor costo por ciclo de uso",
+      "Compatibles con antenas EAS en salidas",
+    ],
+  },
+  {
+    group: "exhibicion",
+    number: "1.6",
+    slug: "sensores-cosmeticos",
+    accent: "azul-primario",
+    zoneLabel: "Exhibición · 1.6",
+    navLabel: "Sensores con cable",
+    title: "Sensores para cosméticos y productos especiales",
     icon: "wifi",
     problema:
-      "Muchas pérdidas ocurren justo en la caja: productos que pasan sin escanear, descuentos no autorizados, anulaciones fuera de lugar. Además, si la desactivación de etiquetas de seguridad es lenta, la fila crece y el cliente se desespera.",
+      "Productos con formas irregulares (paletas de maquillaje, sets de brochas, perfumes de diseñador, dispositivos de cuidado facial eléctrico) no encajan en las soluciones estándar de seguridad. Quedan desprotegidos o se retiran de la exhibición.",
     solucion: [
-      "Sistemas de seguridad inteligentes conectados a internet que permiten monitorear cada equipo de forma remota: saber cuándo se encienden, cuándo se apagan, cuántas alarmas se activan y cuántas etiquetas se desactivan. Los desactivadores de alto rendimiento procesan las etiquetas rápido, sin agregar tiempo a la transacción. Todo se centraliza en una plataforma que permite comparar el desempeño entre sucursales.",
+      "Sensores con cable retráctil que se adhieren directamente al producto, sin importar su forma. El cliente puede tomarlo, girarlo y leer la información, pero si alguien corta el cable o lo jala fuera del rango permitido, la alarma se activa. Son ideales para cualquier producto donde la forma impide usar una base o una etiqueta convencional.",
     ],
     highlights: [
-      "Monitoreo remoto del estado de cada equipo",
-      "Datos de alarmas y desactivaciones por sucursal",
-      "Desactivación rápida sin hacer fila",
-      "Servicio técnico remoto, sin enviar técnico a tienda",
+      "Se adaptan a cualquier forma de producto",
+      "Exhibición libre: el cliente puede manipular el producto",
+      "Alarma ante corte de cable o exceso de rango",
+      "Solución para productos que antes no podían protegerse en exhibición abierta",
     ],
   },
   {
-    number: "05",
-    slug: "bodega",
+    group: "exhibicion",
+    number: "1.7",
+    slug: "etiquetas-precio-esl",
     accent: "verde-acento",
-    zoneLabel: "Zona 5 · Bodega, trastienda y accesos restringidos",
-    solutionName: "Cerraduras electrónicas",
-    title: "Cerraduras electrónicas con registro de cada acceso",
-    icon: "key",
+    zoneLabel: "Exhibición · 1.7",
+    navLabel: "Etiquetas de precio (ESL)",
+    title: "Etiquetas electrónicas de precio (ESL)",
+    icon: "grid",
     problema:
-      "La trastienda y la bodega guardan lo más valioso: medicamento controlado, producto de alta especialidad y mercancía de reposición. Una llave física no deja registro, se puede copiar fácilmente y no te dice quién entró ni cuándo.",
+      "Una farmacia maneja miles de SKU con cambios de precio frecuentes: promociones semanales, ajustes por temporada, precios regulados. Cambiar etiquetas a mano es lento, propenso a errores y genera diferencias entre el anaquel y la caja. El cliente ve un precio en el estante y otro en la terminal. Eso genera desconfianza y quejas.",
     solucion: [
-      "Cerraduras electrónicas que reemplazan la llave física. Cada apertura queda registrada: quién abrió, a qué hora y durante cuánto tiempo. El acceso al inventario de respaldo queda reservado al personal autorizado. Sin llave que copiar, sin accesos fuera de control.",
+      "Etiquetas electrónicas que se actualizan de forma remota y centralizada. Un cambio de precio se refleja en todos los anaqueles de todas las sucursales en minutos, sin recorridos manuales. Tu equipo recupera horas de trabajo para atender y vender, en vez de recorrer pasillos con impresora de etiquetas.",
     ],
     highlights: [
-      "Registro de cada apertura: quién, cuándo, cuánto",
-      "Sin llaves físicas que duplicar",
-      "Acceso solo a personal autorizado",
-      "Exhibición visible, inventario resguardado",
+      "Actualización remota de precios en todas las sucursales",
+      "Cero diferencias entre anaquel y caja",
+      "Tu equipo deja de cambiar precios a mano y se enfoca en atender al cliente",
+      "Ideal para farmacias con alta rotación de promociones y miles de SKU",
+    ],
+  },
+  // ───────────────── Seguridad ─────────────────
+  {
+    group: "seguridad",
+    number: "2.1",
+    slug: "sistemas-eas",
+    accent: "azul-corporativo",
+    zoneLabel: "Seguridad · 2.1",
+    navLabel: "Sistemas EAS",
+    title: "Sistemas EAS (Electronic Article Surveillance)",
+    icon: "shield",
+    problema:
+      "El robo en farmacia tiene dos caras: el hormiga (productos pequeños de alto valor que desaparecen uno a uno) y el organizado (grupos que vacían categorías completas). Sin un sistema de detección en las salidas, el producto simplemente desaparece sin dejar rastro.",
+    solucion: [
+      "Antenas de detección en los accesos de la sucursal que identifican productos con etiqueta activa (suave o rígida). Si alguien intenta salir sin pasar por caja, la alarma se activa y el personal puede intervenir. Los sistemas se conectan a internet para monitoreo remoto: cuántas alarmas se activan, a qué hora, en qué sucursal.",
+    ],
+    highlights: [
+      "Detección en tiempo real en cada acceso",
+      "Monitoreo remoto del estado del equipo (encendido, apagado, alarmas activadas)",
+      "Datos de incidencias por sucursal y por horario",
+      "Desactivación rápida en caja, sin agregar tiempo a la transacción",
+      "Servicio técnico remoto: diagnóstico sin necesidad de enviar técnico a sucursal",
     ],
   },
   {
-    number: "06",
-    slug: "piso-venta",
+    group: "seguridad",
+    number: "2.2",
+    slug: "deteccion-ia",
     accent: "tinta",
-    zoneLabel: "Zona 6 · Piso de venta completo",
-    solutionName: "IA, ESL y señalización digital",
-    title: "Inteligencia artificial, etiquetas ESL y señalización digital en piso de venta",
+    zoneLabel: "Seguridad · 2.2",
+    navLabel: "IA de video",
+    title: "Detección de movimiento sospechoso (Inteligencia Artificial)",
+    icon: "camera",
+    problema:
+      "Las cámaras graban, pero nadie revisa cientos de horas de video. El robo ya ocurrió cuando alguien lo ve. En farmacias con alto tráfico, es imposible que el personal identifique comportamientos sospechosos mientras atiende clientes.",
+    solucion: [
+      "Inteligencia artificial aplicada al análisis de video en tiempo real. El sistema observa el comportamiento dentro de la sucursal y detecta patrones sospechosos: permanencia prolongada frente al anaquel de dermocuidado, movimientos repetitivos en la zona de fragancias, recorridos inusuales. Genera alertas en el momento, no después del hecho.",
+    ],
+    highlights: [
+      "Detección de comportamiento sospechoso en tiempo real",
+      "Alertas inmediatas al personal de seguridad",
+      "No requiere que alguien esté viendo un monitor todo el día",
+      "Aprendizaje continuo: el sistema mejora su detección con el tiempo",
+    ],
+  },
+  {
+    group: "seguridad",
+    number: "2.3",
+    slug: "data-tiempo-real",
+    accent: "azul-primario",
+    zoneLabel: "Seguridad · 2.3",
+    navLabel: "Data en tiempo real",
+    title: "Data en tiempo real: mapas de calor, tráfico y lista negra",
     icon: "chart",
     problema:
-      "Sin datos, el acomodo de la farmacia se define por costumbre, no por comportamiento del cliente. Los precios se cambian a mano, lo que consume horas y genera errores. La comunicación en piso depende de material impreso que llega tarde y se pone donde cabe, no donde funciona.",
-    solucion: ["Tres capas de inteligencia que trabajan juntas en todo el piso de venta:"],
+      "¿Dónde se detiene más la gente? ¿Qué zonas de la farmacia no visita nadie? ¿A qué hora hay más tráfico? ¿Los clientes recurrentes que roban regresan? Sin datos, todas esas preguntas se responden con suposiciones.",
+    solucion: [
+      "Plataforma de analítica que procesa los datos de cámaras y sensores para entregar información accionable:",
+    ],
     subItems: [
       {
-        icon: "camera",
-        title: "Inteligencia artificial",
-        body: "Observa el recorrido del cliente y revela tráfico, zonas de mayor interés y tiempos de permanencia. Te ayuda a decidir dónde exhibir, dónde reforzar personal y dónde enfocar la seguridad, con datos, no con intuición.",
+        icon: "chart",
+        title: "Mapas de calor",
+        body: "Visualización de las zonas más visitadas y las zonas muertas de tu sucursal. Te ayuda a decidir dónde exhibir los productos de mayor valor, dónde colocar promociones y dónde necesitas reforzar presencia de personal.",
       },
       {
-        icon: "tag",
-        title: "Etiquetas electrónicas de precio",
-        body: "Actualizan el precio en todos los anaqueles de forma remota, sin recorridos manuales, sin errores y sin diferencias en caja. Tu equipo recupera horas de trabajo para atender y vender.",
+        icon: "user",
+        title: "Conteo de tráfico y gentrificación",
+        body: "Medición del flujo de personas por zona, por hora y por día. Identifica patrones de visita, tasas de conversión por área y rendimiento de cada metro cuadrado.",
       },
       {
-        icon: "device",
-        title: "Pantallas y señalización digital",
-        body: "Comunican promociones, lanzamientos e información de producto en el lugar y en el momento correctos. La farmacia le habla al cliente mientras recorre el pasillo.",
+        icon: "eye",
+        title: "Lista negra",
+        body: "Reconocimiento de personas que han sido identificadas previamente en incidentes de robo. Cuando regresan a la sucursal, el sistema envía una alerta al equipo de seguridad antes de que ocurra un nuevo incidente.",
       },
     ],
     highlights: [
-      "Mapas de calor y conteo de personas",
-      "Precios actualizados de forma remota",
-      "Comunicación digital en el punto de decisión",
-      "Decisiones basadas en datos, no en intuición",
+      "Decisiones de layout, personal y seguridad basadas en datos reales",
+      "Identificación de zonas rentables y zonas muertas",
+      "Alertas proactivas ante personas identificadas en incidentes previos",
+      "Información en tiempo real, no reportes del mes pasado",
+    ],
+  },
+  {
+    group: "seguridad",
+    number: "2.4",
+    slug: "cerraduras-electronicas",
+    accent: "verde-acento",
+    zoneLabel: "Seguridad · 2.4",
+    navLabel: "Cerraduras electrónicas",
+    title: "Cerraduras electrónicas",
+    icon: "key",
+    problema:
+      "La trastienda, el almacén de medicamentos controlados y los exhibidores cerrados guardan el producto de mayor valor. Una llave física no deja registro, se puede copiar y no te dice quién accedió, cuándo ni durante cuánto tiempo.",
+    solucion: [
+      "Cerraduras electrónicas que reemplazan la llave física. Cada apertura queda registrada: quién abrió, a qué hora y durante cuánto tiempo. El acceso queda reservado al personal autorizado. Sin llave que copiar, sin accesos fuera de control.",
+    ],
+    highlights: [
+      "Registro completo de cada apertura: quién, cuándo, cuánto tiempo",
+      "Sin llaves físicas que duplicar",
+      "Acceso solo a personal autorizado con credencial o código",
+      "Control de acceso a vitrinas, exhibidores y almacén desde un solo sistema",
     ],
   },
 ];
 
-export const FARMACIAS_POR_QUE = {
+export const FARMACIAS_CIERRE = {
   eyebrow: "POR QUÉ DÁSOK",
-  title: "Un solo socio comercial para todo el entorno de tu farmacia",
-  intro:
-    "No necesitas contratar a alguien para las antenas, a otro para las cerraduras, a otro para las etiquetas y a otro para la analítica. Necesitas un socio que piense tu farmacia como un entorno completo y te acompañe en cada etapa.",
-  features: [
-    {
-      icon: "eye",
-      title: "Ver para decidir",
-      body: "Showrooms interactivos en operación real en CDMX y en el norte del país. Experimenta las soluciones en un entorno real, no en catálogo, antes de comprometer presupuesto.",
-    },
-    {
-      icon: "headset",
-      title: "Acompañamiento y call center dedicado",
-      body: "Te acompañamos en cada etapa: diagnóstico, instalación, capacitación, operación e incidencias. Nuestro call center dedicado es el respaldo detrás de la tecnología.",
-    },
-    {
-      icon: "clock",
-      title: "25 años en retail mexicano",
-      body: "25 años de trayectoria respaldan cada recomendación. Ese historial reduce el riesgo de tu inversión desde el primer día.",
-    },
-    {
-      icon: "pin",
-      title: "Cobertura nacional",
-      body: "Instalación, servicio y soporte en todo el país. Una sola relación comercial que escala con tu operación.",
-    },
-    {
-      icon: "device",
-      title: "Tecnología de primer nivel, criterio local",
-      body: "Trabajamos con tecnología de primer nivel implementada con criterio local. Tienes garantía de largo plazo, no solo precio de entrada.",
-    },
+  title: "Todo conectado, con un solo socio comercial.",
+  body: "Etiquetas, antenas, ganchos, bases, cerraduras, inteligencia artificial y precios electrónicos: no necesitas un contacto diferente para cada solución. Dások integra todo el entorno de seguridad y exhibición de tu farmacia, con acompañamiento de principio a fin.",
+  highlights: [
+    "Más de 25 años en retail mexicano",
+    "Showrooms en operación real en CDMX y en el norte del país",
+    "Cobertura nacional con call center dedicado",
+    "Diagnóstico, instalación, capacitación y soporte en una sola relación comercial",
   ],
 };
 
-export const FARMACIAS_CIERRE = {
-  title: "¿Cuánto producto estás perdiendo cada mes?",
-  body: "Agenda tu visita a nuestro showroom en CDMX o en el norte del país. Comprueba en persona cómo opera un entorno farmacéutico inteligente antes de tomar cualquier decisión.",
+export const FARMACIAS_CTA = {
+  title: "¿Cuánto producto estás perdiendo cada mes en tu farmacia?",
+  body: "Agenda tu visita a nuestro showroom. Comprueba en persona cómo se ve una farmacia que exhibe con libertad y protege con inteligencia.",
 };
