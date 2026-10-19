@@ -66,7 +66,7 @@ export function HomeHero() {
           interactúan con el producto, tu equipo decide con datos en tiempo
           real y tu inventario permanece resguardado.
         </p>
-        <div data-hero-item className="mt-10 flex flex-wrap gap-4">
+        <div data-hero-item className="mt-10 flex flex-wrap gap-4 pr-20 sm:pr-0">
           <CtaButton onClick={() => openModal("showroom")}>
             {PRIMARY_CTA_LABEL}
           </CtaButton>

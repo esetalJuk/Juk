@@ -11,6 +11,7 @@ import {
 } from "react";
 import { PRIMARY_CTA_LABEL } from "@/lib/content";
 import { ContactForm } from "@/components/forms/contact-form";
+import { useBodyScrollLock } from "@/hooks/use-body-scroll-lock";
 
 type ContactIntent = "showroom" | "asesor";
 
@@ -43,16 +44,15 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
 
   const closeModal = useCallback(() => setIsOpen(false), []);
 
+  useBodyScrollLock(isOpen);
+
   useEffect(() => {
     if (!isOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") closeModal();
     };
     window.addEventListener("keydown", onKeyDown);
     return () => {
-      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [isOpen, closeModal]);

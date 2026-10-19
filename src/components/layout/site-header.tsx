@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PRIMARY_CTA_LABEL, getRetailFormats } from "@/lib/content";
 import { useContactModal } from "@/components/layout/contact-modal";
+import { useBodyScrollLock } from "@/hooks/use-body-scroll-lock";
 
 const NAV_LINKS = [
   { href: "/retail", label: "Retail", withFormats: true },
@@ -32,12 +33,7 @@ export function SiteHeader() {
   const { openModal } = useContactModal();
   const retailFormats = getRetailFormats();
 
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
+  useBodyScrollLock(mobileOpen);
 
   return (
     <header

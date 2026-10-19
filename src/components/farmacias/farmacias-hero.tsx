@@ -68,7 +68,7 @@ export function FarmaciasHero() {
         >
           {FARMACIAS_HERO.intro}
         </p>
-        <div data-hero-item className="mt-9 flex flex-wrap gap-4">
+        <div data-hero-item className="mt-9 flex flex-wrap gap-4 pr-20 sm:pr-0">
           <CtaButton onClick={() => openModal("showroom")}>
             {PRIMARY_CTA_LABEL}
           </CtaButton>

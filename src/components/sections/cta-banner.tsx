@@ -45,7 +45,7 @@ export function CtaBanner({
           <p className="mt-5 font-body text-base normal-case tracking-normal text-ink-muted">
             {body}
           </p>
-          <div className="mt-9 flex flex-wrap gap-4">
+          <div className="mt-9 flex flex-wrap gap-4 pr-20 sm:pr-0">
             <CtaButton onClick={() => openModal("showroom")}>
               {PRIMARY_CTA_LABEL}
             </CtaButton>
