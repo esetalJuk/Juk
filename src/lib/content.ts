@@ -298,7 +298,8 @@ export const getSolution = (slug: string) =>
   SOLUTIONS.find((solution) => solution.slug === slug)!;
 
 export const CONTACT_INFO = {
-  whatsappNumber: "525500000000",
+  // Número de prueba — reemplazar por el número comercial definitivo antes de lanzar.
+  whatsappNumber: "525662260107",
   whatsappMessage:
     "Hola, quiero información sobre soluciones Dások para mi operación de retail.",
   email: "contacto@dasoksolutions.com",
@@ -306,9 +307,16 @@ export const CONTACT_INFO = {
   showroomNorte: "Showroom Zona Norte",
 };
 
+// Buzón interno al que llegan las solicitudes del formulario de contacto
+// (showroom / asesor). Ver src/app/api/contact/route.ts.
+export const LEAD_NOTIFICATION_EMAIL = "juanmendez@dasoksolutions.com";
+
 export const SOCIAL_LINKS = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/dasok" },
-  { label: "Instagram", href: "https://www.instagram.com/dasoksolutions" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/dasoksolutions/",
+  },
+  { label: "Instagram", href: "https://www.instagram.com/dasok.all.solution/" },
 ];
 
 export const PRIMARY_CTA_LABEL = "Agenda tu visita al showroom";

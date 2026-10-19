@@ -39,13 +39,33 @@ Rutas principales:
 - `/contacto` — formulario de contacto (además del modal global, disponible
   desde cualquier página vía el CTA "Agenda tu visita al showroom")
 
+## Formulario de contacto
+
+`src/app/api/contact/route.ts` envía cada solicitud (showroom / asesor) por
+correo a `LEAD_NOTIFICATION_EMAIL` (`src/lib/content.ts`) usando
+[Resend](https://resend.com). Requiere la variable de entorno
+`RESEND_API_KEY` — ver `.env.example` para el detalle completo. Sin esa
+variable configurada, la solicitud se valida y queda registrada en el log del
+servidor, pero no se envía ningún correo.
+
+Pasos para dar de alta el envío real:
+
+1. Crear cuenta en [resend.com](https://resend.com) (tiene plan gratuito).
+2. **API Keys → Create API Key** y copiar el valor.
+3. Dar de alta `RESEND_API_KEY` en el hosting (en Vercel: Project Settings →
+   Environment Variables) con ese valor.
+4. Opcional pero recomendado: **Domains → Add Domain**, agregar
+   `dasoksolutions.com` y los registros DNS que indique Resend. Una vez
+   verificado, dar de alta también `RESEND_FROM_EMAIL` para que los correos
+   salgan desde el dominio propio en vez del remitente de pruebas de Resend.
+
 ## Pendiente antes de producción
 
-- **Datos de contacto reales**: `CONTACT_INFO` en `src/lib/content.ts` usa un
-  número de WhatsApp y correo de marcador de posición — reemplazar con los
-  datos verificados del equipo comercial.
-- **Integración del formulario**: `src/app/api/contact/route.ts` valida y
-  registra la solicitud, pero no está conectado a un CRM o servicio de
-  correo. Conectar antes de lanzar.
-- **Dominio**: `siteUrl` en `src/app/layout.tsx`, `src/app/sitemap.ts` y
-  `src/app/robots.ts` usa `https://www.dasoksolutions.com` como placeholder.
+- **Dominio**: confirmar el hosting donde se va a publicar el sitio y
+  apuntar `dasoksolutions.com` hacia él (ver instrucciones de despliegue).
+- **Número de WhatsApp**: `CONTACT_INFO.whatsappNumber` en
+  `src/lib/content.ts` usa un número de prueba — confirmar el número
+  comercial definitivo antes de lanzar.
+- **Analítica**: el sitio no tiene Google Analytics / GTM configurado.
+- **Imagen Open Graph**: no hay una imagen de vista previa para cuando se
+  comparta el link en redes/WhatsApp.

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PILLARS } from "@/lib/content";
 
-const BASE_URL = "https://www.dasoksolutions.com";
+const BASE_URL = "https://dasoksolutions.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/contacto"].map((path) => ({

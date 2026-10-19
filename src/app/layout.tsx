@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://www.dasoksolutions.com";
+const siteUrl = "https://dasoksolutions.com";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
