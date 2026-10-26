@@ -112,8 +112,12 @@ export const DASOK_DIFFERENCES = [
 ];
 
 export const SHOWROOMS = [
-  { city: "Ciudad de México", details: "[dirección] y [horario]" },
-  { city: "Norte del país", details: "[ciudad, dirección] y [horario]" },
+  {
+    city: "Ciudad de México",
+    details:
+      "Calz. Gral. Mariano Escobedo 476, Piso 12, Chapultepec Morales, Anzures, Miguel Hidalgo, 11590 Ciudad de México, CDMX · Tel. 55 9417 5246",
+  },
+  { city: "Norte del país", details: "Próximamente" },
 ];
 
 export type PainPoint = {

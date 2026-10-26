@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/motion/reveal";
 import { ContactForm } from "@/components/forms/contact-form";
-import { CONTACT_INFO, SOCIAL_LINKS } from "@/lib/content";
+import { CONTACT_INFO, SHOWROOMS, SOCIAL_LINKS } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -33,11 +33,14 @@ export default function ContactoPage() {
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal className="space-y-8">
             <InfoBlock title="Showrooms">
-              <p className="text-sm text-ink-muted">
-                {CONTACT_INFO.showroomCdmx} y {CONTACT_INFO.showroomNorte}.
-                Agenda tu visita y te compartimos la ubicación exacta y
-                horarios disponibles.
-              </p>
+              <div className="space-y-3">
+                {SHOWROOMS.map((showroom) => (
+                  <p key={showroom.city} className="text-sm text-ink-muted">
+                    <span className="text-white">{showroom.city}:</span>{" "}
+                    {showroom.details}
+                  </p>
+                ))}
+              </div>
             </InfoBlock>
 
             <InfoBlock title="WhatsApp">
