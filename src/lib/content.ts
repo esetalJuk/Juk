@@ -117,7 +117,11 @@ export const SHOWROOMS = [
     details:
       "Calz. Gral. Mariano Escobedo 476, Piso 12, Chapultepec Morales, Anzures, Miguel Hidalgo, 11590 Ciudad de México, CDMX · Tel. 55 9417 5246",
   },
-  { city: "Norte del país", details: "Próximamente" },
+  {
+    city: "Norte del país",
+    details:
+      "Agenda tu visita por WhatsApp (56 6226 0107) o al teléfono de la oficina (55 9417 5246).",
+  },
 ];
 
 export type PainPoint = {
