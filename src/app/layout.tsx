@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { ContactModalProvider } from "@/components/layout/contact-modal";
 import { SOCIAL_LINKS } from "@/lib/content";
+import { SiteAnalytics } from "@/components/analytics/site-analytics";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SiteFooter />
           <WhatsAppButton />
         </ContactModalProvider>
+        <SiteAnalytics />
       </body>
     </html>
   );

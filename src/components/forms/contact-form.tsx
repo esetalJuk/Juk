@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { getAttribution, trackEvent } from "@/lib/analytics";
 
 type ContactIntent = "showroom" | "asesor";
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -19,14 +20,22 @@ export function ContactForm({
     setStatus("submitting");
     const formData = new FormData(event.currentTarget);
     const payload = Object.fromEntries(formData.entries());
+    const attribution = getAttribution();
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, intent }),
+        body: JSON.stringify({ ...payload, ...attribution, intent }),
       });
       if (!response.ok) throw new Error("request_failed");
+      trackEvent("generate_lead", {
+        intencion: intent,
+        pagina: window.location.pathname,
+        utm_source: attribution.utm_source,
+        utm_campaign: attribution.utm_campaign,
+        utm_content: attribution.utm_content,
+      });
       setStatus("success");
     } catch {
       setStatus("error");

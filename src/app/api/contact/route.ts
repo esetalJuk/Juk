@@ -11,7 +11,18 @@ type ContactPayload = {
   telefono?: string;
   mensaje?: string;
   intent?: "showroom" | "asesor";
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  utm_term?: string;
+  pagina_entrada?: string;
+  referencia?: string;
 };
+
+function clean(value: unknown, max = 200) {
+  return typeof value === "string" && value.trim() ? value.trim().slice(0, max) : undefined;
+}
 
 const INTENT_LABEL: Record<NonNullable<ContactPayload["intent"]>, string> = {
   showroom: "Agenda tu visita al showroom",
@@ -36,6 +47,13 @@ function buildEmailHtml(body: ContactPayload) {
     ["Correo", body.email],
     ["Teléfono", body.telefono],
     ["Mensaje", body.mensaje],
+    ["Origen · fuente (utm_source)", clean(body.utm_source)],
+    ["Origen · medio (utm_medium)", clean(body.utm_medium)],
+    ["Origen · campaña (utm_campaign)", clean(body.utm_campaign)],
+    ["Origen · pieza (utm_content)", clean(body.utm_content)],
+    ["Origen · término (utm_term)", clean(body.utm_term)],
+    ["Página de entrada", clean(body.pagina_entrada)],
+    ["Sitio de referencia", clean(body.referencia)],
   ];
 
   const rowsHtml = rows

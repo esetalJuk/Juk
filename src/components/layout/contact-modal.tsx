@@ -12,6 +12,7 @@ import {
 import { PRIMARY_CTA_LABEL } from "@/lib/content";
 import { ContactForm } from "@/components/forms/contact-form";
 import { useBodyScrollLock } from "@/hooks/use-body-scroll-lock";
+import { trackEvent } from "@/lib/analytics";
 
 type ContactIntent = "showroom" | "asesor";
 
@@ -40,6 +41,10 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
   const openModal = useCallback((nextIntent: ContactIntent = "showroom") => {
     setIntent(nextIntent);
     setIsOpen(true);
+    trackEvent("abrir_formulario", {
+      intencion: nextIntent,
+      pagina: window.location.pathname,
+    });
   }, []);
 
   const closeModal = useCallback(() => setIsOpen(false), []);
