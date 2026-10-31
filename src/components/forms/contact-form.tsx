@@ -14,6 +14,7 @@ export function ContactForm({
   className?: string;
 }) {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [mountedAt] = useState(() => Date.now());
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -26,7 +27,12 @@ export function ContactForm({
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, ...attribution, intent }),
+        body: JSON.stringify({
+          ...payload,
+          ...attribution,
+          intent,
+          ts: mountedAt,
+        }),
       });
       if (!response.ok) throw new Error("request_failed");
       trackEvent("generate_lead", {
@@ -71,6 +77,15 @@ export function ContactForm({
         <Field label="Teléfono" name="telefono" type="tel" />
       </div>
       <Field label="Mensaje" name="mensaje" as="textarea" />
+
+      <input
+        type="text"
+        name="sitio_web"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-px w-px opacity-0"
+      />
 
       {status === "error" && (
         <p className="text-sm text-red-400">

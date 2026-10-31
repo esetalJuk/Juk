@@ -18,7 +18,11 @@ type ContactPayload = {
   utm_term?: string;
   pagina_entrada?: string;
   referencia?: string;
+  sitio_web?: string;
+  ts?: number;
 };
+
+const MIN_FILL_TIME_MS = 2000;
 
 function clean(value: unknown, max = 200) {
   return typeof value === "string" && value.trim() ? value.trim().slice(0, max) : undefined;
@@ -77,6 +81,17 @@ export async function POST(request: Request) {
       { ok: false, error: "invalid_payload" },
       { status: 400 },
     );
+  }
+
+  const filledInstantly =
+    typeof body.ts !== "number" || Date.now() - body.ts < MIN_FILL_TIME_MS;
+
+  if (body.sitio_web || filledInstantly) {
+    console.warn("Solicitud de contacto bloqueada por filtro antispam:", {
+      honeypot: body.sitio_web,
+      ts: body.ts,
+    });
+    return NextResponse.json({ ok: true, delivered: false });
   }
 
   console.log("Nueva solicitud de contacto Dások:", body);
