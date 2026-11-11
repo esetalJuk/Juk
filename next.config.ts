@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       { source: "/proteccion-de-mercancias-en-estantes", destination: "/retail", permanent: true },
       { source: "/proteccion-de-mercancias-en-estantes/:path*", destination: "/retail", permanent: true },
       { source: "/electronicos-de-consumo", destination: "/oem-electronica", permanent: true },
+      { source: "/electronicos-de-consumo/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/tiendas-minoristas-de-electronica", destination: "/oem-electronica", permanent: true },
       { source: "/soportes-para-tabletas-de-negocio", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-tabletas-en-mostrador/:path*", destination: "/oem-electronica", permanent: true },
