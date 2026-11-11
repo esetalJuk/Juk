@@ -15,12 +15,14 @@ const nextConfig: NextConfig = {
       { source: "/electronicos-de-consumo/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/tiendas-minoristas-de-electronica", destination: "/oem-electronica", permanent: true },
       { source: "/soportes-para-tabletas-de-negocio", destination: "/oem-electronica", permanent: true },
+      { source: "/soportes-para-tabletas-de-negocio/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-tabletas-en-mostrador/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-mesa-integrada/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-tableta-de-piso/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-tableta-de-pared/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/inteligencia-artificial", destination: "/retail", permanent: true },
       { source: "/vizitech", destination: "/", permanent: true },
+      { source: "/index", destination: "/", permanent: true },
     ];
   },
 };
