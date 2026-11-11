@@ -18,7 +18,6 @@ import { ProcessSteps } from "@/components/oem/process-steps";
 import { Faq } from "@/components/oem/faq";
 
 import {
-  OEM_HERO,
   OEM_RETO,
   OEM_ENTORNO_INTRO,
   OEM_PARA_QUIEN,
@@ -34,9 +33,12 @@ import {
 } from "@/lib/oem-content";
 
 export const metadata: Metadata = {
-  title: OEM_HERO.h1,
+  title: "Exhibición segura para electrónica de consumo",
   description:
-    "Seguridad para exhibición, Digital Tools, interacción en punto de venta, inteligencia artificial, cerraduras electrónicas, etiquetas ESL y sistemas EAS para exhibición de electrónica de consumo en México.",
+    "Display, exhibición e interacción en punto de venta con Digital Tools para electrónica de consumo en México.",
+  alternates: {
+    canonical: "/oem-electronica",
+  },
 };
 
 export default function OemElectronicaPage() {

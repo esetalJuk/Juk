@@ -145,6 +145,10 @@ export type Pillar = {
   navLabel: string;
   eyebrow: string;
   h1: string;
+  // Título para <title>/SEO (≤52 caracteres, el sufijo "| Dások" lo agrega el
+  // layout). Distinto del H1: el H1 es el titular de la página, este es lo
+  // que se ve en la pestaña del navegador y en Google. No lo confundas con h1.
+  seoTitle: string;
   hook: string;
   intro: string;
   painPoints: PainPoint[];
@@ -158,6 +162,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Retail",
     eyebrow: "RETAIL",
     h1: "Tecnología que protege tu piso de venta y da visibilidad a la operación",
+    seoTitle: "Prevención de merma, exhibición y datos en retail",
     hook: "La merma en retail rara vez llega como un solo incidente. Es una fuga constante entre anaquel, caja y almacén.",
     intro:
       "Cada formato de retail pierde margen de manera distinta: merma en perecederos, robo en producto de alto valor, ineficiencia operativa con poco personal en piso. Dások integra sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas en un entorno pensado para el formato específico de tu cadena.",
@@ -169,7 +174,7 @@ export const PILLARS: Pillar[] = [
     ],
     solutions: ["antenas-eas", "etiquetas-esl", "digital-signage", "inteligencia-artificial", "cerraduras-electronicas"],
     metaDescription:
-      "Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas para reducir merma y robo en retail físico en México.",
+      "Sistemas EAS, etiquetas ESL y Digital Tools con inteligencia artificial para reducir merma y robo en retail físico en México.",
   },
   {
     slug: "retail/supermercados",
@@ -177,6 +182,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Supermercados",
     eyebrow: "RETAIL · SUPERMERCADOS",
     h1: "Menos merma en perecederos, sin frenar la alta rotación",
+    seoTitle: "Prevención de merma y robo en supermercados",
     hook: "En un supermercado, la merma no espera: perecederos con vida de anaquel corta y una rotación que no da tiempo a un conteo manual.",
     intro:
       "El reto de un supermercado es distinto al de una departamental: volumen alto, márgenes ajustados por categoría y personal enfocado en reposición, no en control. Dások ordena la exhibición segura de categorías sensibles y da visibilidad de tráfico y zonas calientes sin agregar carga operativa al piso.",
@@ -195,6 +201,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Tiendas departamentales",
     eyebrow: "RETAIL · TIENDAS DEPARTAMENTALES",
     h1: "Protección para prenda y producto de alto valor, sin frenar la experiencia de compra",
+    seoTitle: "Seguridad, exhibición y datos en departamentales",
     hook: "En una tienda departamental, el mismo pasillo que exhibe tu producto de mayor margen es el que más se expone al robo.",
     intro:
       "El comprador de una departamental toca, prueba y compara antes de decidir. La seguridad tiene que convivir con esa experiencia, no restarle. Dások protege prenda y producto de alto valor con sistemas EAS y cerraduras electrónicas, y da visibilidad de zonas y comportamiento en piso con inteligencia artificial con datos en tiempo real.",
@@ -213,6 +220,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Autoservicio",
     eyebrow: "RETAIL · AUTOSERVICIO",
     h1: "Operación eficiente con el mínimo de personal en piso",
+    seoTitle: "Eficiencia operativa en tiendas de autoservicio",
     hook: "Un formato de autoservicio opera con menos personal por diseño. El riesgo aparece cuando esa eficiencia deja puntos sin control.",
     intro:
       "Con poco personal en piso, cada tarea manual compite directamente con la atención al cliente. Dások automatiza el control de precio y la vigilancia del perímetro, para que la operación eficiente no se convierta en un punto ciego.",
@@ -231,6 +239,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Otros formatos",
     eyebrow: "RETAIL · OTROS FORMATOS",
     h1: "Un entorno adaptado al formato particular de tu operación",
+    seoTitle: "Seguridad, exhibición y mejora de procesos en retail",
     hook: "No todo formato de retail encaja en una sola categoría. Tiendas de conveniencia, especializadas o de membresía tienen su propia combinación de dolores.",
     intro:
       "Cuando el formato no encaja en supermercado, departamental o autoservicio, el diagnóstico empieza por tu operación real, no por un catálogo genérico. Dások adapta la combinación de sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas al riesgo específico de tu formato.",
@@ -247,6 +256,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "OEM / Electrónica",
     eyebrow: "OEM Y ELECTRÓNICA DE CONSUMO",
     h1: "Exhibición segura para producto de alto valor unitario",
+    seoTitle: "Exhibición segura para electrónica de consumo",
     hook: "Un producto de electrónica de consumo se vende mejor cuando el cliente lo toca. Esa misma exhibición abierta es la que más expone a la marca al robo.",
     intro:
       "Dások trabaja con fabricantes y distribuidores de electrónica de consumo para que el producto se exhiba abierto, se pueda probar en piso y quede protegido con cerraduras electrónicas y sistemas EAS, sin frenar la conversión en punto de venta.",
@@ -264,6 +274,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Farmacias",
     eyebrow: "FARMACIAS",
     h1: "Control de anaquel abierto sin frenar la rapidez de atención en caja",
+    seoTitle: "Control de robo hormiga en farmacias",
     hook: "El robo hormiga en farmacia no siempre se nota en el momento. Se nota al cierre de mes, en el anaquel de mayor margen.",
     intro:
       "Una farmacia opera bajo presión doble: categorías sensibles que requieren control de acceso y un cliente que espera atención rápida en caja. Dások da control de anaquel abierto y acceso trazable a categorías reguladas, sin agregar fricción al punto de venta.",
@@ -282,6 +293,7 @@ export const PILLARS: Pillar[] = [
     navLabel: "Centros comerciales",
     eyebrow: "CENTROS COMERCIALES",
     h1: "Seguridad perimetral y experiencia digital para la administración de plaza",
+    seoTitle: "Control de acceso y datos de tus visitantes",
     hook: "Quien administra una plaza comercial responde por la seguridad de todos los locatarios, no solo por la propia operación.",
     intro:
       "La administración de un centro comercial necesita control de accesos y seguridad perimetral a nivel plaza, además de una experiencia digital consistente para el visitante. Dások integra Digital Tools e inteligencia artificial con datos en tiempo real con el mismo estándar en cada acceso.",

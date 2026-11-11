@@ -5,8 +5,11 @@ import { getPillar } from "@/lib/content";
 const pillar = getPillar("centros-comerciales");
 
 export const metadata: Metadata = {
-  title: pillar.h1,
+  title: pillar.seoTitle,
   description: pillar.metaDescription,
+  alternates: {
+    canonical: "/centros-comerciales",
+  },
 };
 
 export default function CentrosComercialesPage() {

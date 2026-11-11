@@ -23,8 +23,11 @@ export async function generateMetadata({
   const pillar = resolvePillar(format);
   if (!pillar) return {};
   return {
-    title: pillar.h1,
+    title: pillar.seoTitle,
     description: pillar.metaDescription,
+    alternates: {
+      canonical: `/${pillar.slug}`,
+    },
   };
 }
 

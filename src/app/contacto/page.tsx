@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Contacto",
   description:
     "Agenda tu visita al showroom o habla con un asesor de Dások All Solutions para diagnosticar la operación de tu retail.",
+  alternates: {
+    canonical: "/contacto",
+  },
 };
 
 export default function ContactoPage() {

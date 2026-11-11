@@ -5,8 +5,11 @@ import { getPillar } from "@/lib/content";
 const pillar = getPillar("retail");
 
 export const metadata: Metadata = {
-  title: pillar.h1,
+  title: pillar.seoTitle,
   description: pillar.metaDescription,
+  alternates: {
+    canonical: "/retail",
+  },
 };
 
 export default function RetailPage() {

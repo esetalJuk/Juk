@@ -47,10 +47,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Dások All Solutions | Entornos comerciales inteligentes",
-    template: "%s | Dások All Solutions",
+    template: "%s | Dások",
   },
   description:
-    "Convertimos espacios comerciales en entornos inteligentes, más seguros y rentables. Sistemas EAS, etiquetas ESL, Digital Tools, inteligencia artificial con datos en tiempo real y cerraduras electrónicas para retail en México.",
+    "Convertimos tu piso de venta en un entorno inteligente y seguro: EAS, ESL, Digital Tools e IA contra la merma y el robo en retail físico en México.",
   keywords: [
     "reducir merma en retail",
     "sistemas EAS",

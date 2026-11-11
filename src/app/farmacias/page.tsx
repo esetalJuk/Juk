@@ -11,7 +11,6 @@ import { SectionZone } from "@/components/oem/section-zone";
 import { SectionHeader } from "@/components/oem/section-header";
 
 import {
-  FARMACIAS_HERO,
   FARMACIAS_GRUPOS,
   FARMACIAS_ZONAS,
   FARMACIAS_CIERRE,
@@ -19,9 +18,12 @@ import {
 } from "@/lib/farmacias-content";
 
 export const metadata: Metadata = {
-  title: FARMACIAS_HERO.h1,
+  title: "Control de robo hormiga en farmacias",
   description:
-    "Protección, exhibición e inteligencia para cada punto de tu farmacia: bases de seguridad, ganchos inteligentes, dispensadores, etiquetas, EAS, inteligencia artificial y cerraduras electrónicas.",
+    "Anaqueles inteligentes contra el robo hormiga en farmacias: exhibición segura y al alcance de tu cliente.",
+  alternates: {
+    canonical: "/farmacias",
+  },
 };
 
 export default function FarmaciasPage() {
