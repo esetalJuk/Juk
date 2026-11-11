@@ -318,7 +318,6 @@ export const getSolution = (slug: string) =>
   SOLUTIONS.find((solution) => solution.slug === slug)!;
 
 export const CONTACT_INFO = {
-  // Número de prueba — reemplazar por el número comercial definitivo antes de lanzar.
   whatsappNumber: "525662260107",
   whatsappMessage:
     "Hola, quiero información sobre soluciones Dások para mi operación de retail.",
