@@ -5,11 +5,37 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PRIMARY_CTA_LABEL, getRetailFormats } from "@/lib/content";
+import { SOLUTION_PAGES } from "@/lib/solutions-content";
 import { useContactModal } from "@/components/layout/contact-modal";
 import { useBodyScrollLock } from "@/hooks/use-body-scroll-lock";
 
-const NAV_LINKS = [
-  { href: "/retail", label: "Retail", withFormats: true },
+type NavDropdown = {
+  viewAllHref: string;
+  viewAllLabel: string;
+  items: { href: string; label: string }[];
+};
+
+const retailDropdown: NavDropdown = {
+  viewAllHref: "/retail",
+  viewAllLabel: "Ver todo Retail",
+  items: getRetailFormats().map((format) => ({
+    href: `/${format.slug}`,
+    label: format.navLabel,
+  })),
+};
+
+const solucionesDropdown: NavDropdown = {
+  viewAllHref: "/soluciones",
+  viewAllLabel: "Ver todas las soluciones",
+  items: SOLUTION_PAGES.map((page) => ({
+    href: `/soluciones/${page.slug}`,
+    label: page.navLabel,
+  })),
+};
+
+const NAV_LINKS: { href: string; label: string; dropdown?: NavDropdown }[] = [
+  { href: "/retail", label: "Retail", dropdown: retailDropdown },
+  { href: "/soluciones", label: "Soluciones", dropdown: solucionesDropdown },
   { href: "/oem-electronica", label: "OEM / Electrónica" },
   { href: "/farmacias", label: "Farmacias" },
   { href: "/centros-comerciales", label: "Centros comerciales" },
@@ -31,7 +57,6 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const { openModal } = useContactModal();
-  const retailFormats = getRetailFormats();
 
   useBodyScrollLock(mobileOpen);
 
@@ -62,7 +87,7 @@ export function SiteHeader() {
               href={link.href}
               label={link.label}
               active={pathname.startsWith(link.href)}
-              formats={link.withFormats ? retailFormats : undefined}
+              dropdown={link.dropdown}
             />
           ))}
         </nav>
@@ -99,7 +124,6 @@ export function SiteHeader() {
       <MobileNav
         open={mobileOpen}
         pathname={pathname}
-        retailFormats={retailFormats}
         onNavigate={() => setMobileOpen(false)}
         onCta={() => {
           setMobileOpen(false);
@@ -114,12 +138,12 @@ function NavItem({
   href,
   label,
   active,
-  formats,
+  dropdown,
 }: {
   href: string;
   label: string;
   active: boolean;
-  formats?: ReturnType<typeof getRetailFormats>;
+  dropdown?: NavDropdown;
 }) {
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -135,8 +159,8 @@ function NavItem({
   return (
     <div
       className="relative"
-      onMouseEnter={formats ? show : undefined}
-      onMouseLeave={formats ? hide : undefined}
+      onMouseEnter={dropdown ? show : undefined}
+      onMouseLeave={dropdown ? hide : undefined}
     >
       <Link
         href={href}
@@ -145,7 +169,7 @@ function NavItem({
         }`}
       >
         {label}
-        {formats && (
+        {dropdown && (
           <svg
             viewBox="0 0 10 6"
             className={`h-1.5 w-2.5 fill-current transition-transform ${open ? "rotate-180" : ""}`}
@@ -156,25 +180,25 @@ function NavItem({
         )}
       </Link>
 
-      {formats && (
+      {dropdown && (
         <div
           className={`absolute left-0 top-full w-64 border border-line bg-tinta-raised pt-1 shadow-[0_24px_60px_rgba(0,0,0,0.5)] transition-all duration-200 ${
             open ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
           }`}
         >
           <Link
-            href={href}
+            href={dropdown.viewAllHref}
             className="block border-b border-line px-5 py-3 text-sm text-white hover:bg-white/5"
           >
-            Ver todo Retail
+            {dropdown.viewAllLabel}
           </Link>
-          {formats.map((format) => (
+          {dropdown.items.map((item) => (
             <Link
-              key={format.slug}
-              href={`/${format.slug}`}
+              key={item.href}
+              href={item.href}
               className="block px-5 py-3 text-sm text-ink-muted hover:bg-white/5 hover:text-white"
             >
-              {format.navLabel}
+              {item.label}
             </Link>
           ))}
         </div>
@@ -186,13 +210,11 @@ function NavItem({
 function MobileNav({
   open,
   pathname,
-  retailFormats,
   onNavigate,
   onCta,
 }: {
   open: boolean;
   pathname: string;
-  retailFormats: ReturnType<typeof getRetailFormats>;
   onNavigate: () => void;
   onCta: () => void;
 }) {
@@ -212,16 +234,16 @@ function MobileNav({
             >
               {link.label}
             </Link>
-            {link.withFormats && (
+            {link.dropdown && (
               <div className="mt-3 flex flex-col gap-2 pl-3">
-                {retailFormats.map((format) => (
+                {link.dropdown.items.map((item) => (
                   <Link
-                    key={format.slug}
-                    href={`/${format.slug}`}
+                    key={item.href}
+                    href={item.href}
                     onClick={onNavigate}
                     className="text-sm text-ink-muted"
                   >
-                    {format.navLabel}
+                    {item.label}
                   </Link>
                 ))}
               </div>

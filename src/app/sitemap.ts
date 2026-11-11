@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PILLARS } from "@/lib/content";
+import { SOLUTION_PAGES } from "@/lib/solutions-content";
 
 const BASE_URL = "https://dasoksolutions.com";
 
@@ -20,6 +21,14 @@ const LAST_MODIFIED: Record<string, string> = {
   "/oem-electronica": "2026-11-11",
   "/farmacias": "2026-11-11",
   "/centros-comerciales": "2026-11-11",
+  "/soluciones": "2026-11-11",
+  "/soluciones/sistemas-eas": "2026-11-11",
+  "/soluciones/etiquetas-esl": "2026-11-11",
+  "/soluciones/digital-signage": "2026-11-11",
+  "/soluciones/display-exhibicion-segura": "2026-11-11",
+  "/soluciones/cerraduras-electronicas": "2026-11-11",
+  "/soluciones/inteligencia-artificial-retail": "2026-11-11",
+  "/soluciones/control-de-acceso": "2026-11-11",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -37,5 +46,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: pillar.parent ? 0.7 : 0.9,
   }));
 
-  return [...staticRoutes, ...pillarRoutes];
+  const solutionRoutes = [
+    {
+      url: `${BASE_URL}/soluciones`,
+      lastModified: LAST_MODIFIED["/soluciones"],
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...SOLUTION_PAGES.map((page) => ({
+      url: `${BASE_URL}/soluciones/${page.slug}`,
+      lastModified: LAST_MODIFIED[`/soluciones/${page.slug}`],
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
+  return [...staticRoutes, ...pillarRoutes, ...solutionRoutes];
 }

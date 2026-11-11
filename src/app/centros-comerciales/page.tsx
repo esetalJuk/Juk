@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { PillarTemplate } from "@/components/sections/pillar-template";
 import { getPillar } from "@/lib/content";
+import { getSolutionPage } from "@/lib/solutions-content";
 
 const pillar = getPillar("centros-comerciales");
+const controlDeAcceso = getSolutionPage("control-de-acceso");
 
 export const metadata: Metadata = {
   title: pillar.seoTitle,
@@ -13,5 +15,16 @@ export const metadata: Metadata = {
 };
 
 export default function CentrosComercialesPage() {
-  return <PillarTemplate pillar={pillar} />;
+  return (
+    <PillarTemplate
+      pillar={pillar}
+      extraSolutionLinks={[
+        {
+          label: controlDeAcceso.navLabel,
+          short: controlDeAcceso.cardShort,
+          href: `/soluciones/${controlDeAcceso.slug}`,
+        },
+      ]}
+    />
+  );
 }

@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/ui/section";
 import { SOLUTIONS } from "@/lib/content";
+import { SOLUTION_HREF } from "@/lib/solutions-content";
 
 export function SolutionsGrid() {
   return (
@@ -23,8 +25,9 @@ export function SolutionsGrid() {
         className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3"
       >
         {SOLUTIONS.map((solution, index) => (
-          <div
+          <Link
             key={solution.slug}
+            href={SOLUTION_HREF[solution.slug] ?? "/soluciones"}
             data-reveal-item
             className="group flex flex-col justify-between bg-tinta-raised p-6 transition-colors hover:bg-tinta-card"
           >
@@ -41,8 +44,11 @@ export function SolutionsGrid() {
               <p className="mt-3 text-sm text-ink-muted">
                 {solution.description}
               </p>
+              <span className="eyebrow mt-4 inline-block text-azul-primario">
+                Conoce más →
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </Reveal>
     </Section>

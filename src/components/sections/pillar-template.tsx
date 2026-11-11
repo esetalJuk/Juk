@@ -6,12 +6,18 @@ import { RelatedFormats } from "@/components/sections/related-formats";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import type { Pillar } from "@/lib/content";
 
-export function PillarTemplate({ pillar }: { pillar: Pillar }) {
+export function PillarTemplate({
+  pillar,
+  extraSolutionLinks,
+}: {
+  pillar: Pillar;
+  extraSolutionLinks?: { label: string; short: string; href: string }[];
+}) {
   return (
     <>
       <PillarHero pillar={pillar} />
       <PainPoints points={pillar.painPoints} />
-      <SolutionsApplicable slugs={pillar.solutions} />
+      <SolutionsApplicable slugs={pillar.solutions} extra={extraSolutionLinks} />
       {pillar.slug === "retail" && <FormatBreakdown />}
       {pillar.parent === "retail" && <RelatedFormats current={pillar.slug} />}
       <CtaBanner />

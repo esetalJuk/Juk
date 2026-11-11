@@ -1,0 +1,89 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { gsap } from "@/lib/gsap";
+import { CtaButton } from "@/components/ui/cta-button";
+import { useContactModal } from "@/components/layout/contact-modal";
+import { PRIMARY_CTA_LABEL, SECONDARY_CTA_LABEL } from "@/lib/content";
+
+export function SolutionHero({
+  eyebrow,
+  h1,
+  hook,
+}: {
+  eyebrow: string;
+  h1: string;
+  hook: string;
+}) {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const { openModal } = useContactModal();
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    const targets = el.querySelectorAll("[data-hero-item]");
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReduced) {
+      gsap.set(targets, { opacity: 1, y: 0 });
+      return;
+    }
+
+    const tl = gsap.timeline({ delay: 0.1 });
+    tl.set(targets, { opacity: 0, y: 24 });
+    tl.to(targets, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={rootRef}
+      className="relative overflow-hidden border-b border-line pb-16 pt-32 sm:pb-20 sm:pt-40"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 20% 0%, rgba(0,128,223,0.18), transparent 55%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8">
+        <p data-hero-item className="eyebrow text-verde-acento">
+          {eyebrow}
+        </p>
+        <h1
+          data-hero-item
+          className="font-display text-balance mt-6 max-w-3xl text-4xl sm:text-6xl lg:text-7xl"
+        >
+          {h1}
+        </h1>
+        <p
+          data-hero-item
+          className="mt-6 max-w-xl font-body text-lg normal-case tracking-normal text-ink-muted"
+        >
+          {hook}
+        </p>
+        <div data-hero-item className="mt-9 flex flex-wrap gap-4 pr-20 sm:pr-0">
+          <CtaButton onClick={() => openModal("showroom")}>
+            {PRIMARY_CTA_LABEL}
+          </CtaButton>
+          <CtaButton variant="secondary" onClick={() => openModal("asesor")}>
+            {SECONDARY_CTA_LABEL}
+          </CtaButton>
+        </div>
+      </div>
+    </div>
+  );
+}
