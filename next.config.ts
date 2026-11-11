@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
       { source: "/soporte-para-tabletas-en-mostrador/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-mesa-integrada/:path*", destination: "/oem-electronica", permanent: true },
       { source: "/soporte-para-tableta-de-piso/:path*", destination: "/oem-electronica", permanent: true },
+      { source: "/soporte-para-tableta-de-pared/:path*", destination: "/oem-electronica", permanent: true },
+      { source: "/inteligencia-artificial", destination: "/retail", permanent: true },
       { source: "/vizitech", destination: "/", permanent: true },
     ];
   },
